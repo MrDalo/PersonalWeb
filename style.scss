@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
+@import "./styles/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arima Madurai','Fredoka', cursive, sans-serif;
+  text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+body{
+    background-color: $mainBrown;
+    width: 100%;
+    height: 600vh;
+    :nth-of-type(even){
+        .left-box{
+            background-color: $mainBrown;
+        }
+
+        .right-box{
+            background-color: $mainGray;
+        }
+
+        p{
+            color: $mainGray;
+        }
+    }
+    
+    :nth-of-type(odd){
+        .left-box{
+            background-color: $mainGray;
+        }
+        
+        .right-box{
+            background-color: $mainBrown;
+        }
+
+        p{
+            color: $mainBrown;
+        }
+    }
+}
+
+.content-box{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.left-box{
+    position: relative;
+    width: 70%;
+    height: 100%;
+}
+
+.right-box{
+    position: relative;
+    width: 30%;
+    height: 100%;
+}
+
+.arrows{
+    width: 5%;
+    position: absolute;
+    height: 20vh;
+    top: 40%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    
+}
+
+.up-arrow, .down-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    transform: scale(1);
+    
+    svg:hover{
+        transform: scale(1.4);
+        cursor: pointer;
+        
+    }
+}
+
+
+//First page
+#profile-picture-div{
+    background-image: url("./pictures/profilePicture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#first-content-box{
+    h1{
+        color: $mainBrown;
+        margin-bottom: 10vh;
+        font-size: 5em;
+        font-weight: 100;
+    }
+
+    .left-box{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-top: 5%;
+        row-gap: 20%;
+        
+        div{
+            width: 100%;
+
+        }
+
+        div:first-of-type{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        div:nth-of-type(2){
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 10%;
+            column-gap: 3%;
+        }
+
+        section{
+            text-align: center;
+            font-weight: 100;
+        }
+
+        
+    }
+}
