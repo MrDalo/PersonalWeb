@@ -1,0 +1,19 @@
+@import "./mixins";
+@import "./variables";
+
+#second-content-box{
+    .right-box{
+        @include flex-center;
+        padding: 0 5% 0 5%;
+
+        h1{
+            font-size: 4em;
+            color: $mainBrown;
+            font-weight: 100;
+            text-align: center;
+        }
+
+    }
+
+
+}
