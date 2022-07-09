@@ -15,5 +15,70 @@
 
     }
 
+    .left-box{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        
+        #road-map{
+            position: relative;
+            height: 100%;
+            left: 45%;
+            width: 189px;
+            svg{
+                position: relative;
+                z-index: 2;
+                stroke-dashoffset: 0;
+                stroke-dasharray: 60;
+                stroke: blue;
+                animation: dash 20s linear reverse infinite;
+                
+            }
+        }
+
+        .skillPath{
+            @include flex-center;
+            position: absolute;
+            width: 20%;
+            font-size: 1em;
+            color: $mainGray;
+            text-align: center;
+            
+        }
+
+        .skillPath:first-of-type{
+            left: 55%;
+            top: 17%;
+        }
+
+        .skillPath:nth-of-type(2){
+            left: 25%;
+            top: 32%;
+        }
+
+        .skillPath:nth-of-type(3){
+            left: 60%;
+            top: 47%;
+        }
+
+        .skillPath:nth-of-type(4){
+            left: 25%;
+            top: 62%;
+        }
+
+        .skillPath:nth-of-type(5){
+            left: 65%;
+            top: 77%;
+        }
+    }
+
 
 }
+
+@keyframes dash {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 600;
+    }
+  }

@@ -70,7 +70,7 @@ body{
     height: 100%;
 }
 
-.arrows{
+#arrows{
     width: 50px;
     position: fixed;
     height: 20vh;
@@ -83,7 +83,7 @@ body{
     
 }
 
-.up-arrow, .down-arrow{
+#up-arrow, #down-arrow{
     @include flex-center();
     height: 50%;
     width: 100%;
