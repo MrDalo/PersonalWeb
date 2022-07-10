@@ -1,0 +1,50 @@
+@import "./mixins";
+@import "./variables";
+
+#fifth-content-box{
+    .right-box{
+        @include flex-center;
+        padding: 0 4% 0 4%;
+
+        h1{
+            font-size: 4em;
+            color: $mainGray;
+            font-weight: 400;
+            text-align: center;
+        }
+
+    }
+
+    .left-box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        row-gap: 5vh;
+        flex-direction: column;
+
+        article{
+            padding-left: 30%;
+            width: 100%;
+            color: $mainBrown;
+
+            h2{
+                font-size: 2.5em;
+                font-weight: 400;
+                position: relative;
+                left: -5%;
+            }
+
+            h3{
+                position: relative;
+                font-size: 1.5em;
+                left: -4%;
+                font-weight: 400;
+            }
+
+            .date-of-job{
+                position: relative;
+                left: -4%;
+            }
+        }
+    }
+}

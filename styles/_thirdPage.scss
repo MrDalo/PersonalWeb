@@ -1,0 +1,95 @@
+@import "./mixins";
+@import "./variables";
+
+#third-content-box{
+    .right-box{
+        @include flex-center;
+        padding: 0 4% 0 4%;
+
+        h1{
+            font-size: 4em;
+            color: $mainGray;
+            font-weight: 400;
+            text-align: center;
+        }
+
+    }
+
+    .left-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-left: 15%;
+
+        aside{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            row-gap: 3.5vh;
+        }
+        
+        #progress-bars{
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            row-gap: 5vh;
+        }
+
+        .progress-bar{
+            z-index: 2;
+            position: relative;
+            border: 1px solid $mainBrown;
+            border-radius: 10px;
+            width: 70%;
+            height: 2vh;
+            padding-top: 0.2vh;
+            padding-bottom: 0.2vh;
+
+            div{
+                position: relative;
+                background-color: $mainBrown;
+                border-radius: 30px;
+                width: 60%;
+                height: 100%;
+            }
+
+            #first{
+                width: 70%;
+
+            }
+
+            #second{
+                width: 40%;
+            }
+
+            #third{
+                width: 80%;
+            }
+
+            #fourth{
+                width: 55%;
+            }
+
+            #fifth{
+                width: 85%;
+            }
+
+            #sixth{
+                width: 75%;
+            }
+
+            #seventh{
+                width: 60%;
+            }
+            
+            
+
+        }
+        
+
+    }
+}

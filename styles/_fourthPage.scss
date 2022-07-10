@@ -1,0 +1,19 @@
+@import "./mixins";
+@import "./variables";
+
+#fourth-content-box{
+    .right-box{
+        @include flex-center;
+        padding: 0 4% 0 4%;
+
+        h1{
+            font-size: 4em;
+            color: $mainBrown;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        
+
+    }
+}
