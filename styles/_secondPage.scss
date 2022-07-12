@@ -42,32 +42,81 @@
             font-size: 1em;
             color: $mainGray;
             text-align: center;
+            cursor: pointer;
             
         }
 
         .skillPath:first-of-type{
             left: 55%;
             top: 17%;
+
+            article{
+                left:20%;
+            }
         }
 
         .skillPath:nth-of-type(2){
             left: 25%;
             top: 32%;
+
+            article{
+                right:20%;
+            }
         }
 
         .skillPath:nth-of-type(3){
             left: 60%;
             top: 47%;
+
+            article{
+                left:20%;
+            }
         }
 
         .skillPath:nth-of-type(4){
             left: 25%;
-            top: 62%;
+            top: 68%;
+
+            article{
+                right:20%;
+            }
         }
 
         .skillPath:nth-of-type(5){
             left: 65%;
-            top: 77%;
+            top: 80%;
+
+            article{
+                left:10%;
+            }
+        }
+        
+        article{
+            position: absolute;
+            width: 160%;
+            height: auto;
+            // background-color: $mainGray;
+            background-color: $secondaryGray;
+            border-radius: 20px;
+            top: 120%;
+            font-size: 0.75em;
+            color: $mainBrown;
+            //top right bottom left
+            padding: 7px 10px 7px 10px;
+            transition-duration: 2s;
+            opacity: 0;
+            visibility: hidden;
+
+        }
+        
+        .skillPath:hover{
+            article{
+                opacity: 1;
+                visibility: visible;
+                transition-duration: 0.4s;
+                transition-property: opacity;
+                transition-timing-function: linear;
+            }
         }
     }
 
@@ -81,4 +130,7 @@
     to {
       stroke-dashoffset: 600;
     }
-  }
+}
+
+@keyframes loadArticle{
+}

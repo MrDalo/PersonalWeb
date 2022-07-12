@@ -19,24 +19,23 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        padding-left: 15%;
-
-        aside{
-            width: 40%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-            row-gap: 3.5vh;
-        }
+        flex-direction: column;
+        padding: 0 12%;
+        row-gap: 3vh;
         
-        #progress-bars{
-            width: 60%;
+        .progress-bars{
+            width: 100%;
             display: flex;
             justify-content: center;
-            flex-direction: column;
-            row-gap: 5vh;
+            flex-direction: row;
+            column-gap: 10%;
+        
+            span{
+                text-align: left;
+                width: 40%;
+                color: $mainBrown;
+
+            }
         }
 
         .progress-bar{
@@ -44,7 +43,7 @@
             position: relative;
             border: 1px solid $mainBrown;
             border-radius: 10px;
-            width: 70%;
+            width: 50%;
             height: 2vh;
             padding-top: 0.2vh;
             padding-bottom: 0.2vh;
@@ -86,10 +85,7 @@
                 width: 60%;
             }
             
-            
-
         }
         
-
     }
 }

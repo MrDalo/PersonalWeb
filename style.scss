@@ -6,6 +6,7 @@
 @import "./styles/fourthPage";
 @import "./styles/fifthPage";
 @import "./styles/sixthPage";
+@import "./styles/mediaQueries";
 @import "./styles/mixins";
 
 * {
@@ -114,6 +115,251 @@ body{
         transform: scale(1.2);
     }
 }
+
+
+@media only screen and (max-width: 1199px) {
+    html{
+        font-size: 12px;
+
+    }
+
+    #first-content-box{
+
+        .left-box{
+            div:first-of-type{
+                height: 50%;
+                justify-content: center;
+            }
+        }
+    }
+
+    #second-content-box{
+        .left-box{
+
+            #road-map{
+                transform: scale(1);
+                top: 10%;
+                left: 40%;
+                
+            }
+            
+            .skillPath:nth-of-type(2){
+                left: 20%;
+
+                article{
+                    right: 5%;
+                }
+            }
+
+            .skillPath:nth-of-type(4){
+                left: 20%;
+    
+                article{
+                    right: 5%;
+                }
+            }
+
+        }
+    }
+
+    #fourth-content-box{
+        .left-box{
+            #projects{
+                row-gap: 20%;
+            }
+        }
+    }
+
+    @media only screen and(max-width: 1024px) {
+        html{
+            font-size: 18px;
+    
+        }
+
+        .content-box{
+            position: relative;
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            height: 110vh;
+        }
+        
+        
+        .left-box{
+            position: relative;
+            width: 100%;
+            height: 80%;
+        }
+        
+        .right-box{
+            position: relative;
+            width: 100%;
+            height: 20%;
+        }
+
+        body{
+
+            div.content-box:nth-of-type(even){
+                .left-box{
+                    background-color: $mainBrown;
+                }
+        
+                .right-box{
+                    background-color: $mainGray;
+                }
+        
+                p{
+                    color: $mainGray;
+                }
+            }
+            
+            div.content-box:nth-of-type(odd){
+                .left-box{
+                    background-color: $mainBrown;
+                }
+                
+                .right-box{
+                    background-color: $mainGray;
+                }
+        
+                p{
+                    color: $mainGray;
+                }
+            }
+        }
+        
+
+        #first-content-box{
+            h1{
+                font-size: 4em;
+                font-weight: 400;
+            }
+
+            .left-box{
+                div:nth-of-type(2){
+                    padding-left: 20%;
+                    svg{
+                        transform: scale(0.8);
+                    }
+                }
+            }
+        }
+
+
+        #second-content-box{
+            .right-box{
+        
+                h1{
+                    font-size: 4em;
+                    color: $mainBrown;
+                }
+            }
+
+        }
+
+        #third-content-box{
+            .right-box{
+        
+                h1{
+                    font-size: 4em;
+                    color: $mainBrown;
+                }
+            }
+
+            .left-box{
+                .progress-bars{
+                    span{
+                        color: $mainGray;
+                    }
+                }
+
+                .progress-bar{
+                    border: 1px solid $mainGray;
+
+                    div{
+                        background-color: $mainGray;
+                    }
+                }
+            }
+        }
+
+        #fourth-content-box{
+            .right-box{
+        
+                h1{
+                    font-size: 4em;
+                    color: $mainBrown;
+                }
+            }
+
+            .left-box{
+
+                padding: 15% 8% 15% 10%;
+                #projects{
+                    row-gap: 0%;
+
+                    .portfolio-project{
+                        span{
+                            h3{
+                                font-size: 1.8em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #fifth-content-box{
+            .right-box{
+        
+                h1{
+                    font-size: 4em;
+                    color: $mainBrown;
+                }
+            }
+
+            .left-box{
+                article{
+                    color: $mainGray;
+                }
+            }
+        }
+
+
+        #sixth-content-box{
+            .right-box{
+        
+                h1{
+                    font-size: 4em;
+                    color: $mainBrown;
+                }
+                span{
+                    visibility: hidden;
+                }
+            }
+
+
+            .left-box{
+                svg{
+                    transform: scale(0.8);
+                }
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+
+
+            @media only screen and (max-width: 600px) {
+            
+            
+            }
+
+        }
+    
+    }
+
+ }
+
 
 
 

@@ -12,8 +12,88 @@
             font-weight: 400;
             text-align: center;
         }
+    }
 
+
+    .left-box{
+        @include flex-center;
+            // top right bottom left
+        padding: 15% 13% 15% 17%;
+    
+        #projects{
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            row-gap: 35%; 
+
+            .portfolio-project{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 10%;
+                height: 35%;
+
+                span{
+                    width: 45%;
+                    @include flex-center;
+                    flex-direction: column;
+                    row-gap: 1vh;
+
+                    h3{
+                        font-size: 2.3em;
+                        font-weight: 400;
+                    }
+
+                    a{
+                        width: 40%;
+                        cursor: pointer;
+                    
+                        button{
+                            background-color: $secondaryGray;
+                            color: $mainBrown;
+                            width: 100%;
+                            border-radius: 20px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                a{
+                    width: 45%;
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                        border-radius: 20px;
+                    }
+                }
+                
+            }
+
+        }
+
+        #portfolio-up-arrow, #portfolio-down-arrow{
+            position: absolute;
+        }
+
+        #portfolio-up-arrow{
+            top: 18%;
+        }
+
+        #portfolio-down-arrow{
+            bottom: 18%;
+        }
+
+        svg{
+            transform: scale(0.8);
+            cursor: pointer;
+        }
         
-
+        svg:hover{
+            transform: scale(1.1);
+        }
+        
     }
 }
