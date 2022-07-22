@@ -200,6 +200,7 @@
           transition-duration: 2s;
   opacity: 0;
   visibility: hidden;
+  z-index: 2;
 }
 
 #second-content-box .left-box .skillPath:hover article {
@@ -283,6 +284,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-column-gap: 10%;
           column-gap: 10%;
 }
@@ -437,6 +441,7 @@
   width: 100%;
   border-radius: 20px;
   cursor: pointer;
+  height: 2.5em;
 }
 
 #fourth-content-box .left-box #projects .portfolio-project a {
@@ -754,6 +759,25 @@ body div.content-box:nth-of-type(odd) p {
           transform: scale(1.2);
 }
 
+footer {
+  visibility: hidden;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  right: 10%;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.6em;
+}
+
 @media only screen and (max-width: 1199px) {
   html {
     font-size: 12px;
@@ -793,6 +817,9 @@ body div.content-box:nth-of-type(odd) p {
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
   html {
     font-size: 18px;
+  }
+  footer {
+    visibility: visible;
   }
   .content-box {
     position: relative;
@@ -891,6 +918,7 @@ body div.content-box:nth-of-type(odd) p {
   }
   #fifth-content-box .left-box article {
     color: #323131;
+    padding-right: 10%;
   }
   #sixth-content-box .right-box h1 {
     font-size: 4em;
@@ -912,9 +940,66 @@ body div.content-box:nth-of-type(odd) p {
   #arrows {
     display: none;
   }
+  #first-content-box .left-box div:first-of-type {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .right-box h1 {
+    font-size: 3.5em !important;
+  }
+  #second-content-box .left-box #road-map {
+    left: 38%;
+  }
+  #second-content-box .left-box .skillPath:first-of-type {
+    left: 55%;
+    top: 17%;
+  }
+  #second-content-box .left-box .skillPath:first-of-type article {
+    left: -40%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(2) {
+    left: 18%;
+    top: 32%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(2) article {
+    right: 20%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(3) {
+    left: 60%;
+    top: 43%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(3) article {
+    left: -60%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(4) {
+    left: 20%;
+    top: 60%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(4) article {
+    right: -70%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(5) {
+    left: 70%;
+    top: 75%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(5) article {
+    left: -130%;
+  }
+  #second-content-box .left-box article {
+    width: 220%;
+  }
+  #fourth-content-box .left-box #projects .portfolio-project span a {
+    width: 60%;
+  }
+  #fifth-content-box .left-box article h2 {
+    font-size: 2em;
+  }
 }
 
 @media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-width: 768px) and (max-width: 600px) {
+  #fifth-content-box .left-box article {
+    padding-left: 28%;
+  }
   #sixth-content-box .left-box section {
     padding-left: 20%;
   }

@@ -120,6 +120,17 @@ body{
     }
 }
 
+footer{
+    visibility: hidden;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    bottom: 0px;
+    @include flex-center;
+    font-size: 0.6em;
+}
+
 
 @media only screen and (max-width: 1199px) {
     html{
@@ -181,6 +192,10 @@ body{
     
         }
 
+        footer{
+            visibility: visible;
+        }
+
         .content-box{
             position: relative;
             display: flex;
@@ -235,6 +250,7 @@ body{
         
 
         #first-content-box{
+            // flex-direction: column;
 
             #profile-picture-div{
                 background-position: center top;
@@ -342,6 +358,7 @@ body{
             .left-box{
                 article{
                     color: $mainGray;
+                    padding-right: 10%;
                 }
             }
         }
@@ -377,9 +394,117 @@ body{
                 display: none;
             }
 
+            #first-content-box{
+
+
+                .left-box{
+                    div:first-of-type{
+                        padding-left: 10%;
+                        padding-right: 10%;
+                    }
+                }
+            }
+
+            .right-box h1{
+                font-size: 3.5em !important;
+            }
+
+            #second-content-box{
+                .left-box{
+
+                    #road-map{
+                        left: 38%;
+                    }
+
+                    .skillPath:first-of-type{
+                        left: 55%;
+                        top: 17%;
+            
+                        article{
+                            left:-40%;
+                        }
+                    }
+            
+                    .skillPath:nth-of-type(2){
+                        left: 18%;
+                        top: 32%;
+            
+                        article{
+                            right:20%;
+                        }
+                    }
+            
+                    .skillPath:nth-of-type(3){
+                        left: 60%;
+                        top: 43%;
+            
+                        article{
+                            left:-60%;
+                        }
+                    }
+            
+                    .skillPath:nth-of-type(4){
+                        left: 20%;
+                        top: 60%;
+            
+                        article{
+                            right:-70%;
+                        }
+                    }
+            
+                    .skillPath:nth-of-type(5){
+                        left: 70%;
+                        top: 75%;
+            
+                        article{
+                            left: -130%;
+                        }
+                    }
+                    
+                    article{
+                        width: 220%;
+                    }
+                }
+            }
+
+            #fourth-content-box{
+                .left-box{
+                    #projects{
+                        .portfolio-project{
+                            span{
+                                a{
+                                    width: 60%;
+                                    
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+
+            #fifth-content-box{
+                .left-box{
+                    article{
+                        h2{
+                            font-size: 2em;
+                        }
+                    }
+                }
+            }
+
 
             @media only screen and (max-width: 600px) {
             
+                #fifth-content-box{
+                    .left-box{
+                        article{
+                            padding-left: 28%;
+                        
+                        }
+                    }
+                }
+
                 #sixth-content-box{
                             
                     .left-box{

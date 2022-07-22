@@ -28,6 +28,7 @@
             display: flex;
             justify-content: center;
             flex-direction: row;
+            align-items: center;
             column-gap: 10%;
         
             span{
@@ -47,6 +48,7 @@
             height: 2vh;
             padding-top: 0.2vh;
             padding-bottom: 0.2vh;
+
 
             div{
                 position: relative;
@@ -86,6 +88,7 @@
             }
             
         }
+
         
     }
 }
