@@ -78,6 +78,10 @@
   cursor: pointer;
 }
 
+#second-content-box {
+  min-height: 1200px;
+}
+
 #second-content-box .right-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -632,6 +636,7 @@ html {
 body {
   background-color: #FCF4DA;
   width: 100%;
+  min-height: 6250px;
   height: 660vh;
 }
 
@@ -665,6 +670,7 @@ body div.content-box:nth-of-type(odd) p {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  min-height: 1000px;
   height: 110vh;
 }
 
@@ -672,12 +678,14 @@ body div.content-box:nth-of-type(odd) p {
   position: relative;
   width: 70%;
   height: 100%;
+  min-height: 700px;
 }
 
 .right-box {
   position: relative;
   width: 30%;
   height: 100%;
+  min-height: 250px;
 }
 
 #arrows {
@@ -749,6 +757,9 @@ body div.content-box:nth-of-type(odd) p {
 @media only screen and (max-width: 1199px) {
   html {
     font-size: 12px;
+  }
+  #first-content-box {
+    min-height: 1200px;
   }
   #first-content-box .left-box div:first-of-type {
     height: 50%;
@@ -823,9 +834,13 @@ body div.content-box:nth-of-type(odd) p {
   body div.content-box:nth-of-type(odd) p {
     color: #323131;
   }
+  #first-content-box #profile-picture-div {
+    background-position: center top;
+  }
   #first-content-box h1 {
     font-size: 4em;
     font-weight: 400;
+    color: #323131;
   }
   #first-content-box .left-box div:nth-of-type(2) {
     padding-left: 20%;
@@ -833,6 +848,9 @@ body div.content-box:nth-of-type(odd) p {
   #first-content-box .left-box div:nth-of-type(2) svg {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+  }
+  #first-content-box .right-box {
+    min-height: 400px !important;
   }
   #second-content-box .right-box h1 {
     font-size: 4em;
@@ -864,6 +882,9 @@ body div.content-box:nth-of-type(odd) p {
   #fourth-content-box .left-box #projects .portfolio-project span h3 {
     font-size: 1.8em;
   }
+  #fourth-content-box .left-box #projects .portfolio-project a img {
+    width: 90%;
+  }
   #fifth-content-box .right-box h1 {
     font-size: 4em;
     color: #FCF4DA;
@@ -881,6 +902,21 @@ body div.content-box:nth-of-type(odd) p {
   #sixth-content-box .left-box svg {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+  }
+  #sixth-content-box .left-box section {
+    padding-left: 25%;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-width: 768px) {
+  #arrows {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-width: 768px) and (max-width: 600px) {
+  #sixth-content-box .left-box section {
+    padding-left: 20%;
   }
 }
 /*# sourceMappingURL=style.css.map */
