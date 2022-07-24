@@ -32,19 +32,7 @@
 }
 
 
-// #burger-menu-icon:hover{
-//     :first-child{
-//         transform: rotateZ(45deg) translateY(5px) translateX(5px);
-//         top: 100px;
 
-//     }
-
-//     :nth-child(2){
-//         width: 40px;
-//         transform: rotateZ(-45deg);
-//     }
-
-// }
 
 #burger-menu{
     opacity: 0;
@@ -52,13 +40,13 @@
     top: 2%;
     left: 1%;
     width: 400px;
-    height: 200px;
+    height: 0px;
     z-index: 4;
     background-color: white;
     @include flex-center;
     border-radius: 15px;
     padding-right: 2.5%;
-
+    overflow: hidden;
     transition: 0.3s linear;
 
     a{
