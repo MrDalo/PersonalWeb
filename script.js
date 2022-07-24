@@ -1,4 +1,5 @@
 const burgerMenu = document.getElementById('burger-menu');
+const burgerMenuIcon = document.getElementById('burger-menu-icon');
 const upArrow = document.getElementById("up-arrow");
 const downArrow = document.getElementById("down-arrow");
 const mainBrown = "#FCF4DA";
@@ -35,9 +36,8 @@ function IsInViewport(element, offset){
 
 function BurgerClick(){
 
-    console.log("Burger menu clicked");
-    console.log(`${ window.innerHeight}`);
-    burgerMenuTriggered = !burgerMenuTriggered;
+    burgerMenuIcon.classList.toggle("triggeredIcon");
+    burgerMenu.classList.toggle("triggered");
 }
 
 document.addEventListener("scroll", (e) =>{
