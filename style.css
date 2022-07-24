@@ -4,6 +4,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#profile-picture-div-inner {
+  display: none;
+  background-image: url("./pictures/profilePictureSmall.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80%;
+  aspect-ratio: 1;
+  border-radius: 40px;
 }
 
 #first-content-box h1 {
@@ -112,6 +132,7 @@
   height: 100%;
   left: 45%;
   width: 189px;
+  top: 15%;
 }
 
 #second-content-box .left-box #road-map svg {
@@ -121,6 +142,8 @@
   stroke-dasharray: 60;
   stroke: blue;
   animation: dash 20s linear reverse infinite;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 #second-content-box .left-box .skillPath {
@@ -139,10 +162,11 @@
   color: #323131;
   text-align: center;
   cursor: pointer;
+  z-index: 2;
 }
 
 #second-content-box .left-box .skillPath:first-of-type {
-  left: 55%;
+  left: 60%;
   top: 17%;
 }
 
@@ -151,12 +175,12 @@
 }
 
 #second-content-box .left-box .skillPath:nth-of-type(2) {
-  left: 25%;
+  left: 20%;
   top: 32%;
 }
 
 #second-content-box .left-box .skillPath:nth-of-type(2) article {
-  right: 20%;
+  right: 10%;
 }
 
 #second-content-box .left-box .skillPath:nth-of-type(3) {
@@ -200,7 +224,7 @@
           transition-duration: 2s;
   opacity: 0;
   visibility: hidden;
-  z-index: 2;
+  z-index: 3;
 }
 
 #second-content-box .left-box .skillPath:hover article {
@@ -442,6 +466,7 @@
   border-radius: 20px;
   cursor: pointer;
   height: 2.5em;
+  border: none;
 }
 
 #fourth-content-box .left-box #projects .portfolio-project a {
@@ -641,7 +666,6 @@ html {
 body {
   background-color: #FCF4DA;
   width: 100%;
-  min-height: 6250px;
   height: 660vh;
 }
 
@@ -675,7 +699,7 @@ body div.content-box:nth-of-type(odd) p {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  min-height: 1000px;
+  min-height: 800px;
   height: 110vh;
 }
 
@@ -683,20 +707,18 @@ body div.content-box:nth-of-type(odd) p {
   position: relative;
   width: 70%;
   height: 100%;
-  min-height: 700px;
 }
 
 .right-box {
   position: relative;
   width: 30%;
   height: 100%;
-  min-height: 250px;
 }
 
 #arrows {
   width: 50px;
   position: fixed;
-  height: 20vh;
+  height: 120px;
   top: 40%;
   left: 20px;
   display: -webkit-box;
@@ -765,7 +787,7 @@ footer {
   width: 80%;
   left: 10%;
   right: 10%;
-  bottom: 0px;
+  bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -780,10 +802,7 @@ footer {
 
 @media only screen and (max-width: 1199px) {
   html {
-    font-size: 12px;
-  }
-  #first-content-box {
-    min-height: 1200px;
+    font-size: 14px;
   }
   #first-content-box .left-box div:first-of-type {
     height: 50%;
@@ -816,7 +835,7 @@ footer {
 
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
   footer {
     visibility: visible;
@@ -861,23 +880,43 @@ footer {
   body div.content-box:nth-of-type(odd) p {
     color: #323131;
   }
+  #first-content-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+  }
   #first-content-box #profile-picture-div {
-    background-position: center top;
+    background-color: #FCF4DA;
+    background-image: none;
+  }
+  #first-content-box #profile-picture-div-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #first-content-box h1 {
     font-size: 4em;
     font-weight: 400;
     color: #323131;
+    margin-bottom: 6vh;
   }
   #first-content-box .left-box div:nth-of-type(2) {
-    padding-left: 20%;
+    padding-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #first-content-box .left-box div:nth-of-type(2) svg {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
+  #first-content-box .left-box path {
+    stroke: #323131;
+  }
   #first-content-box .right-box {
-    min-height: 400px !important;
+    min-height: 300px;
   }
   #second-content-box .right-box h1 {
     font-size: 4em;
@@ -958,11 +997,11 @@ footer {
     left: -40%;
   }
   #second-content-box .left-box .skillPath:nth-of-type(2) {
-    left: 18%;
+    left: 20%;
     top: 32%;
   }
   #second-content-box .left-box .skillPath:nth-of-type(2) article {
-    right: 20%;
+    right: -30%;
   }
   #second-content-box .left-box .skillPath:nth-of-type(3) {
     left: 60%;
@@ -972,7 +1011,7 @@ footer {
     left: -60%;
   }
   #second-content-box .left-box .skillPath:nth-of-type(4) {
-    left: 20%;
+    left: 18%;
     top: 60%;
   }
   #second-content-box .left-box .skillPath:nth-of-type(4) article {
@@ -997,6 +1036,72 @@ footer {
 }
 
 @media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-width: 768px) and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  body {
+    min-height: 4800px;
+    height: 600vh;
+  }
+  .content-box {
+    height: 100vh;
+    min-height: 800px;
+  }
+  .left-box {
+    min-height: 600px;
+  }
+  .right-box {
+    min-height: 200px;
+  }
+  #first-content-box {
+    min-height: 800px;
+  }
+  #first-content-box .left-box {
+    min-height: 500px;
+  }
+  #first-content-box .right-box {
+    min-height: 300px;
+  }
+  #second-content-box .left-box #road-map {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    left: 35%;
+  }
+  #second-content-box .left-box .skillPath:first-of-type {
+    left: 55%;
+    top: 17%;
+  }
+  #second-content-box .left-box .skillPath:first-of-type article {
+    left: -40%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(2) {
+    left: 20%;
+    top: 32%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(2) article {
+    right: -30%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(3) {
+    left: 60%;
+    top: 50%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(3) article {
+    left: -60%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(4) {
+    left: 18%;
+    top: 60%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(4) article {
+    right: -70%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(5) {
+    left: 45%;
+    top: 75%;
+  }
+  #second-content-box .left-box .skillPath:nth-of-type(5) article {
+    left: -130%;
+  }
   #fifth-content-box .left-box article {
     padding-left: 28%;
   }

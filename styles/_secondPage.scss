@@ -27,6 +27,7 @@
             height: 100%;
             left: 45%;
             width: 189px;
+            top: 15%;
             svg{
                 position: relative;
                 z-index: 2;
@@ -34,6 +35,7 @@
                 stroke-dasharray: 60;
                 stroke: blue;
                 animation: dash 20s linear reverse infinite;
+                transform: scale(1.25);
                 
             }
         }
@@ -46,11 +48,12 @@
             color: $mainGray;
             text-align: center;
             cursor: pointer;
+            z-index: 2;
             
         }
 
         .skillPath:first-of-type{
-            left: 55%;
+            left: 60%;
             top: 17%;
 
             article{
@@ -59,11 +62,11 @@
         }
 
         .skillPath:nth-of-type(2){
-            left: 25%;
+            left: 20%;
             top: 32%;
 
             article{
-                right:20%;
+                right:10%;
             }
         }
 
@@ -109,7 +112,7 @@
             transition-duration: 2s;
             opacity: 0;
             visibility: hidden;
-            z-index: 2;
+            z-index: 3;
 
         }
         

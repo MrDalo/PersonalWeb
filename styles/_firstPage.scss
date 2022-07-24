@@ -6,6 +6,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    @include flex-center;
+}
+
+#profile-picture-div-inner{
+    display: none;
+    background-image: url("./pictures/profilePictureSmall.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 80%;
+    aspect-ratio: 1;
+    border-radius: 40px;
 }
 
 #first-content-box{
