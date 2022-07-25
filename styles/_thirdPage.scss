@@ -54,36 +54,38 @@
                 position: relative;
                 background-color: $mainBrown;
                 border-radius: 30px;
-                width: 60%;
+                width: 0px;
                 height: 100%;
+
+                transition: 2s ease-out;
             }
 
-            #first{
+            #first.bar-visible{
                 width: 70%;
 
             }
 
-            #second{
+            #second.bar-visible{
                 width: 40%;
             }
 
-            #third{
+            #third.bar-visible{
                 width: 80%;
             }
 
-            #fourth{
+            #fourth.bar-visible{
                 width: 55%;
             }
 
-            #fifth{
+            #fifth.bar-visible{
                 width: 85%;
             }
 
-            #sixth{
+            #sixth.bar-visible{
                 width: 75%;
             }
 
-            #seventh{
+            #seventh.bar-visible{
                 width: 60%;
             }
             
