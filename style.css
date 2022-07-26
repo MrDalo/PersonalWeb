@@ -418,6 +418,12 @@
   row-gap: 35%;
 }
 
+#fourth-content-box .left-box #projects .hidden-project {
+  display: none !important;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+}
+
 #fourth-content-box .left-box #projects .portfolio-project {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +458,7 @@
 }
 
 #fourth-content-box .left-box #projects .portfolio-project span h3 {
+  text-align: center;
   font-size: 2.3em;
   font-weight: 400;
 }
@@ -771,8 +778,8 @@
   position: relative;
   -webkit-transform: scale(0.4);
           transform: scale(0.4);
-  -webkit-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .triggeredIcon div {
@@ -838,6 +845,10 @@ body div.content-box:nth-of-type(odd) .right-box {
 
 body div.content-box:nth-of-type(odd) p {
   color: #FCF4DA;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .content-box {

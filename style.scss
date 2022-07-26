@@ -57,6 +57,10 @@ body{
     }
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 .content-box{
     position: relative;
     display: flex;

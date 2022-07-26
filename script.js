@@ -7,6 +7,8 @@ const mainGray = "#323131";
 const contentBoxes = document.getElementsByClassName("content-box");
 const contentBoxesPositions = Array.from(contentBoxes).map( box => box.getBoundingClientRect());
 const progressBars = document.getElementsByClassName("progress-bar");
+let portfolio = [1,2,3, 4];
+const portfolioProjects = document.getElementsByClassName("portfolio-project");
 
 const pages={
     page: 1,
@@ -16,106 +18,271 @@ const pages={
 };
 
 
-// if(contentBoxesPositions[0].y != 0){
-//     console.table(contentBoxesPositions);
-//     console.log(`Y: ${contentBoxesPositions[0].y}`);
-//     let offset = contentBoxesPositions[0].y;
-//         //posunutie o offset
-//     contentBoxesPositions.forEach(box => box.y = box.y - offset);
-//         //uprava cisla stranky v objekte pages
-//     contentBoxesPositions.forEach((box, index) => {
-//         if(box.y == -offset){
-//             pages.page = index + 1;
-//             console.log(pages.page);
-//         }
-//     });
 
-//     // console.table(contentBoxesPositions);
-//     console.log(offset);
+// function disableScroll() {
+//     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+//         // if any scroll is attempted,
+//         // set this to the previous value
+//         window.onscroll = function() {
+//             window.scrollTo(scrollLeft, scrollTop);
+//         };
 // }
+
+// // disableScroll();
+
+// window.onscroll = function() {
+//     pages.page++;
+//     window.scrollTo(contentBoxes[pages.page - 1].getBoundingClientRect().y, contentBoxes[pages.page - 1].getBoundingClientRect().top);
+//     // contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+// };
+
+/*
+*   Zmena farby sipok a burger menu ikony pri presune na podstranky
+*
+*
+*/
+function ArrowBurgerColorChange(pageNumber){
+    if(pageNumber % 2 >= 1){
+        upArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
+        downArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
+        Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
+    }else{
+        upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+        downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+        Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
+    }
+    
+    
+
+    if(window.innerWidth <= 1024){
+        if(pageNumber == 1){
+            upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+            downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
+        }
+        else{
+            upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+            downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
+        }
+    }
+}
+
+
+
+/*
+*   Funkcia, ktora zisti ci je element vo viewPorte uzivatela
+*
+*
+*/
 
 function IsInViewport(element, offset){
     const rect = element.getBoundingClientRect();
     return ((window.innerHeight || document.documentElement.clientHeight) - offset - rect.top > 0 && rect.bottom - offset > 0); 
 }
 
+
+
+function PortfolioSliderRendering(direction){
+    if(direction == "up"){
+        portfolioProjects[portfolio[0] - 1].classList.remove("second-project");
+        portfolioProjects[portfolio[1] - 1].classList.remove("hidden-project");
+        portfolioProjects[portfolio[2] - 1].classList.remove("hidden-project");
+        portfolioProjects[portfolio[3] - 1].classList.remove("first-project");
+
+    }
+    else if(direction == "down"){
+        portfolioProjects[portfolio[0] - 1].classList.remove("hidden-project");
+        portfolioProjects[portfolio[1] - 1].classList.remove("first-project");
+        portfolioProjects[portfolio[2] - 1].classList.remove("second-project");
+        portfolioProjects[portfolio[3] - 1].classList.remove("hidden-project");
+
+    }
+    portfolioProjects[portfolio[0] - 1].classList.add("first-project");
+    portfolioProjects[portfolio[1] - 1].classList.add("second-project");
+    portfolioProjects[portfolio[2] - 1].classList.add("hidden-project");
+    portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
+
+    if(portfolio[0] > portfolio[1]){
+        document.getElementById('projects').style.flexDirection = "column-reverse";
+    }
+    else{
+        document.getElementById('projects').style.flexDirection = "column";
+
+    }
+}
+
+
+function PortfolioUpArrow(){
+    portfolio = portfolio.map(item =>{ 
+        item++;
+        if(item == 5){
+            item = 1;
+        } 
+        return item;
+    });
+    PortfolioSliderRendering("up");
+    console.log(portfolio);
+}
+
+
+function PortfolioDownArrow(){
+    portfolio = portfolio.map(item =>{ 
+        item--;
+        if(item == 0){
+            item = 4;
+        } 
+        return item;
+    });
+    PortfolioSliderRendering("down");
+
+    console.log(portfolio);
+}
+
+/*
+*   Reakcie na stlacenie sipky hore, posunutie a presmerovanie na dalsie podstranku
+*
+*
+*/
 function UpArrowClick(){
     if (pages.page != 1){
         pages.page--;
-        contentBoxes[pages.page - 1].scrollIntoView();
-        
-        if(pages.page % 2 >= 1){
-            upArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
-            downArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
-        }else{
-            upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
-            
-        }
-        
+
+        contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+
+        ArrowBurgerColorChange(pages.page);
     }
 }
 
+/*
+*   Reakcie na stlacenie sipky dolu, posunutie a presmerovanie na dalsie podstranku
+*
+*
+*/
 function DownArrowClick(){
     if (pages.page != 6){
         pages.page++;
-        contentBoxes[pages.page - 1].scrollIntoView();
         
-        if(pages.page % 2 >= 1){
-            upArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
-            downArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
-        }else{
-            upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
-        }
+        contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+
+        ArrowBurgerColorChange(pages.page);
     }
 }
 
+/*
+*   Spracovanie akcie kliknutia v burger menu, nastavenie premennej pages.page
+*
+*/
 
-
-function BurgerClick(){
+function BurgerClick(index){
+    if(index != -1){
+        pages.page = index;
+        
+        ArrowBurgerColorChange(pages.page);
+    }
 
     burgerMenuIcon.classList.toggle("triggeredIcon");
     burgerMenu.classList.toggle("triggered");
 }
 
 
-
-document.addEventListener("scroll", (e) =>{
-
-    let offset = (window.innerWidth > 1024 ? contentBoxesPositions[2].height * 0.3 : contentBoxes[2].getElementsByClassName('left-box')[0].getBoundingClientRect().height * 0.2 + contentBoxes[2].getElementsByClassName('right-box')[0].getBoundingClientRect().height);
-
-
-    if(IsInViewport(contentBoxes[2], offset)){
-        Array.from(progressBars).forEach(bar => bar.getElementsByTagName('div')[0].classList.add('bar-visible'));
+function ScrollEventFunction(){
+    
+            //Animation of progressBars activated on scroll
+        let offset = (window.innerWidth > 1024 ? contentBoxesPositions[2].height * 0.3 : contentBoxes[2].getElementsByClassName('left-box')[0].getBoundingClientRect().height * 0.2 + contentBoxes[2].getElementsByClassName('right-box')[0].getBoundingClientRect().height);
+    
+        if(IsInViewport(contentBoxes[2], offset)){
+            Array.from(progressBars).forEach(bar => bar.getElementsByTagName('div')[0].classList.add('bar-visible'));
+        }
+        else{
+            Array.from(progressBars).forEach(bar => bar.getElementsByTagName('div')[0].classList.remove('bar-visible'));
+        }
+    
+            //Changing color of burger menu when window.innerWidrh <= 1024
+        if(window.innerWidth <= 1024){
+            if(!IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0) && pages.page != 1){
+                Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
+                
+            }
+            else if(IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0)){
+                Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
+    
+            }
     }
-    else{
-        Array.from(progressBars).forEach(bar => bar.getElementsByTagName('div')[0].classList.remove('bar-visible'));
-    }
+}
+    
 
 
 
+function WheelEventFunction(){
 
-    // if(window.scrollY % window.innerHeight > 0.5*window.innerHeight){
-        
-    //     console.log(upArrow.getBoundingClientRect());
-        // if((window.scrollY / window.innerHeight) % 1 < 0.50){
-        //     upArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
-        //     downArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
-        //     console.log("BROWN");
-        // }else{
-        //     upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-        //     downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-        //     console.log("GRAY");
+    // if(pages.page != 6 && IsInViewport(contentBoxes[pages.page], 0)){
+    //     pages.page++;
 
-        // }
-    //     console.log((window.scrollY / window.innerHeight) % 1);
+    //     document.removeEventListener("wheel", WheelEventFunction);
+    //     setTimeout(()=>contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"}), 1000);
+    //     //contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+    //     setTimeout(() => document.addEventListener("wheel", WheelEventFunction), 1000);
+    //     // contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+    //     console.log("DownArrowCalled, page: ", pages.page);
     // }
-});
+    // else if(pages.page != 1 && IsInViewport(contentBoxes[pages.page - 2], 0)){
+    //     pages.page--;
+    //     document.removeEventListener("wheel", WheelEventFunction);
+    //     setTimeout(()=>contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"}), 1000);
+    //     //contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+    //     setTimeout(() => document.addEventListener("wheel", WheelEventFunction), 1000);
+    //     console.log("UpArrowCalled, page: ", pages.page);
+    // }
 
 
-console.log(contentBoxesPositions);
+}
+
+/*
+*   Event listener na scroll
+*   Akcie, ktore sa vykonavaju na scroll
+*
+*
+*/
+document.addEventListener("scroll", ScrollEventFunction);
+
+document.addEventListener("wheel", WheelEventFunction);
+
+
+/*
+*   Spracovanie anchru v URL pri nacitani stranky
+*
+*
+*/
+window.onload = (event) =>{
+    let URL = document.URL;
+    if(URL.indexOf("/#") != -1){
+        let anchor = URL.slice(URL.indexOf("/#") + 1);
+        
+            if( anchor == "#about-me"){
+                pages.page = 1;
+            }
+            else if(anchor == "#front-end-road-map"){
+                pages.page = 2;
+            }
+            else if(anchor == "#other-skills"){
+                pages.page = 3;
+            }
+            else if(anchor == "#portfolio"){
+                pages.page = 4;
+            }
+            else if(anchor == "#career"){
+                pages.page = 5;
+            }
+            else if(anchor == "#contact"){
+                pages.page = 6;
+            }
+            else{
+                pages.page = 1;
+            }
+    }
+
+    ArrowBurgerColorChange(pages.page);
+}
