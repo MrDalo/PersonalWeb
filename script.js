@@ -16,23 +16,23 @@ const pages={
 };
 
 
-if(contentBoxesPositions[0].y != 0){
-    console.table(contentBoxesPositions);
-    console.log(`Y: ${contentBoxesPositions[0].y}`);
-    let offset = contentBoxesPositions[0].y;
-        //posunutie o offset
-    contentBoxesPositions.forEach(box => box.y = box.y - offset);
-        //uprava cisla stranky v objekte pages
-    contentBoxesPositions.forEach((box, index) => {
-        if(box.y == -offset){
-            pages.page = index + 1;
-            console.log(pages.page);
-        }
-    });
+// if(contentBoxesPositions[0].y != 0){
+//     console.table(contentBoxesPositions);
+//     console.log(`Y: ${contentBoxesPositions[0].y}`);
+//     let offset = contentBoxesPositions[0].y;
+//         //posunutie o offset
+//     contentBoxesPositions.forEach(box => box.y = box.y - offset);
+//         //uprava cisla stranky v objekte pages
+//     contentBoxesPositions.forEach((box, index) => {
+//         if(box.y == -offset){
+//             pages.page = index + 1;
+//             console.log(pages.page);
+//         }
+//     });
 
-    // console.table(contentBoxesPositions);
-    console.log(offset);
-}
+//     // console.table(contentBoxesPositions);
+//     console.log(offset);
+// }
 
 function IsInViewport(element, offset){
     const rect = element.getBoundingClientRect();
@@ -42,9 +42,8 @@ function IsInViewport(element, offset){
 function UpArrowClick(){
     if (pages.page != 1){
         pages.page--;
-        console.log(pages.page, " : " , contentBoxesPositions[pages.page - 1].y);
-        window.scroll(0, contentBoxesPositions[pages.page - 1].y);
-
+        contentBoxes[pages.page - 1].scrollIntoView();
+        
         if(pages.page % 2 >= 1){
             upArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
             downArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
@@ -53,7 +52,7 @@ function UpArrowClick(){
             upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
             downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
             Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
-
+            
         }
         
     }
@@ -62,8 +61,7 @@ function UpArrowClick(){
 function DownArrowClick(){
     if (pages.page != 6){
         pages.page++;
-        console.log(pages.page, " : " , contentBoxesPositions[pages.page - 1].y);
-        window.scroll(0, contentBoxesPositions[pages.page - 1].y);
+        contentBoxes[pages.page - 1].scrollIntoView();
         
         if(pages.page % 2 >= 1){
             upArrow.getElementsByTagName('path')[0].style.fill = mainBrown;
