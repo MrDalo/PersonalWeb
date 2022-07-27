@@ -87,23 +87,21 @@ function IsInViewport(element, offset){
 
 function PortfolioSliderRendering(direction){
     if(direction == "up"){
-        portfolioProjects[portfolio[0] - 1].classList.remove("second-project");
-        portfolioProjects[portfolio[1] - 1].classList.remove("hidden-project");
-        portfolioProjects[portfolio[2] - 1].classList.remove("hidden-project");
-        portfolioProjects[portfolio[3] - 1].classList.remove("first-project");
-
+        Array.from(portfolioProjects).forEach(item => item.classList.remove( 'first-project', 'second-project', 'hidden-project', 'last-hidden-project'));
+        
+        portfolioProjects[portfolio[0] - 1].classList.add("first-project");
+        portfolioProjects[portfolio[1] - 1].classList.add("second-project");
+        portfolioProjects[portfolio[2] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[3] - 1].classList.add("last-hidden-project");
     }
     else if(direction == "down"){
-        portfolioProjects[portfolio[0] - 1].classList.remove("hidden-project");
-        portfolioProjects[portfolio[1] - 1].classList.remove("first-project");
-        portfolioProjects[portfolio[2] - 1].classList.remove("second-project");
-        portfolioProjects[portfolio[3] - 1].classList.remove("hidden-project");
+        Array.from(portfolioProjects).forEach(item => item.classList.remove( 'first-project', 'second-project', 'hidden-project', 'last-hidden-project'));
 
+        portfolioProjects[portfolio[0] - 1].classList.add("first-project");
+        portfolioProjects[portfolio[1] - 1].classList.add("second-project");
+        portfolioProjects[portfolio[2] - 1].classList.add("last-hidden-project");
+        portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
     }
-    portfolioProjects[portfolio[0] - 1].classList.add("first-project");
-    portfolioProjects[portfolio[1] - 1].classList.add("second-project");
-    portfolioProjects[portfolio[2] - 1].classList.add("hidden-project");
-    portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
 
     if(portfolio[0] > portfolio[1]){
         document.getElementById('projects').style.flexDirection = "column-reverse";
@@ -123,7 +121,21 @@ function PortfolioUpArrow(){
         } 
         return item;
     });
+    
     PortfolioSliderRendering("up");
+    
+    Array.from(document.getElementsByClassName("hidden-project")).forEach(item => {
+        item.style.top = "0px";
+        item.style.animation = "hidden-project-animation 0.1s";
+    });
+
+    document.getElementsByClassName("last-hidden-project")[0].style.animation = "last-hidden-project-animation-up 2s";
+    document.getElementsByClassName("last-hidden-project")[0].style.top = "0px";
+    
+    document.getElementsByClassName("first-project")[0].style.animation = "first-project-animation-up 2s"
+    document.getElementsByClassName("second-project")[0].style.animation = "second-project-animation-up 2s"
+
+
     console.log(portfolio);
 }
 
@@ -136,7 +148,20 @@ function PortfolioDownArrow(){
         } 
         return item;
     });
+    
     PortfolioSliderRendering("down");
+    
+    Array.from(document.getElementsByClassName("hidden-project")).forEach(item => {
+        item.style.bottom = "0px";
+        item.style.animation = "hidden-project-animation 0.1s";
+    });
+    
+    document.getElementsByClassName("last-hidden-project")[0].style.animation = "last-hidden-project-animation-down 2s";
+    document.getElementsByClassName("last-hidden-project")[0].style.bottom = "0px";
+    
+    document.getElementsByClassName("first-project")[0].style.animation = "first-project-animation-down 2s"
+    document.getElementsByClassName("second-project")[0].style.animation = "second-project-animation-down 2s"
+    
 
     console.log(portfolio);
 }

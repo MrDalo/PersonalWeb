@@ -28,17 +28,55 @@
             flex-direction: column;
             row-gap: 35%; 
 
-            .hidden-project{
-                display: none !important;
-                transition: 1s linear;
+            .last-hidden-project{
+                position: absolute;
+                display: flex;
+                opacity: 0;
+                bottom: 0%;
+                margin-left: 24.3%;
+                margin-right: 24.3%;
+                right: -5.7%;
+                animation: last-hidden-project-animation-up 2s;
+                z-index: -1;
             }
 
+            .hidden-project{
+                position: absolute;
+                display: flex;
+                opacity: 0;
+                bottom: 0%;
+                margin-left: 24.3%;
+                margin-right: 24.3%;
+                animation: hidden-project-animation 0.1s;
+                right: -5.7%;
+                z-index: -1;
+            }
+            
+            .first-project{
+                position: relative;
+                display: flex;
+                opacity: 1;
+                animation: first-project-animation-up 2s;
+                z-index: 4;
+            }
+
+            
+            
+            .second-project{
+                position: relative;
+                display: flex;
+                opacity: 1;
+                animation: second-project-animation-up 2s;
+                z-index: 3;
+            }
+            
             .portfolio-project{
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 column-gap: 10%;
                 height: 35%;
+                transition: 3s linear;
                 
 
                 span{
@@ -104,5 +142,105 @@
             transform: scale(1.1);
         }
         
+    }
+}
+
+
+@keyframes first-project-animation-up{
+    from{
+        transform: translateY(200%);
+
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes second-project-animation-up{
+    from{
+        top: 0;
+        transform: translateY(100%);
+        opacity: 0;
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes first-project-animation-down{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes second-project-animation-down{
+    from{
+        transform: translateY(-200%);
+        opacity: 1;
+        
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes last-hidden-project-animation-up{
+    from{
+        top: 20%;
+        z-index: 1;
+        opacity: 1;
+        margin-left: 24.3%;
+        margin-right: 24.3%;
+    }
+    to{
+        top: 0;
+        z-index: -1;
+        opacity: 0;
+        margin-left: 24.3%;
+        margin-right: 24.3%;
+    }
+}
+
+@keyframes last-hidden-project-animation-down{
+    from{
+        top: auto;
+        bottom: 20%;
+        z-index: 1;
+        opacity: 1;
+        margin-left: 24.3%;
+        margin-right: 24.3%;
+        
+    }
+    to{
+        top: auto;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0;
+        margin-left: 24.3%;
+        margin-right: 24.3%;
+        
+    }
+}
+
+
+
+@keyframes hidden-project-animation{
+    
+    to{
+        opacity: 0;
     }
 }
