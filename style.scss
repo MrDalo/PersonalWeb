@@ -339,6 +339,22 @@ footer{
                 #projects{
                     row-gap: 0%;
 
+                    .last-hidden-project{
+                        margin-left: 0%;
+                        margin-right: 0%;
+                        right: auto;
+                        left: 11%;
+                        width: 80%;
+                    }
+        
+                    .hidden-project{
+                        margin-left: 0%;
+                        margin-right: 0%;
+                        right: auto;
+                        left: 11%;
+                        width: 80%;
+                    }
+
                     .portfolio-project{
                         span{
                             h3{
@@ -351,7 +367,11 @@ footer{
                             width: 90%;
                             max-width: 270px;
                         }
-                    }    
+                    } 
+
+                    
+                    
+
                     }
                 }
             }
@@ -396,6 +416,44 @@ footer{
                 section{
                     padding-left: 25%;
                 }
+            }
+        }
+
+        @keyframes last-hidden-project-animation-up{
+            from{
+                top: 20%;
+                z-index: 1;
+                opacity: 1;
+                margin-left: 0%;
+                margin-right: 0%;
+            }
+            to{
+                top: 0;
+                z-index: -1;
+                opacity: 0;
+                margin-left: 0%;
+                margin-right: 0%;
+            }
+        }
+        
+        @keyframes last-hidden-project-animation-down{
+            from{
+                top: auto;
+                bottom: 20%;
+                z-index: 1;
+                opacity: 1;
+                margin-left: 0%;
+                margin-right: 0%;
+                
+            }
+            to{
+                top: auto;
+                bottom: 0;
+                z-index: -1;
+                opacity: 0;
+                margin-left: 0%;
+                margin-right: 0%;
+                
             }
         }
 
