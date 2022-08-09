@@ -753,6 +753,11 @@
   }
 }
 
+#fifth-content-box #career-nav {
+  position: absolute;
+  top: 5vh;
+}
+
 #fifth-content-box .right-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -777,42 +782,290 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  row-gap: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#fifth-content-box .left-box #career-up-arrow, #fifth-content-box .left-box #career-down-arrow {
+  margin-left: 5.5%;
+  position: absolute;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  cursor: pointer;
+}
+
+#fifth-content-box .left-box #career-up-arrow:hover, #fifth-content-box .left-box #career-down-arrow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#fifth-content-box .left-box #career-up-arrow {
+  top: 10%;
+}
+
+#fifth-content-box .left-box #career-down-arrow {
+  bottom: 10%;
+}
+
+#fifth-content-box .left-box #list-of-jobs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 2%;
+  row-gap: 4%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  height: 70%;
+  padding-left: 32%;
 }
 
-#fifth-content-box .left-box article {
-  padding-left: 30%;
+#fifth-content-box .left-box #list-of-jobs article {
   width: 100%;
+  height: 47%;
   color: #FCF4DA;
 }
 
-#fifth-content-box .left-box article h2 {
+#fifth-content-box .left-box #list-of-jobs article h2 {
   font-size: 2.25em;
   font-weight: 400;
   position: relative;
-  left: -5%;
+  left: -3vw;
 }
 
-#fifth-content-box .left-box article h3 {
+#fifth-content-box .left-box #list-of-jobs article h3 {
   position: relative;
   font-size: 1.5em;
-  left: -4%;
+  left: -2vw;
   font-weight: 400;
 }
 
-#fifth-content-box .left-box article .date-of-job {
+#fifth-content-box .left-box #list-of-jobs article .date-of-job {
   position: relative;
-  left: -4%;
+  left: -2vw;
+}
+
+#fifth-content-box .left-box .last-hidden-job {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: last-hidden-job-animation-up 2s;
+          animation: last-hidden-job-animation-up 2s;
+}
+
+#fifth-content-box .left-box .hidden-job {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: hidden-job-animation 0.1s;
+          animation: hidden-job-animation 0.1s;
+}
+
+#fifth-content-box .left-box .first-job {
+  position: relative;
+  opacity: 1;
+  z-index: 4;
+  -webkit-animation: first-job-animation-up 2s;
+          animation: first-job-animation-up 2s;
+}
+
+#fifth-content-box .left-box .second-job {
+  position: relative;
+  opacity: 1;
+  z-index: 3;
+  -webkit-animation: second-job-animation-up 2s;
+          animation: second-job-animation-up 2s;
+}
+
+@-webkit-keyframes first-job-animation-up {
+  from {
+    -webkit-transform: translateY(106%);
+            transform: translateY(106%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes first-job-animation-up {
+  from {
+    -webkit-transform: translateY(106%);
+            transform: translateY(106%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes second-job-animation-up {
+  from {
+    top: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes second-job-animation-up {
+  from {
+    top: 0;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    opacity: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes first-job-animation-down {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes first-job-animation-down {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes second-job-animation-down {
+  from {
+    -webkit-transform: translateY(-108%);
+            transform: translateY(-108%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes second-job-animation-down {
+  from {
+    -webkit-transform: translateY(-108%);
+            transform: translateY(-108%);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes last-hidden-job-animation-up {
+  from {
+    top: 17.5%;
+    z-index: 1;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes last-hidden-job-animation-up {
+  from {
+    top: 17.5%;
+    z-index: 1;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes last-hidden-job-animation-down {
+  from {
+    top: auto;
+    bottom: 0%;
+    z-index: 1;
+    opacity: 1;
+  }
+  to {
+    top: auto;
+    bottom: -19%;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes last-hidden-job-animation-down {
+  from {
+    top: auto;
+    bottom: 0%;
+    z-index: 1;
+    opacity: 1;
+  }
+  to {
+    top: auto;
+    bottom: -19%;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes hidden-job-animation {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hidden-job-animation {
+  to {
+    opacity: 0;
+  }
+}
+
+#sixth-content-box {
+  height: 100vh;
 }
 
 #sixth-content-box .right-box {
@@ -911,7 +1164,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: fixed;
-  z-index: 5;
+  z-index: 11;
   top: 20px;
   left: 20px;
   width: 50px;
@@ -961,6 +1214,7 @@
   overflow: hidden;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
+  z-index: 10;
 }
 
 #burger-menu a {
@@ -1062,7 +1316,7 @@ html {
 body {
   background-color: #FCF4DA;
   width: 100%;
-  height: 660vh;
+  height: 650vh;
 }
 
 body div.content-box:nth-of-type(even) .left-box {
@@ -1351,7 +1605,7 @@ footer {
     font-size: 4em;
     color: #FCF4DA;
   }
-  #fifth-content-box .left-box article {
+  #fifth-content-box .left-box #list-of-jobs article {
     color: #323131;
     padding-right: 10%;
   }
@@ -1596,7 +1850,7 @@ footer {
   #fourth-content-box .left-box #projects .portfolio-project span a {
     width: 60%;
   }
-  #fifth-content-box .left-box article h2 {
+  #fifth-content-box .left-box #list-of-jobs article h2 {
     font-size: 2em;
   }
   @-webkit-keyframes first-project-animation-up {
@@ -1838,7 +2092,7 @@ footer {
   #second-content-box .left-box .skillPath:nth-of-type(5) article {
     left: -130%;
   }
-  #fifth-content-box .left-box article {
+  #fifth-content-box .left-box #list-of-jobs article {
     padding-left: 28%;
   }
   #sixth-content-box .left-box section {

@@ -2,6 +2,11 @@
 @import "./variables";
 
 #fifth-content-box{
+    #career-nav{
+        position: absolute;
+        top: 5vh;
+    }
+
     .right-box{
         @include flex-center;
         padding: 0 4% 0 4%;
@@ -16,35 +21,200 @@
     }
 
     .left-box{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        row-gap: 5vh;
-        flex-direction: column;
+        @include flex-center;
 
-        article{
-            padding-left: 30%;
-            width: 100%;
-            color: $mainBrown;
-
-            h2{
-                font-size: 2.25em;
-                font-weight: 400;
-                position: relative;
-                left: -5%;
-            }
-
-            h3{
-                position: relative;
-                font-size: 1.5em;
-                left: -4%;
-                font-weight: 400;
-            }
-
-            .date-of-job{
-                position: relative;
-                left: -4%;
-            }
+        #career-up-arrow, #career-down-arrow{
+            margin-left: 5.5%;
+            position: absolute;
+            transform: scale(0.8);
+            cursor: pointer;
         }
+
+        #career-up-arrow:hover, #career-down-arrow:hover{
+            transform: scale(1.1);
+        }
+
+        #career-up-arrow{
+            top: 10%;
+        }
+
+        #career-down-arrow{
+            bottom: 10%;
+        }
+
+        
+        #list-of-jobs{
+            display: flex;
+            justify-content: flex-start;
+            padding-top: 2%;
+            row-gap: 4%;
+            flex-direction: column;
+            width: 100%;
+            height: 70%;
+            padding-left: 32%;
+
+            article{
+                width: 100%;
+                height: 47%;
+                color: $mainBrown;
+    
+                h2{
+                    font-size: 2.25em;
+                    font-weight: 400;
+                    position: relative;
+                    left: -3vw;
+                }
+    
+                h3{
+                    position: relative;
+                    font-size: 1.5em;
+                    left: -2vw;
+                    font-weight: 400;
+                }
+    
+                .date-of-job{
+                    position: relative;
+                    left: -2vw;
+                }
+            }
+
+        }
+
+
+        .last-hidden-job{
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            animation: last-hidden-job-animation-up 2s;
+            // margin-left: 62%;
+            // margin-right: 30%;
+
+            
+        }
+
+        .hidden-job{
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            animation: hidden-job-animation 0.1s;
+            // margin-left: 62%;
+            // margin-right: 30%;
+        }
+
+        .first-job{
+            position: relative;
+            opacity: 1;
+            z-index: 4;
+            animation: first-job-animation-up 2s;
+        }
+        
+        .second-job{
+            position: relative;
+            opacity: 1;
+            z-index: 3;
+            animation: second-job-animation-up 2s;
+            
+        }
+
+    }
+}
+
+
+@keyframes first-job-animation-up{
+    from{
+        transform: translateY(106%);
+
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes second-job-animation-up{
+    from{
+        top: 0;
+        transform: translateY(100%);
+        opacity: 0;
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes first-job-animation-down{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes second-job-animation-down{
+    from{
+        transform: translateY(-108%);
+        opacity: 1;
+        
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes last-hidden-job-animation-up{
+    from{
+        top: 17.5%;
+        z-index: 1;
+        opacity: 1;
+        // margin-left: 62%;
+        // margin-right: 30%;
+    }
+    to{
+        top: 0;
+        z-index: -1;
+        opacity: 0;
+        // margin-left: 62%;
+        // margin-right: 30%;
+    }
+}
+
+@keyframes last-hidden-job-animation-down{
+    from{
+        top: auto;
+        bottom: 0%;
+        z-index: 1;
+        opacity: 1;
+        // margin-left: 62%;
+        // margin-right: 30%;
+        
+    }
+    to{
+        top: auto;
+        bottom: -19%;
+        z-index: -1;
+        opacity: 0;
+        // margin-left: 62%;
+        // margin-right: 30%;
+        
+    }
+}
+
+
+
+@keyframes hidden-job-animation{
+    
+    to{
+        opacity: 0;
     }
 }

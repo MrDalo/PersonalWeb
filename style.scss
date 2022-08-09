@@ -27,7 +27,7 @@ body{
     background-color: $mainBrown;
     width: 100%;
     // min-height: 5190px;
-    height: 660vh;
+    height: 650vh;
     div.content-box:nth-of-type(even){
         .left-box{
             background-color: $mainBrown;
@@ -385,9 +385,13 @@ footer{
             }
 
             .left-box{
-                article{
-                    color: $mainGray;
-                    padding-right: 10%;
+
+                #list-of-jobs{
+                    article{
+                        color: $mainGray;
+                        padding-right: 10%;
+                    }
+
                 }
             }
         }
@@ -604,9 +608,11 @@ footer{
 
             #fifth-content-box{
                 .left-box{
-                    article{
-                        h2{
-                            font-size: 2em;
+                    #list-of-jobs{
+                        article{
+                            h2{
+                                font-size: 2em;
+                            }
                         }
                     }
                 }
@@ -805,9 +811,11 @@ footer{
             
                 #fifth-content-box{
                     .left-box{
-                        article{
-                            padding-left: 28%;
-                        
+                        #list-of-jobs{
+                            article{
+                                padding-left: 28%;
+                            
+                            }
                         }
                     }
                 }

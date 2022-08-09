@@ -7,8 +7,13 @@ const mainGray = "#323131";
 const contentBoxes = document.getElementsByClassName("content-box");
 const contentBoxesPositions = Array.from(contentBoxes).map( box => box.getBoundingClientRect());
 const progressBars = document.getElementsByClassName("progress-bar");
+
 let portfolio = [1,2,3, 4];
 const portfolioProjects = document.getElementsByClassName("portfolio-project");
+
+let career = [1,2,3,4];
+const careerItems = document.getElementsByClassName("career-item");
+
 
 const pages={
     page: 1,
@@ -84,6 +89,88 @@ function IsInViewport(element, offset){
 }
 
 
+function CareerSliderRendering(direction){
+    if(direction == "up"){
+        Array.from(careerItems).forEach(item => item.classList.remove( 'first-job', 'second-job', 'hidden-job', 'last-hidden-job'));
+        
+        careerItems[career[0] - 1].classList.add("first-job");
+        careerItems[career[1] - 1].classList.add("second-job");
+        careerItems[career[2] - 1].classList.add("hidden-job");
+        careerItems[career[3] - 1].classList.add("last-hidden-job");
+    }
+    else if(direction == "down"){
+        Array.from(careerItems).forEach(item => item.classList.remove( 'first-job', 'second-job', 'hidden-job', 'last-hidden-job'));
+
+        careerItems[career[0] - 1].classList.add("first-job");
+        careerItems[career[1] - 1].classList.add("second-job");
+        careerItems[career[2] - 1].classList.add("last-hidden-job");
+        careerItems[career[3] - 1].classList.add("hidden-job");
+    }
+
+    if(career[0] > career[1]){
+        document.getElementById('list-of-jobs').style.flexDirection = "column-reverse";
+    }
+    else{
+        document.getElementById('list-of-jobs').style.flexDirection = "column";
+
+    }
+}
+
+function CareerUpArrow(){
+    career = career.map(item =>{ 
+        item++;
+        if(item == 5){
+            item = 1;
+        } 
+        return item;
+    });
+
+
+    CareerSliderRendering("up");
+
+    Array.from(document.getElementsByClassName("hidden-job")).forEach(item => {
+        item.style.top = "0px";
+        item.style.animation = "hidden-job-animation 0.1s";
+    });
+
+    document.getElementsByClassName("last-hidden-job")[0].style.animation = "last-hidden-job-animation-up 2s";
+    document.getElementsByClassName("last-hidden-job")[0].style.top = "0px";
+    
+    document.getElementsByClassName("first-job")[0].style.animation = "first-job-animation-up 2s"
+    document.getElementsByClassName("second-job")[0].style.animation = "second-job-animation-up 2s"
+
+
+
+
+}
+
+
+function CareerDownArrow(){
+    career = career.map(item =>{ 
+        item--;
+        if(item == 0){
+            item = 4;
+        } 
+        return item;
+    });
+
+
+    CareerSliderRendering("down");
+
+    Array.from(document.getElementsByClassName("hidden-job")).forEach(item => {
+        item.style.bottom = "0px";
+        item.style.animation = "hidden-job-animation 0.1s";
+    });
+    
+    document.getElementsByClassName("last-hidden-job")[0].style.animation = "last-hidden-job-animation-down 2s";
+    document.getElementsByClassName("last-hidden-job")[0].style.bottom = "0px";
+    
+    document.getElementsByClassName("first-job")[0].style.animation = "first-job-animation-down 2s"
+    document.getElementsByClassName("second-job")[0].style.animation = "second-job-animation-down 2s"
+    
+
+
+}
 
 function PortfolioSliderRendering(direction){
     if(direction == "up"){
@@ -174,8 +261,14 @@ function PortfolioDownArrow(){
 function UpArrowClick(){
     if (pages.page != 1){
         pages.page--;
+        
+        if(pages.page == 5){
+            document.getElementById("career-nav").scrollIntoView({behavior: "smooth"});
+        }
+        else{
+            contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+        }
 
-        contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
 
         ArrowBurgerColorChange(pages.page);
     }
@@ -190,7 +283,13 @@ function DownArrowClick(){
     if (pages.page != 6){
         pages.page++;
         
-        contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+        if(pages.page == 5){
+            document.getElementById("career-nav").scrollIntoView({behavior: "smooth"});
+        }
+        else{
+            contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+        }
+        
 
         ArrowBurgerColorChange(pages.page);
     }
@@ -239,27 +338,55 @@ function ScrollEventFunction(){
 }
     
 
+// document.getElementsByTagName('html')[0].addEventListener('scroll', (e) =>{
+//     console.log("Prevent scroolll");
+//     // e.preventDefault();
+//     // e.stopPropagation();
+//     // setTimeout(() => contentBoxes[3].scrollIntoView({behavior: "smooth"}), 1000);
 
+//     // return false;
+// })
 
-function WheelEventFunction(){
+function WheelEventFunction(e){
+
+    // console.log(e);
+    if(e.deltaY < 0){
+        console.log(`zaporna DeltaY: ${e.deltaY}`);
+    }
+    else if(e.deltaY > 0){
+        
+        pages.page++;
+        
+        document.removeEventListener("wheel",WheelEventFunction);
+        console.log(`kladna DeltaY: ${e.deltaY}`);
+        // setTimeout(()=>{
+            contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+        ArrowBurgerColorChange(pages.page);
+        // }, 500);
+
+        setTimeout(() => document.addEventListener("wheel", WheelEventFunction), 1000);
+    }
 
     // if(pages.page != 6 && IsInViewport(contentBoxes[pages.page], 0)){
     //     pages.page++;
 
-    //     document.removeEventListener("wheel", WheelEventFunction);
-    //     setTimeout(()=>contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"}), 1000);
-    //     //contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
-    //     setTimeout(() => document.addEventListener("wheel", WheelEventFunction), 1000);
-    //     // contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
-    //     console.log("DownArrowCalled, page: ", pages.page);
+    //     document.removeEventListener("wheel",(e) => WheelEventFunction(e));
+    //     setTimeout(()=>{
+    //         contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+    //         ArrowBurgerColorChange(pages.page);
+    //     }, 500);
+
+    //     setTimeout(() => document.addEventListener("wheel",(e) => WheelEventFunction(e)), 600);
     // }
     // else if(pages.page != 1 && IsInViewport(contentBoxes[pages.page - 2], 0)){
     //     pages.page--;
-    //     document.removeEventListener("wheel", WheelEventFunction);
-    //     setTimeout(()=>contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"}), 1000);
-    //     //contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
-    //     setTimeout(() => document.addEventListener("wheel", WheelEventFunction), 1000);
-    //     console.log("UpArrowCalled, page: ", pages.page);
+    //     document.removeEventListener("wheel",(e) => WheelEventFunction(e));
+    //     setTimeout(()=>{
+    //         contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
+    //         ArrowBurgerColorChange(pages.page);
+    //     }, 500);
+
+    //     setTimeout(() => document.addEventListener("wheel",(e) => WheelEventFunction(e)), 600);
     // }
 
 
