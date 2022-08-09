@@ -385,14 +385,32 @@ footer{
             }
 
             .left-box{
+                #career-up-arrow, #career-down-arrow{
+                    path{
+                        fill: $mainGray;
+
+                    }
+                }
+
+                #career-down-arrow{
+                    bottom: 6%;
+                }
 
                 #list-of-jobs{
+
+                    padding-left: 27%;
+
                     article{
                         color: $mainGray;
-                        padding-right: 10%;
                     }
 
                 }
+
+                .last-hidden-job, .hidden-job{
+                    width: 73% !important;
+                    left: 27%;
+                }
+
             }
         }
 
@@ -806,19 +824,6 @@ footer{
                     }
                 }
 
-                
-
-            
-                #fifth-content-box{
-                    .left-box{
-                        #list-of-jobs{
-                            article{
-                                padding-left: 28%;
-                            
-                            }
-                        }
-                    }
-                }
 
                 #sixth-content-box{
                             
