@@ -1605,9 +1605,21 @@ footer {
     font-size: 4em;
     color: #FCF4DA;
   }
+  #fifth-content-box .left-box #career-up-arrow path, #fifth-content-box .left-box #career-down-arrow path {
+    fill: #323131;
+  }
+  #fifth-content-box .left-box #career-down-arrow {
+    bottom: 6%;
+  }
+  #fifth-content-box .left-box #list-of-jobs {
+    padding-left: 27%;
+  }
   #fifth-content-box .left-box #list-of-jobs article {
     color: #323131;
-    padding-right: 10%;
+  }
+  #fifth-content-box .left-box .last-hidden-job, #fifth-content-box .left-box .hidden-job {
+    width: 73% !important;
+    left: 27%;
   }
   #sixth-content-box .right-box h1 {
     font-size: 4em;
@@ -2091,9 +2103,6 @@ footer {
   }
   #second-content-box .left-box .skillPath:nth-of-type(5) article {
     left: -130%;
-  }
-  #fifth-content-box .left-box #list-of-jobs article {
-    padding-left: 28%;
   }
   #sixth-content-box .left-box section {
     padding-left: 20%;
