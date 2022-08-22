@@ -965,6 +965,7 @@ html {
 }
 
 body {
+  position: relative;
   background-color: #FCF4DA;
   width: 100%;
 }
@@ -1090,6 +1091,11 @@ footer {
     row-gap: 20%;
   }
 }
+@media only screen and (max-width: 1199px) and (max-width: 1024px) {
+  #arrows {
+    display: none;
+  }
+}
 @media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-height: 800px) {
   #fifth-content-box .left-box #list-of-jobs article h2 {
     font-size: 2em;
@@ -1172,6 +1178,10 @@ footer {
     color: #323131;
     margin-bottom: 6vh;
   }
+  #first-content-box .left-box {
+    height: 70%;
+    padding-top: 10vh;
+  }
   #first-content-box .left-box div:nth-of-type(2) {
     padding-left: 0;
     justify-content: center;
@@ -1183,7 +1193,9 @@ footer {
     stroke: #323131;
   }
   #first-content-box .right-box {
+    height: 30%;
     min-height: 300px;
+    padding-bottom: 5vh;
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
@@ -1444,9 +1456,6 @@ footer {
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-width: 768px) {
-  #arrows {
-    display: none;
-  }
   #first-content-box .left-box div:first-of-type {
     padding-left: 10%;
     padding-right: 10%;
