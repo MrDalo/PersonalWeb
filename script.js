@@ -5,6 +5,7 @@ const downArrow = document.getElementById("down-arrow");
 const mainBrown = "#FCF4DA";
 const mainGray = "#323131";
 const contentBoxes = document.getElementsByClassName("content-box");
+const contentBoxesArray = Array.from(contentBoxes);
 const contentBoxesPositions = Array.from(contentBoxes).map( box => box.getBoundingClientRect());
 const progressBars = document.getElementsByClassName("progress-bar");
 let scrollAction = false;
@@ -245,13 +246,16 @@ function UpArrowClick(){
     if (pages.page != 1){
         pages.page--;
         
-        if(pages.page == 5){
-            document.getElementById("career-nav").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-        }
-        else{
-            contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-        }
-
+        // if(pages.page == 5){
+        //     document.getElementById("career-nav").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        // }
+        // else{
+        //     contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        // }
+        scrollAction = true;
+        // setTimeout(() => {scrollAction = false; ArrowBurgerColorChange(pages.page);}, 500 );
+        setTimeout(() => {scrollAction = false;}, 700 );
+        contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 
         ArrowBurgerColorChange(pages.page);
     }
@@ -266,15 +270,18 @@ function DownArrowClick(){
     if (pages.page != 6){
         pages.page++;
         
-        if(pages.page == 5){
-            document.getElementById("career-nav").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-        }
-        else{
-            contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-        }
-        
+        // if(pages.page == 5){
+        //     document.getElementById("career-nav").scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        // }
+        // else{
+        //     contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+        // }
+        scrollAction = true;
+        // setTimeout(() => {scrollAction = false; ArrowBurgerColorChange(pages.page);}, 500 );
+        setTimeout(() => {scrollAction = false;}, 700 );
+        contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
 
-        ArrowBurgerColorChange(pages.page);
+         ArrowBurgerColorChange(pages.page);
     }
 }
 
@@ -284,6 +291,9 @@ function DownArrowClick(){
 */
 
 function BurgerClick(index){
+    scrollAction = true;
+    setTimeout(() => {scrollAction = false;}, 700 );
+
     if(index != -1){
         pages.page = index;
         
@@ -295,143 +305,90 @@ function BurgerClick(index){
 }
 
 
-function ScrollEventFunction(){
+
+function MainContentBoxScrollEventFunction(){
     
     //Animation of progressBars activated on scroll
     let offset = (window.innerWidth > 1024 ? contentBoxesPositions[2].height * 0.3 : contentBoxes[2].getElementsByClassName('left-box')[0].getBoundingClientRect().height * 0.2 + contentBoxes[2].getElementsByClassName('right-box')[0].getBoundingClientRect().height);
-
+    
     if(IsInViewport(contentBoxes[2], offset)){
         Array.from(progressBars).forEach(bar => bar.getElementsByTagName('div')[0].classList.add('bar-visible'));
     }
     else{
         Array.from(progressBars).forEach(bar => bar.getElementsByTagName('div')[0].classList.remove('bar-visible'));
     }
+    
+    //User's scroll, scroll to another section
+    if(!scrollAction){
 
-        //Changing color of burger menu when window.innerWidrh <= 1024
+        if( pages.page != 6 && IsInViewport(contentBoxes[pages.page], 50)){
+            scrollAction = true;
+            
+            setTimeout(() => {scrollAction = false;}, 200 );
+            pages.page++;
+            
+        }else if(pages.page != 1 && IsInViewport(contentBoxes[pages.page-2], 50)){
+            scrollAction = true;
+            
+            setTimeout(() => {scrollAction = false;}, 200 );
+            pages.page--;
+        }
+    }
+
+
+    
+    //Changing color of burger menu when window.innerWidrh <= 1024
     if(window.innerWidth <= 1024){
         if(!IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0) && pages.page != 1){
             Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
-            
+    
         }
         else if(IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0)){
             Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
-
+        
         }
     }
-    
-    //User's scroll, scroll to another section
-    
-    
-}
-
-
-// document.getElementsByTagName('html')[0].addEventListener('scroll', (e) =>{
-    //     console.log("Prevent scroolll");
-    //     // e.preventDefault();
-    //     // e.stopPropagation();
-    //     // setTimeout(() => contentBoxes[3].scrollIntoView({behavior: "smooth"}), 1000);
-    
-    //     // return false;
-    // })
-    
-function WheelEventFunction(e){
-
-    // if(!scrollAction){
-    //     // console.log(contentBoxes[pages.page-1]);
-    //     if(IsInViewport(contentBoxes[pages.page], 50)){
-    //         scrollAction = true;
-            
-    //         setTimeout(() => {scrollAction = false;},500 );
-    //         pages.page++;
-    //         setTimeout(()=>{contentBoxes[pages.page-1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});},300);
-    //         // contentBoxes[pages.page-1].scrollIntoView();
-    //         console.log("page: ", contentBoxes[pages.page-1]);
-            
-    //     }else if(pages.page != 1 && IsInViewport(contentBoxes[pages.page-2], 50)){
-    //         scrollAction = true;
-            
-    //         setTimeout(() => {scrollAction = false;},500 );
-    //         pages.page--;
-    //         contentBoxes[pages.page-1].scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
-    //         console.log("page: ", contentBoxes[pages.page-1]);
-    //     }
-    // }
-
-    // console.log(e);
-    // if(e.deltaY < 0){
-    //     console.log(`zaporna DeltaY: ${e.deltaY}`);
-    // }
-    // else if(e.deltaY > 0){
-        
-    //     pages.page++;
-        
-    //     document.removeEventListener("wheel",WheelEventFunction);
-    //     console.log(`kladna DeltaY: ${e.deltaY}`);
-    //     // setTimeout(()=>{
-    //         contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
-    //     ArrowBurgerColorChange(pages.page);
-    //     // }, 500);
-
-    //     setTimeout(() => document.addEventListener("wheel", WheelEventFunction), 1000);
-    // }
-
-    // if(pages.page != 6 && IsInViewport(contentBoxes[pages.page], 0)){
-    //     pages.page++;
-
-    //     document.removeEventListener("wheel",(e) => WheelEventFunction(e));
-    //     setTimeout(()=>{
-    //         contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
-    //         ArrowBurgerColorChange(pages.page);
-    //     }, 500);
-
-    //     setTimeout(() => document.addEventListener("wheel",(e) => WheelEventFunction(e)), 600);
-    // }
-    // else if(pages.page != 1 && IsInViewport(contentBoxes[pages.page - 2], 0)){
-    //     pages.page--;
-    //     document.removeEventListener("wheel",(e) => WheelEventFunction(e));
-    //     setTimeout(()=>{
-    //         contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
-    //         ArrowBurgerColorChange(pages.page);
-    //     }, 500);
-
-    //     setTimeout(() => document.addEventListener("wheel",(e) => WheelEventFunction(e)), 600);
-    // }
 
 
 }
 
+function ScrollEventFunction(){
 
-// function disableScroll() {
-//     scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-//         // if any scroll is attempted,
-//         // set this to the previous value
-//         window.onscroll = function() {
-//             window.scrollTo(scrollLeft, scrollTop);
-//         };
-// }
+    //Changing color of burger menu when window.innerWidrh <= 1024
+    if(window.innerWidth <= 1024){
+        if(!IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0) && pages.page != 1){
+            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
 
-// // disableScroll();
+        }
+        else if(IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0)){
+            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
+        
+        }
+    }
 
-// window.onscroll = function() {
-//     pages.page++;
-//     window.scrollTo(contentBoxes[pages.page - 1].getBoundingClientRect().y, contentBoxes[pages.page - 1].getBoundingClientRect().top);
-//     // contentBoxes[pages.page - 1].scrollIntoView({behavior: "smooth"});
-// };
+}
+
+
 
 /*
 *   Event listener na scroll
 *   Akcie, ktore sa vykonavaju na scroll
-*
+*/
+document.getElementById('main-content-box').addEventListener("scroll", MainContentBoxScrollEventFunction);
+
+/*
+*   Page checker
 *
 */
-
-// document.addEventListener("scroll", ScrollEventFunction);
-window.addEventListener("scroll", ScrollEventFunction);
-
-document.addEventListener("wheel", WheelEventFunction);
-
+setInterval(()=>{
+    if(!scrollAction){
+        contentBoxesArray.forEach((box, i) => {if(IsInViewport(box, 50)){
+            pages.page = i+1;
+            ArrowBurgerColorChange(pages.page);
+        }})
+    }
+}, 500);
 
 /*
 *   Spracovanie anchru v URL pri nacitani stranky
@@ -467,4 +424,22 @@ window.onload = (event) =>{
     }
 
     ArrowBurgerColorChange(pages.page);
+
+     
+    const bodyElement = document.getElementsByTagName('body')[0];
+    const mainContentBox = document.getElementById('main-content-box');
+
+    if(window.innerWidth >= 1024){
+        bodyElement.style.height = "100vh";
+        bodyElement.style.overflowY = "hidden";
+        mainContentBox.style.height = "100vh";
+        mainContentBox.style.overflowY = "scroll";
+        mainContentBox.style.scrollSnapType = "y mandatory";
+        mainContentBox.style.scrollSnapStop = "always";
+        Array.from(contentBoxes).forEach(item => item.style.scrollSnapAlign = "start");
+    }else{
+        bodyElement.style.height = "650vh";
+        mainContentBox.style.height = "100%";
+
+    }
 }

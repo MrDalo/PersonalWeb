@@ -16,6 +16,7 @@
   padding: 0;
   font-family: 'Arima Madurai','Fredoka', cursive, sans-serif;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -27,7 +28,13 @@ body{
     background-color: $mainBrown;
     width: 100%;
     // min-height: 5190px;
-    height: 650vh;
+    // height: 650vh;
+
+
+    // height: 100vh;
+    // overflow-y: hidden;
+    
+    
     div.content-box:nth-of-type(even){
         .left-box{
             background-color: $mainBrown;
@@ -41,12 +48,12 @@ body{
             color: $mainGray;
         }
     }
-    
+
     div.content-box:nth-of-type(odd){
         .left-box{
             background-color: $mainGray;
         }
-        
+
         .right-box{
             background-color: $mainBrown;
         }
@@ -55,6 +62,21 @@ body{
             color: $mainBrown;
         }
     }
+
+
+
+}
+
+#main-content-box{
+    width: 100%;
+    // height: 100vh;
+    // scroll-snap-type: y mandatory;
+    // overflow-y: scroll;
+    // scroll-snap-stop: always;
+}
+
+#main-content-box::-webkit-scrollbar{
+    display: none;
 }
 
 body::-webkit-scrollbar{
@@ -65,8 +87,9 @@ body::-webkit-scrollbar{
     position: relative;
     display: flex;
     width: 100%;
-    min-height: 800px;
+    min-height: 750px;
     height: 110vh;
+    // scroll-snap-align: start;
 }
 
 
@@ -94,7 +117,7 @@ body::-webkit-scrollbar{
     flex-wrap: wrap;
     z-index: 2;
 
-    
+
 }
 
 #up-arrow, #down-arrow{
@@ -102,11 +125,11 @@ body::-webkit-scrollbar{
     height: 50%;
     width: 100%;
     transform: scale(0.7);
-    
+
     svg:hover{
         transform: scale(1.3);
         cursor: pointer;
-        
+
     }
     svg, path{
         transition: 0.2s linear;
@@ -126,6 +149,10 @@ footer{
     font-size: 0.6em;
 }
 
+@media only screen and (max-height: 800px) {
+
+}
+
 
 @media only screen and (max-width: 1199px) {
     html{
@@ -135,7 +162,7 @@ footer{
 
 
     #first-content-box{
-        
+
         .left-box{
             div:first-of-type{
                 height: 50%;
@@ -151,9 +178,9 @@ footer{
                 transform: scale(1);
                 top: 10%;
                 left: 40%;
-                
+
             }
-            
+
             .skillPath:nth-of-type(2){
                 left: 20%;
 
@@ -162,9 +189,10 @@ footer{
                 }
             }
 
+
             .skillPath:nth-of-type(4){
                 left: 20%;
-    
+
                 article{
                     right: 5%;
                 }
@@ -182,12 +210,37 @@ footer{
     }
 
     @media only screen and(max-width: 1024px) {
-        html{
-            font-size: 16px;
+
+
+        @media only screen and (max-height: 800px) {
+            #fifth-content-box{
     
+                .left-box{
+                    #list-of-jobs{
+                        article{
+                            h2{
+                                font-size: 2em;
+                            }
+
+                            h3{
+                                font-size: 1.25em;
+                            }
+
+                            ul{
+                                font-size: 0.8em;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        
+        html{
+            font-size: 16px;
+
+        }
+
+
 
         footer{
             visibility: visible;
@@ -200,14 +253,14 @@ footer{
             width: 100%;
             height: 110vh;
         }
-        
-        
+
+
         .left-box{
             position: relative;
             width: 100%;
             height: 80%;
         }
-        
+
         .right-box{
             position: relative;
             width: 100%;
@@ -220,31 +273,31 @@ footer{
                 .left-box{
                     background-color: $mainBrown;
                 }
-        
+
                 .right-box{
                     background-color: $mainGray;
                 }
-        
+
                 p{
                     color: $mainGray;
                 }
             }
-            
+
             div.content-box:nth-of-type(odd){
                 .left-box{
                     background-color: $mainBrown;
                 }
-                
+
                 .right-box{
                     background-color: $mainGray;
                 }
-        
+
                 p{
                     color: $mainGray;
                 }
             }
         }
-        
+
 
         #first-content-box{
             flex-direction: column;
@@ -277,7 +330,7 @@ footer{
 
                 path{
                     stroke: $mainGray;
-                    
+
                 }
             }
 
@@ -289,7 +342,7 @@ footer{
 
         #second-content-box{
             .right-box{
-        
+
                 h1{
                     font-size: 4em;
                     color: $mainBrown;
@@ -300,7 +353,7 @@ footer{
 
         #third-content-box{
             .right-box{
-        
+
                 h1{
                     font-size: 4em;
                     color: $mainBrown;
@@ -326,7 +379,7 @@ footer{
 
         #fourth-content-box{
             .right-box{
-        
+
                 h1{
                     font-size: 4em;
                     color: $mainBrown;
@@ -346,7 +399,7 @@ footer{
                         left: 11%;
                         width: 80.1%;
                     }
-        
+
                     .hidden-project{
                         margin-left: 0%;
                         margin-right: 0%;
@@ -356,19 +409,19 @@ footer{
                     }
 
                     .portfolio-project{
-                        
+
                         span{
                             h3{
                                 font-size: 1.8em;
                             }
                         }
-                    
+
                         a{
                             img{
                                 width: 90%;
                                 max-width: 270px;
                             }
-                        } 
+                        }
 
                     }
                 }
@@ -377,7 +430,7 @@ footer{
 
         #fifth-content-box{
             .right-box{
-        
+
                 h1{
                     font-size: 4em;
                     color: $mainBrown;
@@ -417,7 +470,7 @@ footer{
 
         #sixth-content-box{
             .right-box{
-        
+
                 h1{
                     font-size: 4em;
                     color: $mainBrown;
@@ -442,13 +495,13 @@ footer{
         @keyframes first-project-animation-up{
             from{
                 transform: translateY(150%);
-        
+
             }
             to{
                 transform: translateY(0%);
             }
         }
-        
+
         @keyframes second-project-animation-up{
             from{
                 top: 0;
@@ -456,34 +509,34 @@ footer{
                 opacity: 0;
                 margin-left: 0%;
                 margin-right: 0%;
-        
+
             }
             to{
                 transform: translateY(0%);
                 opacity: 1;
             }
         }
-        
-        
+
+
         @keyframes first-project-animation-down{
             from{
                 transform: translateY(-110%);
                 opacity: 0;
                 margin-left: 0%;
                 margin-right: 0%;
-        
+
             }
             to{
                 transform: translateY(0%);
                 opacity: 1;
             }
         }
-        
+
         @keyframes second-project-animation-down{
             from{
                 transform: translateY(-150%);
                 opacity: 1;
-                
+
             }
             to{
                 transform: translateY(0%);
@@ -507,7 +560,7 @@ footer{
                 margin-right: 0%;
             }
         }
-        
+
         @keyframes last-hidden-project-animation-down{
             from{
                 top: auto;
@@ -516,7 +569,7 @@ footer{
                 opacity: 1;
                 margin-left: 0%;
                 margin-right: 0%;
-                
+
             }
             to{
                 top: auto;
@@ -525,7 +578,7 @@ footer{
                 opacity: 0;
                 margin-left: 0%;
                 margin-right: 0%;
-                
+
             }
         }
 
@@ -560,48 +613,48 @@ footer{
                     .skillPath:first-of-type{
                         left: 55%;
                         top: 17%;
-            
+
                         article{
                             left:-40%;
                         }
                     }
-            
+
                     .skillPath:nth-of-type(2){
                         left: 20%;
                         top: 32%;
-            
+
                         article{
                             right: -30%;
                         }
                     }
-            
+
                     .skillPath:nth-of-type(3){
                         left: 60%;
                         top: 43%;
-            
+
                         article{
                             left:-60%;
                         }
                     }
-            
+
                     .skillPath:nth-of-type(4){
                         left: 18%;
                         top: 60%;
-            
+
                         article{
                             right:-70%;
                         }
                     }
-            
+
                     .skillPath:nth-of-type(5){
                         left: 70%;
                         top: 75%;
-            
+
                         article{
                             left: -130%;
                         }
                     }
-                    
+
                     article{
                         width: 220%;
                     }
@@ -615,12 +668,12 @@ footer{
                             span{
                                 a{
                                     width: 60%;
-                                    
+
                                 }
                             }
                         }
                     }
-                    
+
                 }
             }
 
@@ -639,13 +692,13 @@ footer{
             @keyframes first-project-animation-up{
                 from{
                     transform: translateY(150%);
-            
+
                 }
                 to{
                     transform: translateY(0%);
                 }
             }
-            
+
             @keyframes second-project-animation-up{
                 from{
                     top: 0;
@@ -653,34 +706,34 @@ footer{
                     opacity: 0;
                     margin-left: 0%;
                     margin-right: 0%;
-            
+
                 }
                 to{
                     transform: translateY(0%);
                     opacity: 1;
                 }
             }
-            
-            
+
+
             @keyframes first-project-animation-down{
                 from{
                     transform: translateY(-60%);
                     opacity: 0;
                     margin-left: 0%;
                     margin-right: 0%;
-            
+
                 }
                 to{
                     transform: translateY(0%);
                     opacity: 1;
                 }
             }
-            
+
             @keyframes second-project-animation-down{
                 from{
                     transform: translateY(-150%);
                     opacity: 1;
-                    
+
                 }
                 to{
                     transform: translateY(0%);
@@ -704,7 +757,7 @@ footer{
                     margin-right: 0%;
                 }
             }
-            
+
             @keyframes last-hidden-project-animation-down{
                 from{
                     top: auto;
@@ -713,7 +766,7 @@ footer{
                     opacity: 1;
                     margin-left: 0%;
                     margin-right: 0%;
-                    
+
                 }
                 to{
                     top: auto;
@@ -722,12 +775,12 @@ footer{
                     opacity: 0;
                     margin-left: 0%;
                     margin-right: 0%;
-                    
+
                 }
             }
-    
-            
-            
+
+
+
             @media only screen and (max-width: 600px) {
                 html{
                     font-size: 12px;
@@ -748,12 +801,12 @@ footer{
                 .left-box{
                     min-height: 600px;
                 }
-                
+
                 .right-box{
                     min-height: 200px;
                 }
 
-                
+
 
                 #first-content-box{
                      min-height: 800px;
@@ -774,49 +827,49 @@ footer{
                             transform: scale(0.8);
                             // top: 10%;
                             left: 35%;
-                            
+
                         }
 
                         .skillPath:first-of-type{
                             left: 55%;
                             top: 17%;
-                
+
                             article{
                                 left:-40%;
                             }
                         }
-                
+
                         .skillPath:nth-of-type(2){
                             left: 20%;
                             top: 32%;
-                
+
                             article{
                                 right: -30%;
                             }
                         }
-                
+
                         .skillPath:nth-of-type(3){
                             left: 60%;
                             top: 50%;
-                
+
                             article{
                                 left:-60%;
                             }
                         }
-                
+
                         .skillPath:nth-of-type(4){
                             left: 18%;
                             top: 60%;
-                
+
                             article{
                                 right:-70%;
                             }
                         }
-                
+
                         .skillPath:nth-of-type(5){
                             left: 45%;
                             top: 75%;
-                
+
                             article{
                                 left: -130%;
                             }
@@ -826,25 +879,25 @@ footer{
 
 
                 #sixth-content-box{
-                            
+
                     .left-box{
-                    
+
                         section{
                             padding-left: 20%;
                         }
                     }
                 }
-            
+
                 @keyframes first-project-animation-up{
                     from{
                         transform: translateY(150%);
-                
+
                     }
                     to{
                         transform: translateY(0%);
                     }
                 }
-                
+
                 @keyframes second-project-animation-up{
                     from{
                         top: 0;
@@ -852,34 +905,34 @@ footer{
                         opacity: 0;
                         margin-left: 0%;
                         margin-right: 0%;
-                
+
                     }
                     to{
                         transform: translateY(0%);
                         opacity: 1;
                     }
                 }
-                
-                
+
+
                 @keyframes first-project-animation-down{
                     from{
                         transform: translateY(-40%);
                         opacity: 0;
                         margin-left: 0%;
                         margin-right: 0%;
-                
+
                     }
                     to{
                         transform: translateY(0%);
                         opacity: 1;
                     }
                 }
-                
+
                 @keyframes second-project-animation-down{
                     from{
                         transform: translateY(-150%);
                         opacity: 1;
-                        
+
                     }
                     to{
                         transform: translateY(0%);
@@ -903,7 +956,7 @@ footer{
                         margin-right: 0%;
                     }
                 }
-                
+
                 @keyframes last-hidden-project-animation-down{
                     from{
                         top: auto;
@@ -912,7 +965,7 @@ footer{
                         opacity: 1;
                         margin-left: 0%;
                         margin-right: 0%;
-                        
+
                     }
                     to{
                         top: auto;
@@ -921,19 +974,19 @@ footer{
                         opacity: 0;
                         margin-left: 0%;
                         margin-right: 0%;
-                        
+
                     }
                 }
-        
-    
+
+
             }
 
         }
-    
+
     }
 
  }
 
- 
+
 
 
