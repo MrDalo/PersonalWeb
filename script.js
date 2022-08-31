@@ -14,10 +14,10 @@ let scrollAction = false;
 const smallerThan1024px = window.innerWidth < 1024 ? true : false;
 
 
-let portfolio = [1,2,3, 4];
+let portfolio = [1, 2, 3, 4, 5];
 const portfolioProjects = document.getElementsByClassName("portfolio-project");
 
-let career = [1,2,3,4];
+let career = [1, 2, 3, 4];
 const careerItems = document.getElementsByClassName("career-item");
 
 
@@ -46,21 +46,6 @@ function ArrowBurgerColorChange(pageNumber){
         downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
         Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
     }
-    
-    
-
-    // if(window.innerWidth <= 1024){
-    //     if(pageNumber == 1){
-    //         upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-    //         downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-    //         Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
-    //     }
-    //     else{
-    //         upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-    //         downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-    //         Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
-    //     }
-    // }
 }
 
 
@@ -172,7 +157,8 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[0] - 1].classList.add("first-project");
         portfolioProjects[portfolio[1] - 1].classList.add("second-project");
         portfolioProjects[portfolio[2] - 1].classList.add("hidden-project");
-        portfolioProjects[portfolio[3] - 1].classList.add("last-hidden-project");
+        portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[4] - 1].classList.add("last-hidden-project");
     }
     else if(direction == "down"){
         Array.from(portfolioProjects).forEach(item => item.classList.remove( 'first-project', 'second-project', 'hidden-project', 'last-hidden-project'));
@@ -181,6 +167,7 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[1] - 1].classList.add("second-project");
         portfolioProjects[portfolio[2] - 1].classList.add("last-hidden-project");
         portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
     }
 
     if(portfolio[0] > portfolio[1]){
@@ -196,7 +183,7 @@ function PortfolioSliderRendering(direction){
 function PortfolioUpArrow(){
     portfolio = portfolio.map(item =>{ 
         item++;
-        if(item == 5){
+        if(item == 6){
             item = 1;
         } 
         return item;
@@ -224,7 +211,7 @@ function PortfolioDownArrow(){
     portfolio = portfolio.map(item =>{ 
         item--;
         if(item == 0){
-            item = 4;
+            item = 5;
         } 
         return item;
     });
