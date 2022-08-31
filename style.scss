@@ -322,8 +322,8 @@ footer{
             }
 
             .left-box{
-                height: 70%;
-                padding-top: 10vh;
+                height: 60%;
+                padding-top: 12vh;
                 div:nth-of-type(2){
                     padding-left: 0;
                     justify-content: center;
@@ -339,9 +339,9 @@ footer{
             }
 
             .right-box{
-                height: 30%;
+                height: 40%;
                 min-height: 300px;
-                padding-bottom: 5vh;
+                padding-bottom: 7vh;
 
             }
         }
@@ -596,8 +596,8 @@ footer{
 
                 .left-box{
                     div:first-of-type{
-                        padding-left: 10%;
-                        padding-right: 10%;
+                        padding-left: 5%;
+                        padding-right: 5%;
                     }
                 }
             }
@@ -787,6 +787,12 @@ footer{
             @media only screen and (max-width: 600px) {
                 html{
                     font-size: 12px;
+                }
+
+                #burger-menu{
+                    width: 98%;
+                    font-size: 1.4em;
+
                 }
 
 

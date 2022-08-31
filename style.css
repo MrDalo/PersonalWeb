@@ -895,6 +895,7 @@
   overflow: hidden;
   transition: 0.3s linear;
   z-index: 10;
+  font-size: 1.2em;
 }
 #burger-menu a {
   text-decoration: none;
@@ -1179,8 +1180,8 @@ footer {
     margin-bottom: 6vh;
   }
   #first-content-box .left-box {
-    height: 70%;
-    padding-top: 10vh;
+    height: 60%;
+    padding-top: 12vh;
   }
   #first-content-box .left-box div:nth-of-type(2) {
     padding-left: 0;
@@ -1193,9 +1194,9 @@ footer {
     stroke: #323131;
   }
   #first-content-box .right-box {
-    height: 30%;
+    height: 40%;
     min-height: 300px;
-    padding-bottom: 5vh;
+    padding-bottom: 7vh;
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
@@ -1457,8 +1458,8 @@ footer {
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-width: 768px) {
   #first-content-box .left-box div:first-of-type {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
   .right-box h1 {
     font-size: 3.5em !important;
@@ -1668,6 +1669,10 @@ footer {
 @media only screen and (max-width: 1199px) and (max-width: 1024px) and (max-width: 768px) and (max-width: 600px) {
   html {
     font-size: 12px;
+  }
+  #burger-menu {
+    width: 98%;
+    font-size: 1.4em;
   }
   body {
     min-height: 4800px;

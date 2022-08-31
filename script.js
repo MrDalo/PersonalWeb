@@ -8,6 +8,8 @@ const contentBoxes = document.getElementsByClassName("content-box");
 const contentBoxesArray = Array.from(contentBoxes);
 const contentBoxesPositions = Array.from(contentBoxes).map( box => box.getBoundingClientRect());
 const progressBars = document.getElementsByClassName("progress-bar");
+const headersOfSections = document.getElementsByClassName("right-box");
+let headerInViewPort;
 let scrollAction = false;
 const smallerThan1024px = window.innerWidth < 1024 ? true : false;
 
@@ -47,18 +49,18 @@ function ArrowBurgerColorChange(pageNumber){
     
     
 
-    if(window.innerWidth <= 1024){
-        if(pageNumber == 1){
-            upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
-        }
-        else{
-            upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
-        }
-    }
+    // if(window.innerWidth <= 1024){
+    //     if(pageNumber == 1){
+    //         upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+    //         downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+    //         Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
+    //     }
+    //     else{
+    //         upArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+    //         downArrow.getElementsByTagName('path')[0].style.fill = mainGray;
+    //         Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
+    //     }
+    // }
 }
 
 
@@ -72,6 +74,11 @@ function ArrowBurgerColorChange(pageNumber){
 function IsInViewport(element, offset){
     const rect = element.getBoundingClientRect();
     return ((window.innerHeight || document.documentElement.clientHeight) - offset - rect.top > 0 && rect.bottom - offset > 0); 
+}
+
+function IsHeaderInViewport(element){
+    const rect = element.getBoundingClientRect();
+    return (rect.top > - 180 && rect.top < 40); 
 }
 
 
@@ -325,17 +332,17 @@ function MainContentBoxScrollEventFunction(){
 
 
     
-    //Changing color of burger menu when window.innerWidrh <= 1024
-    if(window.innerWidth <= 1024){
-        if(!IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0) && pages.page != 1){
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
+    // //Changing color of burger menu when window.innerWidrh <= 1024
+    // if(window.innerWidth <= 1024){
+    //     if(!IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0) && pages.page != 1){
+    //         Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
             
-        }
-        else if(IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0)){
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
+    //     }
+    //     else if(IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0)){
+    //         Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
         
-        }
-    }
+    //     }
+    // }
 
 
 }
@@ -354,15 +361,26 @@ function ScrollEventFunction(){
 
     //Changing color of burger menu when window.innerWidrh <= 1024
     if(window.innerWidth <= 1024){
-        if(!IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0) && pages.page != 1){
-            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
+        headerInViewPort = false;
+        Array.from(headersOfSections).forEach( (element, index) =>{
+            if(IsHeaderInViewport(element) && index != 0){
+                headerInViewPort = true;
+                console.log(element,"index je: ", index);
+            }
+        });
 
-        }
-        else if(IsInViewport(contentBoxes[pages.page - 1].getElementsByClassName('right-box')[0], 0)){
+        if(headerInViewPort){
             Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainBrown);
-        
+            
         }
+        else{
+            Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
+            
+        }
+
+
     }
+
 
 }
 
@@ -434,9 +452,9 @@ window.onload = (event) =>{
         }, 500);
         
     }else{
-        // bodyElement.style.height = "650vh";
         mainContentBox.style.height = "100%";
         window.addEventListener("scroll", ScrollEventFunction);
+        Array.from(burgerMenuIcon.getElementsByTagName('div')).forEach(element => element.style.backgroundColor = mainGray);
 
     }
 }
