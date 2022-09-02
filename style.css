@@ -350,15 +350,14 @@
 #fourth-content-box .left-box #projects .portfolio-project span a {
   width: 40%;
   cursor: pointer;
-}
-#fourth-content-box .left-box #projects .portfolio-project span a button {
   background-color: #494949;
   color: #FCF4DA;
-  width: 100%;
   border-radius: 20px;
-  cursor: pointer;
   height: 2.5em;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #fourth-content-box .left-box #projects .portfolio-project a {
   width: 45%;
