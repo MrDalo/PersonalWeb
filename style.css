@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&family=Fredoka:wght@300;400;500&display=swap");
 #profile-picture-div {
-  background-image: url("./pictures/profilePicture.jpg");
+  background-image: url("./pictures/profilePicture.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -11,7 +11,7 @@
 
 #profile-picture-div-inner {
   display: none;
-  background-image: url("./pictures/profilePictureSmall.png");
+  background-image: url("./pictures/profilePictureSmall.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
