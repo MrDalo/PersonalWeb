@@ -14,8 +14,8 @@ let scrollAction = false;
 const smallerThan1024px = window.innerWidth < 1024 ? true : false;
 
 
-// let portfolio = [1, 2, 3, 4, 5];
-let portfolio = [1, 2, 3, 4];
+let portfolio = [1, 2, 3, 4, 5];
+// let portfolio = [1, 2, 3, 4];
 const portfolioProjects = document.getElementsByClassName("portfolio-project");
 
 let career = [1, 2, 3, 4];
@@ -158,8 +158,8 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[0] - 1].classList.add("first-project");
         portfolioProjects[portfolio[1] - 1].classList.add("second-project");
         portfolioProjects[portfolio[2] - 1].classList.add("hidden-project");
-        // portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
-        portfolioProjects[portfolio[3] - 1].classList.add("last-hidden-project");
+        portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[4] - 1].classList.add("last-hidden-project");
     }
     else if(direction == "down"){
         Array.from(portfolioProjects).forEach(item => item.classList.remove( 'first-project', 'second-project', 'hidden-project', 'last-hidden-project'));
@@ -168,7 +168,7 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[1] - 1].classList.add("second-project");
         portfolioProjects[portfolio[2] - 1].classList.add("last-hidden-project");
         portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
-        // portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
     }
 
     if(portfolio[0] > portfolio[1]){
@@ -184,8 +184,8 @@ function PortfolioSliderRendering(direction){
 function PortfolioUpArrow(){
     portfolio = portfolio.map(item =>{ 
         item++;
-        // if(item == 6){
-        if(item == 5){
+        // if(item == 5){
+        if(item == 6){
             item = 1;
         } 
         return item;
@@ -213,7 +213,7 @@ function PortfolioDownArrow(){
     portfolio = portfolio.map(item =>{ 
         item--;
         if(item == 0){
-            item = 4;
+            item = 5;
         } 
         return item;
     });
