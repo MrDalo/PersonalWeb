@@ -14,7 +14,7 @@ let scrollAction = false;
 const smallerThan1024px = window.innerWidth < 1024 ? true : false;
 
 
-let portfolio = [1, 2, 3, 4, 5];
+let portfolio = [1, 2, 3, 4, 5, 6];
 // let portfolio = [1, 2, 3, 4];
 const portfolioProjects = document.getElementsByClassName("portfolio-project");
 
@@ -159,7 +159,8 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[1] - 1].classList.add("second-project");
         portfolioProjects[portfolio[2] - 1].classList.add("hidden-project");
         portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
-        portfolioProjects[portfolio[4] - 1].classList.add("last-hidden-project");
+        portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[5] - 1].classList.add("last-hidden-project");
     }
     else if(direction == "down"){
         Array.from(portfolioProjects).forEach(item => item.classList.remove( 'first-project', 'second-project', 'hidden-project', 'last-hidden-project'));
@@ -169,6 +170,7 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[2] - 1].classList.add("last-hidden-project");
         portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
         portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[5] - 1].classList.add("hidden-project");
     }
 
     if(portfolio[0] > portfolio[1]){
@@ -185,7 +187,7 @@ function PortfolioUpArrow(){
     portfolio = portfolio.map(item =>{ 
         item++;
         // if(item == 5){
-        if(item == 6){
+        if(item == 7){
             item = 1;
         } 
         return item;
@@ -213,7 +215,7 @@ function PortfolioDownArrow(){
     portfolio = portfolio.map(item =>{ 
         item--;
         if(item == 0){
-            item = 5;
+            item = 6;
         } 
         return item;
     });
