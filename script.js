@@ -14,7 +14,7 @@ let scrollAction = false;
 const smallerThan1024px = window.innerWidth < 1024 ? true : false;
 
 
-let portfolio = [1, 2, 3, 4, 5, 6];
+let portfolio = [1, 2, 3, 4, 5, 6, 7];
 // let portfolio = [1, 2, 3, 4];
 const portfolioProjects = document.getElementsByClassName("portfolio-project");
 
@@ -112,11 +112,11 @@ function CareerUpArrow(){
         item.style.animation = "hidden-job-animation 0.1s";
     });
 
-    document.getElementsByClassName("last-hidden-job")[0].style.animation = "last-hidden-job-animation-up 2s";
+    document.getElementsByClassName("last-hidden-job")[0].style.animation = "last-hidden-job-animation-up 1s";
     document.getElementsByClassName("last-hidden-job")[0].style.top = "0px";
     
-    document.getElementsByClassName("first-job")[0].style.animation = "first-job-animation-up 2s"
-    document.getElementsByClassName("second-job")[0].style.animation = "second-job-animation-up 2s"
+    document.getElementsByClassName("first-job")[0].style.animation = "first-job-animation-up 1s"
+    document.getElementsByClassName("second-job")[0].style.animation = "second-job-animation-up 1s"
 
 
 
@@ -141,11 +141,11 @@ function CareerDownArrow(){
         item.style.animation = "hidden-job-animation 0.1s";
     });
     
-    document.getElementsByClassName("last-hidden-job")[0].style.animation = "last-hidden-job-animation-down 2s";
+    document.getElementsByClassName("last-hidden-job")[0].style.animation = "last-hidden-job-animation-down 1s";
     document.getElementsByClassName("last-hidden-job")[0].style.bottom = "0px";
     
-    document.getElementsByClassName("first-job")[0].style.animation = "first-job-animation-down 2s"
-    document.getElementsByClassName("second-job")[0].style.animation = "second-job-animation-down 2s"
+    document.getElementsByClassName("first-job")[0].style.animation = "first-job-animation-down 1s"
+    document.getElementsByClassName("second-job")[0].style.animation = "second-job-animation-down 1s"
     
 
 
@@ -160,7 +160,8 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[2] - 1].classList.add("hidden-project");
         portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
         portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
-        portfolioProjects[portfolio[5] - 1].classList.add("last-hidden-project");
+        portfolioProjects[portfolio[5] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[6] - 1].classList.add("last-hidden-project");
     }
     else if(direction == "down"){
         Array.from(portfolioProjects).forEach(item => item.classList.remove( 'first-project', 'second-project', 'hidden-project', 'last-hidden-project'));
@@ -171,6 +172,7 @@ function PortfolioSliderRendering(direction){
         portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
         portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
         portfolioProjects[portfolio[5] - 1].classList.add("hidden-project");
+        portfolioProjects[portfolio[6] - 1].classList.add("hidden-project");
     }
 
     if(portfolio[0] > portfolio[1]){
@@ -187,7 +189,7 @@ function PortfolioUpArrow(){
     portfolio = portfolio.map(item =>{ 
         item++;
         // if(item == 5){
-        if(item == 7){
+        if(item == 8){
             item = 1;
         } 
         return item;
@@ -200,11 +202,11 @@ function PortfolioUpArrow(){
         item.style.animation = "hidden-project-animation 0.1s";
     });
 
-    document.getElementsByClassName("last-hidden-project")[0].style.animation = "last-hidden-project-animation-up 2s";
+    document.getElementsByClassName("last-hidden-project")[0].style.animation = "last-hidden-project-animation-up 1s";
     document.getElementsByClassName("last-hidden-project")[0].style.top = "0px";
     
-    document.getElementsByClassName("first-project")[0].style.animation = "first-project-animation-up 2s"
-    document.getElementsByClassName("second-project")[0].style.animation = "second-project-animation-up 2s"
+    document.getElementsByClassName("first-project")[0].style.animation = "first-project-animation-up 1s"
+    document.getElementsByClassName("second-project")[0].style.animation = "second-project-animation-up 1s"
 
 
     // console.log(portfolio);
@@ -215,7 +217,7 @@ function PortfolioDownArrow(){
     portfolio = portfolio.map(item =>{ 
         item--;
         if(item == 0){
-            item = 6;
+            item = 7;
         } 
         return item;
     });
@@ -227,11 +229,11 @@ function PortfolioDownArrow(){
         item.style.animation = "hidden-project-animation 0.1s";
     });
     
-    document.getElementsByClassName("last-hidden-project")[0].style.animation = "last-hidden-project-animation-down 2s";
+    document.getElementsByClassName("last-hidden-project")[0].style.animation = "last-hidden-project-animation-down 1s";
     document.getElementsByClassName("last-hidden-project")[0].style.bottom = "0px";
     
-    document.getElementsByClassName("first-project")[0].style.animation = "first-project-animation-down 2s"
-    document.getElementsByClassName("second-project")[0].style.animation = "second-project-animation-down 2s"
+    document.getElementsByClassName("first-project")[0].style.animation = "first-project-animation-down 1s"
+    document.getElementsByClassName("second-project")[0].style.animation = "second-project-animation-down 1s"
     
 
     // console.log(portfolio);

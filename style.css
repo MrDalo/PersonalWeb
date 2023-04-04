@@ -166,15 +166,6 @@
   transition-timing-function: linear;
 }
 
-@-webkit-keyframes dash {
-  from {
-    stroke-dashoffset: 0;
-  }
-  to {
-    stroke-dashoffset: 600;
-  }
-}
-
 @keyframes dash {
   from {
     stroke-dashoffset: 0;
@@ -183,7 +174,6 @@
     stroke-dashoffset: 600;
   }
 }
-@-webkit-keyframes loadArticle {}
 @keyframes loadArticle {}
 #third-content-box .right-box {
   display: flex;
@@ -294,8 +284,7 @@
   margin-left: 24.3%;
   margin-right: 24.3%;
   right: -5.7%;
-  -webkit-animation: last-hidden-project-animation-up 2s;
-          animation: last-hidden-project-animation-up 2s;
+  animation: last-hidden-project-animation-up 1s;
   z-index: -1;
 }
 #fourth-content-box .left-box #projects .hidden-project {
@@ -305,8 +294,7 @@
   bottom: 0%;
   margin-left: 24.3%;
   margin-right: 24.3%;
-  -webkit-animation: hidden-project-animation 0.1s;
-          animation: hidden-project-animation 0.1s;
+  animation: hidden-project-animation 0.1s;
   right: -5.7%;
   z-index: -1;
 }
@@ -314,16 +302,14 @@
   position: relative;
   display: flex;
   opacity: 1;
-  -webkit-animation: first-project-animation-up 2s;
-          animation: first-project-animation-up 2s;
+  animation: first-project-animation-up 1s;
   z-index: 4;
 }
 #fourth-content-box .left-box #projects .second-project {
   position: relative;
   display: flex;
   opacity: 1;
-  -webkit-animation: second-project-animation-up 2s;
-          animation: second-project-animation-up 2s;
+  animation: second-project-animation-up 1s;
   z-index: 3;
 }
 #fourth-content-box .left-box #projects .portfolio-project {
@@ -385,15 +371,6 @@
   transform: scale(1.1);
 }
 
-@-webkit-keyframes first-project-animation-up {
-  from {
-    transform: translateY(200%);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-
 @keyframes first-project-animation-up {
   from {
     transform: translateY(200%);
@@ -402,35 +379,10 @@
     transform: translateY(0%);
   }
 }
-@-webkit-keyframes second-project-animation-up {
-  from {
-    top: 0;
-    transform: translateY(100%);
-    opacity: 0;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 @keyframes second-project-animation-up {
   from {
     top: 0;
     transform: translateY(100%);
-    opacity: 0;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes first-project-animation-down {
-  from {
-    transform: translateY(-100%);
     opacity: 0;
     margin-left: 0%;
     margin-right: 0%;
@@ -452,16 +404,6 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes second-project-animation-down {
-  from {
-    transform: translateY(-200%);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 @keyframes second-project-animation-down {
   from {
     transform: translateY(-200%);
@@ -470,22 +412,6 @@
   to {
     transform: translateY(0%);
     opacity: 1;
-  }
-}
-@-webkit-keyframes last-hidden-project-animation-up {
-  from {
-    top: 20%;
-    z-index: 1;
-    opacity: 1;
-    margin-left: 24.3%;
-    margin-right: 24.3%;
-  }
-  to {
-    top: 0;
-    z-index: -1;
-    opacity: 0;
-    margin-left: 24.3%;
-    margin-right: 24.3%;
   }
 }
 @keyframes last-hidden-project-animation-up {
@@ -498,24 +424,6 @@
   }
   to {
     top: 0;
-    z-index: -1;
-    opacity: 0;
-    margin-left: 24.3%;
-    margin-right: 24.3%;
-  }
-}
-@-webkit-keyframes last-hidden-project-animation-down {
-  from {
-    top: auto;
-    bottom: 20%;
-    z-index: 1;
-    opacity: 1;
-    margin-left: 24.3%;
-    margin-right: 24.3%;
-  }
-  to {
-    top: auto;
-    bottom: 0;
     z-index: -1;
     opacity: 0;
     margin-left: 24.3%;
@@ -538,11 +446,6 @@
     opacity: 0;
     margin-left: 24.3%;
     margin-right: 24.3%;
-  }
-}
-@-webkit-keyframes hidden-project-animation {
-  to {
-    opacity: 0;
   }
 }
 @keyframes hidden-project-animation {
@@ -624,38 +527,25 @@
   position: absolute;
   opacity: 0;
   z-index: -1;
-  -webkit-animation: last-hidden-job-animation-up 2s;
-          animation: last-hidden-job-animation-up 2s;
+  animation: last-hidden-job-animation-up 2s;
 }
 #fifth-content-box .left-box .hidden-job {
   position: absolute;
   opacity: 0;
   z-index: -1;
-  -webkit-animation: hidden-job-animation 0.1s;
-          animation: hidden-job-animation 0.1s;
+  animation: hidden-job-animation 0.1s;
 }
 #fifth-content-box .left-box .first-job {
   position: relative;
   opacity: 1;
   z-index: 4;
-  -webkit-animation: first-job-animation-up 2s;
-          animation: first-job-animation-up 2s;
+  animation: first-job-animation-up 2s;
 }
 #fifth-content-box .left-box .second-job {
   position: relative;
   opacity: 1;
   z-index: 3;
-  -webkit-animation: second-job-animation-up 2s;
-          animation: second-job-animation-up 2s;
-}
-
-@-webkit-keyframes first-job-animation-up {
-  from {
-    transform: translateY(106%);
-  }
-  to {
-    transform: translateY(0%);
-  }
+  animation: second-job-animation-up 2s;
 }
 
 @keyframes first-job-animation-up {
@@ -666,35 +556,10 @@
     transform: translateY(0%);
   }
 }
-@-webkit-keyframes second-job-animation-up {
-  from {
-    top: 0;
-    transform: translateY(100%);
-    opacity: 0;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 @keyframes second-job-animation-up {
   from {
     top: 0;
     transform: translateY(100%);
-    opacity: 0;
-    margin-left: 0%;
-    margin-right: 0%;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes first-job-animation-down {
-  from {
-    transform: translateY(-100%);
     opacity: 0;
     margin-left: 0%;
     margin-right: 0%;
@@ -716,16 +581,6 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes second-job-animation-down {
-  from {
-    transform: translateY(-108%);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
 @keyframes second-job-animation-down {
   from {
     transform: translateY(-108%);
@@ -736,18 +591,6 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes last-hidden-job-animation-up {
-  from {
-    top: 17.5%;
-    z-index: 1;
-    opacity: 1;
-  }
-  to {
-    top: 0;
-    z-index: -1;
-    opacity: 0;
-  }
-}
 @keyframes last-hidden-job-animation-up {
   from {
     top: 17.5%;
@@ -756,20 +599,6 @@
   }
   to {
     top: 0;
-    z-index: -1;
-    opacity: 0;
-  }
-}
-@-webkit-keyframes last-hidden-job-animation-down {
-  from {
-    top: auto;
-    bottom: 0%;
-    z-index: 1;
-    opacity: 1;
-  }
-  to {
-    top: auto;
-    bottom: -19%;
     z-index: -1;
     opacity: 0;
   }
@@ -785,11 +614,6 @@
     top: auto;
     bottom: -19%;
     z-index: -1;
-    opacity: 0;
-  }
-}
-@-webkit-keyframes hidden-job-animation {
-  to {
     opacity: 0;
   }
 }
@@ -1291,14 +1115,6 @@ footer {
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
-  @-webkit-keyframes first-project-animation-up {
-    from {
-      transform: translateY(150%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
   @keyframes first-project-animation-up {
     from {
       transform: translateY(150%);
@@ -1309,19 +1125,6 @@ footer {
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
-  @-webkit-keyframes second-project-animation-up {
-    from {
-      top: 0;
-      transform: translateY(110%);
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
   @keyframes second-project-animation-up {
     from {
       top: 0;
@@ -1337,18 +1140,6 @@ footer {
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
-  @-webkit-keyframes first-project-animation-down {
-    from {
-      transform: translateY(-110%);
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
   @keyframes first-project-animation-down {
     from {
       transform: translateY(-110%);
@@ -1363,16 +1154,6 @@ footer {
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
-  @-webkit-keyframes second-project-animation-down {
-    from {
-      transform: translateY(-150%);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
   @keyframes second-project-animation-down {
     from {
       transform: translateY(-150%);
@@ -1385,22 +1166,6 @@ footer {
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
-  @-webkit-keyframes last-hidden-project-animation-up {
-    from {
-      top: 20%;
-      z-index: 1;
-      opacity: 1;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      top: 0;
-      z-index: -1;
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-  }
   @keyframes last-hidden-project-animation-up {
     from {
       top: 20%;
@@ -1419,24 +1184,6 @@ footer {
   }
 }
 @media only screen and (max-width: 1199px) and (max-width: 1024px) {
-  @-webkit-keyframes last-hidden-project-animation-down {
-    from {
-      top: auto;
-      bottom: 20%;
-      z-index: 1;
-      opacity: 1;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      top: auto;
-      bottom: 0;
-      z-index: -1;
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-  }
   @keyframes last-hidden-project-animation-down {
     from {
       top: auto;
@@ -1511,14 +1258,6 @@ footer {
   #fifth-content-box .left-box #list-of-jobs article h2 {
     font-size: 2em;
   }
-  @-webkit-keyframes first-project-animation-up {
-    from {
-      transform: translateY(150%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
   @keyframes first-project-animation-up {
     from {
       transform: translateY(150%);
@@ -1527,35 +1266,10 @@ footer {
       transform: translateY(0%);
     }
   }
-  @-webkit-keyframes second-project-animation-up {
-    from {
-      top: 0;
-      transform: translateY(60%);
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
   @keyframes second-project-animation-up {
     from {
       top: 0;
       transform: translateY(60%);
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes first-project-animation-down {
-    from {
-      transform: translateY(-60%);
       opacity: 0;
       margin-left: 0%;
       margin-right: 0%;
@@ -1577,16 +1291,6 @@ footer {
       opacity: 1;
     }
   }
-  @-webkit-keyframes second-project-animation-down {
-    from {
-      transform: translateY(-150%);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
   @keyframes second-project-animation-down {
     from {
       transform: translateY(-150%);
@@ -1595,22 +1299,6 @@ footer {
     to {
       transform: translateY(0%);
       opacity: 1;
-    }
-  }
-  @-webkit-keyframes last-hidden-project-animation-up {
-    from {
-      top: 19%;
-      z-index: 1;
-      opacity: 1;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      top: 0;
-      z-index: -1;
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
     }
   }
   @keyframes last-hidden-project-animation-up {
@@ -1623,24 +1311,6 @@ footer {
     }
     to {
       top: 0;
-      z-index: -1;
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-  }
-  @-webkit-keyframes last-hidden-project-animation-down {
-    from {
-      top: auto;
-      bottom: 19%;
-      z-index: 1;
-      opacity: 1;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      top: auto;
-      bottom: 0;
       z-index: -1;
       opacity: 0;
       margin-left: 0%;
@@ -1739,14 +1409,6 @@ footer {
   #sixth-content-box .left-box section {
     padding-left: 20%;
   }
-  @-webkit-keyframes first-project-animation-up {
-    from {
-      transform: translateY(150%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
   @keyframes first-project-animation-up {
     from {
       transform: translateY(150%);
@@ -1755,35 +1417,10 @@ footer {
       transform: translateY(0%);
     }
   }
-  @-webkit-keyframes second-project-animation-up {
-    from {
-      top: 0;
-      transform: translateY(40%);
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
   @keyframes second-project-animation-up {
     from {
       top: 0;
       transform: translateY(40%);
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes first-project-animation-down {
-    from {
-      transform: translateY(-40%);
       opacity: 0;
       margin-left: 0%;
       margin-right: 0%;
@@ -1805,16 +1442,6 @@ footer {
       opacity: 1;
     }
   }
-  @-webkit-keyframes second-project-animation-down {
-    from {
-      transform: translateY(-150%);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(0%);
-      opacity: 1;
-    }
-  }
   @keyframes second-project-animation-down {
     from {
       transform: translateY(-150%);
@@ -1823,22 +1450,6 @@ footer {
     to {
       transform: translateY(0%);
       opacity: 1;
-    }
-  }
-  @-webkit-keyframes last-hidden-project-animation-up {
-    from {
-      top: 17.5%;
-      z-index: 1;
-      opacity: 1;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      top: 0;
-      z-index: -1;
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
     }
   }
   @keyframes last-hidden-project-animation-up {
@@ -1851,24 +1462,6 @@ footer {
     }
     to {
       top: 0;
-      z-index: -1;
-      opacity: 0;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-  }
-  @-webkit-keyframes last-hidden-project-animation-down {
-    from {
-      top: auto;
-      bottom: 17.5%;
-      z-index: 1;
-      opacity: 1;
-      margin-left: 0%;
-      margin-right: 0%;
-    }
-    to {
-      top: auto;
-      bottom: 0;
       z-index: -1;
       opacity: 0;
       margin-left: 0%;

@@ -1,0 +1,23 @@
+{
+  "name": "personalweb",
+  "version": "1.0.0",
+  "description": "Personal web of Dalibor Králik",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrDalo/PersonalWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrDalo/PersonalWeb/issues"
+  },
+  "homepage": "https://github.com/MrDalo/PersonalWeb#readme",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
+}

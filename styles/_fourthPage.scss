@@ -36,7 +36,7 @@
                 margin-left: 24.3%;
                 margin-right: 24.3%;
                 right: -5.7%;
-                animation: last-hidden-project-animation-up 2s;
+                animation: last-hidden-project-animation-up 1s;
                 z-index: -1;
             }
 
@@ -56,7 +56,7 @@
                 position: relative;
                 display: flex;
                 opacity: 1;
-                animation: first-project-animation-up 2s;
+                animation: first-project-animation-up 1s;
                 z-index: 4;
             }
 
@@ -66,7 +66,7 @@
                 position: relative;
                 display: flex;
                 opacity: 1;
-                animation: second-project-animation-up 2s;
+                animation: second-project-animation-up 1s;
                 z-index: 3;
             }
             
