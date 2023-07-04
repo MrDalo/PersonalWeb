@@ -892,8 +892,11 @@ footer {
     font-size: 14px;
   }
   #first-content-box .left-box div:first-of-type {
-    height: 50%;
+    height: 80%;
     justify-content: center;
+  }
+  #first-content-box h1 {
+    margin-bottom: 0vh;
   }
   #second-content-box .left-box #road-map {
     transform: scale(1);
@@ -1001,10 +1004,9 @@ footer {
     font-size: 4em;
     font-weight: 400;
     color: #323131;
-    margin-bottom: 6vh;
   }
   #first-content-box .left-box {
-    height: 60%;
+    height: 70%;
     padding-top: 12vh;
   }
   #first-content-box .left-box div:nth-of-type(2) {
@@ -1018,7 +1020,7 @@ footer {
     stroke: #323131;
   }
   #first-content-box .right-box {
-    height: 40%;
+    height: 30%;
     min-height: 300px;
     padding-bottom: 7vh;
   }

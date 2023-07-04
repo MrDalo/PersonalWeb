@@ -163,9 +163,13 @@ footer{
 
         .left-box{
             div:first-of-type{
-                height: 50%;
+                height: 80%;
                 justify-content: center;
             }
+        }
+
+        h1{
+            margin-bottom: 0vh;
         }
     }
 
@@ -318,11 +322,10 @@ footer{
                 font-size: 4em;
                 font-weight: 400;
                 color: $mainGray;
-                margin-bottom: 6vh;
             }
 
             .left-box{
-                height: 60%;
+                height: 70%;
                 padding-top: 12vh;
                 div:nth-of-type(2){
                     padding-left: 0;
@@ -339,7 +342,7 @@ footer{
             }
 
             .right-box{
-                height: 40%;
+                height: 30%;
                 min-height: 300px;
                 padding-bottom: 7vh;
 
