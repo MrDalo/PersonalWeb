@@ -62,6 +62,10 @@
         }
 
         #socials{
+            svg{
+                transition-duration: 100ms;
+            }
+
             svg:hover{
                 transform: scale(1.2);
                 cursor: pointer;

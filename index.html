@@ -1,513 +1,926 @@
 <!DOCTYPE html>
 <html lang="sk">
-<head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6M841Y2GYZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-6M841Y2GYZ');
-    </script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <meta name="description" content="Dalibor Králik - ETL developer, Front-end developer and student of FIT BUT." />
-    <meta name="author" content="Dalibor Králik dadokralik@gmail.com" />
-    <meta name="copyright" content="dadokralik@gmail.com" />
-    <title>Dalibor Králik</title>
+	<head>
+		<!-- Google tag (gtag.js) -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-6M841Y2GYZ"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-    <meta property="og:locale" content="sk_SK" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Dalbor Králik" />
-    <meta property="og:site_name" content="Dalbor Králik" />
-    <meta property="og:description" content="Dalibor Králik - ETL developer, Front-end developer and student of FIT BUT." />
-    <meta property="og:url" content="https://wedevs.sk/daliborkralik/" />
-    <meta property="og:image" content="https://wedevs.sk/daliborkralik/pictures/profilePictureSmall.webp" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="577" />
-    <meta property="og:image:height" content="508" />
-    <meta property="og:image:alt" content="Dalibor Králik" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@DaliborKralik"/>
+			gtag("config", "G-6M841Y2GYZ");
+		</script>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+		<meta
+			name="description"
+			content="Dalibor Králik - ETL developer, Front-end developer and student of FIT BUT."
+		/>
+		<meta name="author" content="Dalibor Králik dadokralik@gmail.com" />
+		<meta name="copyright" content="dadokralik@gmail.com" />
+		<title>Dalibor Králik</title>
 
+		<meta property="og:locale" content="sk_SK" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Dalbor Králik" />
+		<meta property="og:site_name" content="Dalbor Králik" />
+		<meta
+			property="og:description"
+			content="Dalibor Králik - ETL developer, Front-end developer and student of FIT BUT."
+		/>
+		<meta property="og:url" content="https://wedevs.sk/daliborkralik/" />
+		<meta
+			property="og:image"
+			content="https://wedevs.sk/daliborkralik/pictures/profilePictureSmall.webp"
+		/>
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="577" />
+		<meta property="og:image:height" content="508" />
+		<meta property="og:image:alt" content="Dalibor Králik" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@DaliborKralik" />
 
+		<link
+			href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+			rel="stylesheet"
+		/>
 
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+		<!--Links for Javasript and CSS-->
+		<script src="script.js" type="text/javascript" defer></script>
+		<link href="style.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<span id="burger-menu-icon" onclick="BurgerClick(-1)">
+			<div></div>
+			<div></div>
+		</span>
 
-    <!--Links for Javasript and CSS-->
-    <script src="script.js" type="text/javascript" defer></script>
-    <link href="style.css" type="text/css" rel="stylesheet">
-    
-</head>
-<body>
-    <span id="burger-menu-icon" onclick="BurgerClick(-1)">
-        <div></div>
-        <div></div>
+		<span id="burger-menu">
+			<ul>
+				<a href="#about-me" onclick="BurgerClick(1)">
+					<svg
+						width="49"
+						height="24"
+						viewBox="0 0 49 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z"
+							fill="#323131"
+						/>
+					</svg>
+					<li>About me</li></a
+				>
+				<a href="#front-end-road-map" onclick="BurgerClick(2)">
+					<svg
+						width="49"
+						height="24"
+						viewBox="0 0 49 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z"
+							fill="#323131"
+						/>
+					</svg>
+					<li>Front-end road map</li></a
+				>
+				<a href="#other-skills" onclick="BurgerClick(3)">
+					<svg
+						width="49"
+						height="24"
+						viewBox="0 0 49 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z"
+							fill="#323131"
+						/>
+					</svg>
+					<li>Other skills</li></a
+				>
+				<a href="#portfolio" onclick="BurgerClick(4)">
+					<svg
+						width="49"
+						height="24"
+						viewBox="0 0 49 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z"
+							fill="#323131"
+						/>
+					</svg>
+					<li>Portfolio</li></a
+				>
+				<a href="#career" onclick="BurgerClick(5)">
+					<svg
+						width="49"
+						height="24"
+						viewBox="0 0 49 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z"
+							fill="#323131"
+						/>
+					</svg>
+					<li>Career</li></a
+				>
+				<a href="#contact" onclick="BurgerClick(6)">
+					<svg
+						width="49"
+						height="24"
+						viewBox="0 0 49 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z"
+							fill="#323131"
+						/>
+					</svg>
+					<li>Contact</li></a
+				>
+			</ul>
+		</span>
+		<span id="arrows">
+			<div id="up-arrow">
+				<svg
+					onclick="UpArrowClick()"
+					width="24"
+					height="62"
+					viewBox="0 0 24 62"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M13.0607 0.939335C12.4749 0.35355 11.5251 0.35355 10.9393 0.939335L1.3934 10.4853C0.807611 11.0711 0.807611 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939335ZM13.5 62L13.5 2H10.5L10.5 62H13.5Z"
+						fill="#FCF4DA"
+					/>
+				</svg>
+			</div>
+			<div id="down-arrow">
+				<svg
+					onclick="DownArrowClick()"
+					width="24"
+					height="62"
+					viewBox="0 0 24 62"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M10.9393 61.0607C11.5251 61.6465 12.4749 61.6465 13.0607 61.0607L22.6066 51.5147C23.1924 50.9289 23.1924 49.9792 22.6066 49.3934C22.0208 48.8076 21.0711 48.8076 20.4853 49.3934L12 57.8787L3.51472 49.3934C2.92893 48.8076 1.97919 48.8076 1.3934 49.3934C0.807612 49.9792 0.807612 50.9289 1.3934 51.5147L10.9393 61.0607ZM10.5 1.78873e-08L10.5 60L13.5 60L13.5 -1.78873e-08L10.5 1.78873e-08Z"
+						fill="#FCF4DA"
+					/>
+				</svg>
+			</div>
+		</span>
 
-       
+		<main id="main-content-box">
+			<div class="content-box" id="first-content-box">
+				<div class="left-box" id="about-me">
+					<div>
+						<h1>Bc. Dalibor Králik</h1>
+						<section>
+							<p>
+								Hi! My name is Dalibor and I am a web front-end developer and
+								software developer in SAP BW (BW4Hana). I finished my bachelor's
+								degree at FIT BUT and I'm going to study my master's degree at
+								FI MU in Brno (Software Engineering). I like to realize myself,
+								create UX and UI designs for users, create web applications and
+								solve problems related to programming. For me, the most
+								important thing in development is a team with really pleasant
+								and reliable colleagues.
+							</p>
+						</section>
+					</div>
 
-    </span>
+					<div id="socials">
+						<a href="https://www.instagram.com/dali_kralik/" target="_blank">
+							<svg
+								class="instagram"
+								width="34"
+								height="33"
+								viewBox="0 0 34 33"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M24.0835 2.75H9.91683C6.00481 2.75 2.8335 5.82804 2.8335 9.625V23.375C2.8335 27.172 6.00481 30.25 9.91683 30.25H24.0835C27.9955 30.25 31.1668 27.172 31.1668 23.375V9.625C31.1668 5.82804 27.9955 2.75 24.0835 2.75Z"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M22.6666 15.6337C22.8414 16.7781 22.64 17.9468 22.0911 18.9736C21.5421 20.0005 20.6735 20.8332 19.6089 21.3533C18.5442 21.8734 17.3377 22.0544 16.1609 21.8706C14.9842 21.6869 13.8971 21.1476 13.0543 20.3296C12.2115 19.5116 11.6559 18.4564 11.4665 17.3143C11.2771 16.1721 11.4637 15.0011 11.9995 13.9678C12.5354 12.9344 13.3933 12.0914 14.4513 11.5586C15.5093 11.0258 16.7134 10.8303 17.8924 11C19.0951 11.1731 20.2084 11.717 21.0681 12.5514C21.9278 13.3858 22.4882 14.4665 22.6666 15.6337Z"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M24.7915 8.9375H24.8053"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/dalibor-kralik/"
+							target="_blank"
+						>
+							<svg
+								class="linkedin"
+								width="34"
+								height="34"
+								viewBox="0 0 34 34"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M22.6665 11.3333C24.9208 11.3333 27.0829 12.2288 28.6769 13.8229C30.271 15.417 31.1665 17.579 31.1665 19.8333V29.75H25.4998V19.8333C25.4998 19.0819 25.2013 18.3612 24.67 17.8298C24.1386 17.2985 23.418 17 22.6665 17C21.9151 17 21.1944 17.2985 20.663 17.8298C20.1317 18.3612 19.8332 19.0819 19.8332 19.8333V29.75H14.1665V19.8333C14.1665 17.579 15.062 15.417 16.6561 13.8229C18.2502 12.2288 20.4122 11.3333 22.6665 11.3333V11.3333Z"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M8.50016 12.75H2.8335V29.75H8.50016V12.75Z"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M5.66683 8.49998C7.23164 8.49998 8.50016 7.23145 8.50016 5.66665C8.50016 4.10184 7.23164 2.83331 5.66683 2.83331C4.10202 2.83331 2.8335 4.10184 2.8335 5.66665C2.8335 7.23145 4.10202 8.49998 5.66683 8.49998Z"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://github.com/MrDalo" target="_blank">
+							<svg
+								class="github"
+								width="34"
+								height="34"
+								viewBox="0 0 34 34"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M12.7502 26.9167C5.66683 29.0417 5.66683 23.375 2.8335 22.6667M22.6668 31.1667V25.6842C22.72 25.0087 22.6287 24.3296 22.3991 23.6921C22.1695 23.0545 21.8068 22.4732 21.3352 21.9867C25.7835 21.4908 30.4585 19.805 30.4585 12.07C30.4581 10.0921 29.6973 8.19004 28.3335 6.75751C28.9793 5.02706 28.9336 3.11434 28.206 1.41668C28.206 1.41668 26.5343 0.920847 22.6668 3.51335C19.4198 2.63334 15.9971 2.63334 12.7502 3.51335C8.88266 0.920847 7.211 1.41668 7.211 1.41668C6.48336 3.11434 6.4377 5.02706 7.0835 6.75751C5.70951 8.20067 4.9479 10.1199 4.9585 12.1125C4.9585 19.7908 9.6335 21.4767 14.0818 22.0292C13.6157 22.5108 13.2563 23.0852 13.0268 23.7149C12.7974 24.3446 12.7031 25.0156 12.7502 25.6842V31.1667"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="mailto:dadokralik@gmail.com" target="_blank">
+							<svg
+								class="mail"
+								width="35"
+								height="35"
+								viewBox="0 0 35 35"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M6.18783 6.08356H28.8545C30.4128 6.08356 31.6878 7.35856 31.6878 8.91689V25.9169C31.6878 27.4752 30.4128 28.7502 28.8545 28.7502H6.18783C4.62949 28.7502 3.35449 27.4752 3.35449 25.9169V8.91689C3.35449 7.35856 4.62949 6.08356 6.18783 6.08356Z"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M31.6878 8.91687L17.5212 18.8335L3.35449 8.91687"
+									stroke="#FCF4DA"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="./CV-DaliborKralik.pdf" download>
+							<svg
+								width="32"
+								height="32"
+								viewBox="0 0 32 32"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M3.42857 0C1.53571 0 0 1.53571 0 3.42857V28.5714C0 30.4643 1.53571 32 3.42857 32H28.5714C30.4643 32 32 30.4643 32 28.5714V3.42857C32 1.53571 30.4643 0 28.5714 0H3.42857ZM10.4914 9.51671C11.894 9.51671 13.1401 10.0016 14.0578 10.7289C14.9064 11.4041 15.3038 12.0794 15.6505 12.6856L13.2274 13.8962C13.0541 13.4987 12.8455 13.0829 12.3099 12.6332C11.7207 12.1652 11.1329 12.0272 10.6296 12.0272C8.65629 12.0272 7.61743 13.8624 7.61743 15.9049C7.61743 18.5886 8.98607 19.9206 10.6296 19.9206C12.2224 19.9206 12.8637 18.8127 13.2781 18.1038L15.6857 19.3329C15.2346 20.0419 14.8019 20.7354 13.8321 21.4092C13.3134 21.7728 12.1195 22.4833 10.4224 22.4833C7.18471 22.4833 4.57143 20.1293 4.57143 15.9907C4.57143 12.3739 7.02964 9.51671 10.4914 9.51671ZM15.8831 9.89729H19.1377L21.665 18.5886L24.1739 9.89729H27.4286L23.1872 22.1196H20.0721L15.8831 9.89736V9.89729Z"
+									fill="#FCF4DA"
+								/>
+							</svg>
+						</a>
+						<a href="./resume_DaliborKralik.pdf" download>
+							<svg
+								width="24"
+								height="32"
+								viewBox="0 0 24 32"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M6.04922 20.25C5.82378 20.25 5.60758 20.1604 5.44818 20.001C5.28877 19.8416 5.19922 19.6254 5.19922 19.4C5.19922 19.1746 5.28877 18.9584 5.44818 18.7989C5.60758 18.6395 5.82378 18.55 6.04922 18.55H17.9492C18.1747 18.55 18.3909 18.6395 18.5503 18.7989C18.7097 18.9584 18.7992 19.1746 18.7992 19.4C18.7992 19.6254 18.7097 19.8416 18.5503 20.001C18.3909 20.1604 18.1747 20.25 17.9492 20.25H6.04922ZM6.04922 24.5C5.82378 24.5 5.60758 24.4104 5.44818 24.251C5.28877 24.0916 5.19922 23.8754 5.19922 23.65C5.19922 23.4246 5.28877 23.2084 5.44818 23.0489C5.60758 22.8895 5.82378 22.8 6.04922 22.8H17.9492C18.1747 22.8 18.3909 22.8895 18.5503 23.0489C18.7097 23.2084 18.7992 23.4246 18.7992 23.65C18.7992 23.8754 18.7097 24.0916 18.5503 24.251C18.3909 24.4104 18.1747 24.5 17.9492 24.5H6.04922Z"
+									fill="#FCF4DA"
+								/>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M14.0141 0.700012H2.64961C1.97331 0.700012 1.3247 0.968672 0.846487 1.44689C0.368269 1.92511 0.0996094 2.57371 0.0996094 3.25001V28.75C0.0996094 29.4263 0.368269 30.0749 0.846487 30.5531C1.3247 31.0314 1.97331 31.3 2.64961 31.3H21.3496C22.0259 31.3 22.6745 31.0314 23.1527 30.5531C23.6309 30.0749 23.8996 29.4263 23.8996 28.75V11.2434C23.8994 10.605 23.6598 9.9899 23.2281 9.51961L15.8943 1.52621C15.6553 1.26568 15.3647 1.05769 15.0411 0.915461C14.7174 0.773229 14.3677 0.69986 14.0141 0.700012ZM1.79961 3.25001C1.79961 3.02458 1.88916 2.80838 2.04857 2.64897C2.20797 2.48957 2.42418 2.40001 2.64961 2.40001H14.0141C14.1321 2.39988 14.2487 2.4243 14.3567 2.47171C14.4647 2.51913 14.5617 2.5885 14.6414 2.67541L21.9752 10.6688C22.1193 10.8255 22.1994 11.0305 22.1996 11.2434V28.75C22.1996 28.9754 22.1101 29.1916 21.9506 29.3511C21.7912 29.5105 21.575 29.6 21.3496 29.6H2.64961C2.42418 29.6 2.20797 29.5105 2.04857 29.3511C1.88916 29.1916 1.79961 28.9754 1.79961 28.75V3.25001Z"
+									fill="#FCF4DA"
+								/>
+								<path
+									d="M14.5498 2.57001V10.56H22.5398"
+									stroke="#FCF4DA"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M8.82771 9.42608C9.07048 9.43352 9.31226 9.39212 9.53873 9.30435C9.76519 9.21658 9.97172 9.08423 10.1461 8.91514C10.3204 8.74605 10.459 8.54366 10.5537 8.31999C10.6484 8.09632 10.6971 7.85591 10.6971 7.61303C10.6971 7.37016 10.6484 7.12975 10.5537 6.90608C10.459 6.68241 10.3204 6.48002 10.1461 6.31093C9.97172 6.14184 9.76519 6.00948 9.53873 5.92171C9.31226 5.83394 9.07048 5.79255 8.82771 5.79998C8.35647 5.81441 7.90936 6.01176 7.58113 6.3502C7.2529 6.68863 7.06934 7.14157 7.06934 7.61303C7.06934 8.0845 7.2529 8.53743 7.58113 8.87587C7.90936 9.21431 8.35647 9.41165 8.82771 9.42608Z"
+									fill="#FCF4DA"
+								/>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M12.4514 13.3548C12.4514 11.427 10.8279 10.0313 8.82532 10.0313C6.82272 10.0313 5.19922 11.4253 5.19922 13.3548V14.2626C5.19967 14.4228 5.26363 14.5763 5.37708 14.6895C5.49053 14.8026 5.6442 14.8661 5.80442 14.8661H11.8479C12.0078 14.8657 12.1611 14.8019 12.2742 14.6889C12.3872 14.5758 12.451 14.4225 12.4514 14.2626V13.3548Z"
+									fill="#FCF4DA"
+								/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="right-box" id="profile-picture-div">
+					<div id="profile-picture-div-inner"></div>
+				</div>
+			</div>
 
-    <span id="burger-menu">
-        <ul>
-            <a href="#about-me" onclick="BurgerClick(1)">
-                <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z" fill="#323131"/>
-                </svg>
-                <li>About me </li></a>
-            <a href="#front-end-road-map" onclick="BurgerClick(2)">
-                <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z" fill="#323131"/>
-                </svg>
-                <li>Front-end road map</li></a>
-            <a href="#other-skills" onclick="BurgerClick(3)">
-                <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z" fill="#323131"/>
-                </svg>
-                <li>Other skills</li></a>
-            <a href="#portfolio" onclick="BurgerClick(4)">
-                <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z" fill="#323131"/>
-                </svg>
-                <li>Portfolio</li></a>
-            <a href="#career" onclick="BurgerClick(5)">
-                <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z" fill="#323131"/>
-                </svg>
-                <li>Career</li></a>
-            <a href="#contact" onclick="BurgerClick(6)">
-                <svg width="49" height="24" viewBox="0 0 49 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M48.0607 13.0607C48.6464 12.4749 48.6464 11.5251 48.0607 10.9393L38.5147 1.3934C37.9289 0.807612 36.9792 0.807612 36.3934 1.3934C35.8076 1.97918 35.8076 2.92893 36.3934 3.51472L44.8787 12L36.3934 20.4853C35.8076 21.0711 35.8076 22.0208 36.3934 22.6066C36.9792 23.1924 37.9289 23.1924 38.5147 22.6066L48.0607 13.0607ZM0 13.5H47V10.5H0V13.5Z" fill="#323131"/>
-                </svg>
-                <li>Contact</li></a>
-        </ul>
+			<div class="content-box" id="second-content-box">
+				<div class="left-box">
+					<div class="skillPath">
+						Learning HTML and CSS
+						<article>
+							In 2019 I started to learn HTML and CSS in High school. I created
+							multiple pages written only in HTML and CSS. Many of them were
+							created for education purpose.
+						</article>
+					</div>
+					<div class="skillPath">
+						Studying web development at Univerity
+						<article>
+							During the second and third semester of Bacherol degree I passed
+							subjects aimed at Web development and Development of user
+							interfaces. I created 3 projects. The first aimed at CSS, the
+							second aimed at HTML, CSS and JavaScript and the third one for web
+							application communicated with backend (HTML, CSS, JavaScript). I
+							learned teoretical and practical basics of UX and UI in web
+							development.
+						</article>
+					</div>
+					<div class="skillPath">
+						Learning design and designer's tools
+						<article>
+							Figma and Canva are tools which I learned during working as a
+							marketing assistant in EduEra NGO since 2020. Now I am using this
+							tools for creating front-end application mock-ups or design
+							components for web pages.
+						</article>
+					</div>
+					<div class="skillPath">
+						Learning Javascript
+						<article>
+							JavaScript is must have in web development. I was learning JS by
+							creating small projects as a snake game, web app BrainFree, timer
+							and more. I received certification by Meta and Coursera for
+							completing part of the Meta Front-End Developer Professional
+							Certificate course. You can find my certificates on my LinkedIn
+							profile.
+						</article>
+					</div>
+					<div class="skillPath">
+						Learning React JS & Next JS
+						<article>
+							I decided to learn Next JS in combination with React JS because it
+							offers a lot of features and helps developers to create front-end
+							in web apps. I came through YT tutorial and projects in React
+							aimed at states, useEffect, fetching data and CRUD operations with
+							objects/data. With React JS I am using Material UI, Tailwind CSS,
+							Redux Toolkit, ViteJS and many other libraries.
+						</article>
+					</div>
 
-    </span>
-    <span id="arrows">
-        <div id="up-arrow">
-            <svg onclick="UpArrowClick()" width="24" height="62" viewBox="0 0 24 62" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path  d="M13.0607 0.939335C12.4749 0.35355 11.5251 0.35355 10.9393 0.939335L1.3934 10.4853C0.807611 11.0711 0.807611 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939335ZM13.5 62L13.5 2H10.5L10.5 62H13.5Z" fill="#FCF4DA"/>
-            </svg>
-        </div>
-        <div id="down-arrow">
-            <svg onclick="DownArrowClick()" width="24" height="62" viewBox="0 0 24 62" fill="none" xmlns="http://www.w3.org/2000/svg" >
-                <path d="M10.9393 61.0607C11.5251 61.6465 12.4749 61.6465 13.0607 61.0607L22.6066 51.5147C23.1924 50.9289 23.1924 49.9792 22.6066 49.3934C22.0208 48.8076 21.0711 48.8076 20.4853 49.3934L12 57.8787L3.51472 49.3934C2.92893 48.8076 1.97919 48.8076 1.3934 49.3934C0.807612 49.9792 0.807612 50.9289 1.3934 51.5147L10.9393 61.0607ZM10.5 1.78873e-08L10.5 60L13.5 60L13.5 -1.78873e-08L10.5 1.78873e-08Z" fill="#FCF4DA"/>
-            </svg>
-        </div>
-    </span>
+					<div id="road-map">
+						<svg
+							width="189"
+							height="653"
+							viewBox="0 0 189 653"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<g filter="url(#filter0_d_605_36)">
+								<path
+									d="M43.1427 11C26.6157 38.3189 -0.462949 103.714 23.4375 146.741C53.3131 200.525 106.708 184.518 109.25 257.191C111.793 329.863 14.2206 359.957 43.1427 447.996C72.0647 536.036 206.823 527.392 168.048 634"
+									stroke="white"
+									stroke-width="20"
+									stroke-linecap="round"
+								/>
+							</g>
+							<defs>
+								<filter
+									id="filter0_d_605_36"
+									x="0.000488281"
+									y="0.998535"
+									width="189"
+									height="651.004"
+									filterUnits="userSpaceOnUse"
+									color-interpolation-filters="sRGB"
+								>
+									<feFlood flood-opacity="0" result="BackgroundImageFix" />
+									<feColorMatrix
+										in="SourceAlpha"
+										type="matrix"
+										values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+										result="hardAlpha"
+									/>
+									<feOffset dy="6" />
+									<feGaussianBlur stdDeviation="2" />
+									<feComposite in2="hardAlpha" operator="out" />
+									<feColorMatrix
+										type="matrix"
+										values="0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0.25 0"
+									/>
+									<feBlend
+										mode="normal"
+										in2="BackgroundImageFix"
+										result="effect1_dropShadow_605_36"
+									/>
+									<feBlend
+										mode="normal"
+										in="SourceGraphic"
+										in2="effect1_dropShadow_605_36"
+										result="shape"
+									/>
+								</filter>
+							</defs>
+						</svg>
+					</div>
+				</div>
 
-    <main id="main-content-box">
+				<div class="right-box" id="front-end-road-map">
+					<h1>Front-end road map</h1>
+				</div>
+			</div>
+			<div class="content-box" id="third-content-box">
+				<div class="left-box">
+					<div class="progress-bars">
+						<span>C, PHP</span>
+						<div class="progress-bar">
+							<div id="first"></div>
+						</div>
+					</div>
 
-        <div class="content-box" id="first-content-box">
-            <div class="left-box" id="about-me">
+					<div class="progress-bars">
+						<span>C#, Python</span>
+						<div class="progress-bar">
+							<div id="second"></div>
+						</div>
+					</div>
 
-                <div>
-                    <h1>
-                        Bc. Dalibor Králik
-                    </h1>
-                    <section>
-                        <p>Hi! My name is Dalibor and I am a web front-end developer and software developer in SAP BW (BW4Hana). I finished my bachelor's degree at FIT BUT and I'm going to study my master's degree at FI MU in Brno (Software Engineering). I like to realize myself, create UX and UI designs for users, create web applications and solve problems related to programming. For me, the most important thing in development is a team with really pleasant and reliable colleagues. 
-                        </p>        
-                    </section>
+					<div class="progress-bars">
+						<span>Git</span>
+						<div class="progress-bar">
+							<div id="third"></div>
+						</div>
+					</div>
 
-                </div>
+					<div class="progress-bars">
+						<span>Linux, Windows</span>
+						<div class="progress-bar">
+							<div id="fourth"></div>
+						</div>
+					</div>
 
+					<div class="progress-bars">
+						<span>Figma, Canva</span>
+						<div class="progress-bar">
+							<div id="fifth"></div>
+						</div>
+					</div>
 
+					<div class="progress-bars">
+						<span>SAP BW/BW4HANA modeling</span>
+						<div class="progress-bar">
+							<div id="sixth"></div>
+						</div>
+					</div>
 
-                <div id="socials">
-                    <a href="https://www.instagram.com/dali_kralik/" target="_blank">
-                        <svg class="instagram" width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M24.0835 2.75H9.91683C6.00481 2.75 2.8335 5.82804 2.8335 9.625V23.375C2.8335 27.172 6.00481 30.25 9.91683 30.25H24.0835C27.9955 30.25 31.1668 27.172 31.1668 23.375V9.625C31.1668 5.82804 27.9955 2.75 24.0835 2.75Z" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M22.6666 15.6337C22.8414 16.7781 22.64 17.9468 22.0911 18.9736C21.5421 20.0005 20.6735 20.8332 19.6089 21.3533C18.5442 21.8734 17.3377 22.0544 16.1609 21.8706C14.9842 21.6869 13.8971 21.1476 13.0543 20.3296C12.2115 19.5116 11.6559 18.4564 11.4665 17.3143C11.2771 16.1721 11.4637 15.0011 11.9995 13.9678C12.5354 12.9344 13.3933 12.0914 14.4513 11.5586C15.5093 11.0258 16.7134 10.8303 17.8924 11C19.0951 11.1731 20.2084 11.717 21.0681 12.5514C21.9278 13.3858 22.4882 14.4665 22.6666 15.6337Z" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M24.7915 8.9375H24.8053" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dalibor-kralik/" target="_blank">
-                        <svg class="linkedin" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.6665 11.3333C24.9208 11.3333 27.0829 12.2288 28.6769 13.8229C30.271 15.417 31.1665 17.579 31.1665 19.8333V29.75H25.4998V19.8333C25.4998 19.0819 25.2013 18.3612 24.67 17.8298C24.1386 17.2985 23.418 17 22.6665 17C21.9151 17 21.1944 17.2985 20.663 17.8298C20.1317 18.3612 19.8332 19.0819 19.8332 19.8333V29.75H14.1665V19.8333C14.1665 17.579 15.062 15.417 16.6561 13.8229C18.2502 12.2288 20.4122 11.3333 22.6665 11.3333V11.3333Z" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.50016 12.75H2.8335V29.75H8.50016V12.75Z" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M5.66683 8.49998C7.23164 8.49998 8.50016 7.23145 8.50016 5.66665C8.50016 4.10184 7.23164 2.83331 5.66683 2.83331C4.10202 2.83331 2.8335 4.10184 2.8335 5.66665C2.8335 7.23145 4.10202 8.49998 5.66683 8.49998Z" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/MrDalo" target="_blank">
-                        <svg class="github" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.7502 26.9167C5.66683 29.0417 5.66683 23.375 2.8335 22.6667M22.6668 31.1667V25.6842C22.72 25.0087 22.6287 24.3296 22.3991 23.6921C22.1695 23.0545 21.8068 22.4732 21.3352 21.9867C25.7835 21.4908 30.4585 19.805 30.4585 12.07C30.4581 10.0921 29.6973 8.19004 28.3335 6.75751C28.9793 5.02706 28.9336 3.11434 28.206 1.41668C28.206 1.41668 26.5343 0.920847 22.6668 3.51335C19.4198 2.63334 15.9971 2.63334 12.7502 3.51335C8.88266 0.920847 7.211 1.41668 7.211 1.41668C6.48336 3.11434 6.4377 5.02706 7.0835 6.75751C5.70951 8.20067 4.9479 10.1199 4.9585 12.1125C4.9585 19.7908 9.6335 21.4767 14.0818 22.0292C13.6157 22.5108 13.2563 23.0852 13.0268 23.7149C12.7974 24.3446 12.7031 25.0156 12.7502 25.6842V31.1667" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:dadokralik@gmail.com" target="_blank">
-                        <svg class="mail" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.18783 6.08356H28.8545C30.4128 6.08356 31.6878 7.35856 31.6878 8.91689V25.9169C31.6878 27.4752 30.4128 28.7502 28.8545 28.7502H6.18783C4.62949 28.7502 3.35449 27.4752 3.35449 25.9169V8.91689C3.35449 7.35856 4.62949 6.08356 6.18783 6.08356Z" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M31.6878 8.91687L17.5212 18.8335L3.35449 8.91687" stroke="#FCF4DA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="./CV-DaliborKralik.pdf" download>
-                        <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.04922 20.25C5.82378 20.25 5.60758 20.1604 5.44818 20.001C5.28877 19.8416 5.19922 19.6254 5.19922 19.4C5.19922 19.1746 5.28877 18.9584 5.44818 18.7989C5.60758 18.6395 5.82378 18.55 6.04922 18.55H17.9492C18.1747 18.55 18.3909 18.6395 18.5503 18.7989C18.7097 18.9584 18.7992 19.1746 18.7992 19.4C18.7992 19.6254 18.7097 19.8416 18.5503 20.001C18.3909 20.1604 18.1747 20.25 17.9492 20.25H6.04922ZM6.04922 24.5C5.82378 24.5 5.60758 24.4104 5.44818 24.251C5.28877 24.0916 5.19922 23.8754 5.19922 23.65C5.19922 23.4246 5.28877 23.2084 5.44818 23.0489C5.60758 22.8895 5.82378 22.8 6.04922 22.8H17.9492C18.1747 22.8 18.3909 22.8895 18.5503 23.0489C18.7097 23.2084 18.7992 23.4246 18.7992 23.65C18.7992 23.8754 18.7097 24.0916 18.5503 24.251C18.3909 24.4104 18.1747 24.5 17.9492 24.5H6.04922Z" fill="#FCF4DA"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0141 0.700012H2.64961C1.97331 0.700012 1.3247 0.968672 0.846487 1.44689C0.368269 1.92511 0.0996094 2.57371 0.0996094 3.25001V28.75C0.0996094 29.4263 0.368269 30.0749 0.846487 30.5531C1.3247 31.0314 1.97331 31.3 2.64961 31.3H21.3496C22.0259 31.3 22.6745 31.0314 23.1527 30.5531C23.6309 30.0749 23.8996 29.4263 23.8996 28.75V11.2434C23.8994 10.605 23.6598 9.9899 23.2281 9.51961L15.8943 1.52621C15.6553 1.26568 15.3647 1.05769 15.0411 0.915461C14.7174 0.773229 14.3677 0.69986 14.0141 0.700012ZM1.79961 3.25001C1.79961 3.02458 1.88916 2.80838 2.04857 2.64897C2.20797 2.48957 2.42418 2.40001 2.64961 2.40001H14.0141C14.1321 2.39988 14.2487 2.4243 14.3567 2.47171C14.4647 2.51913 14.5617 2.5885 14.6414 2.67541L21.9752 10.6688C22.1193 10.8255 22.1994 11.0305 22.1996 11.2434V28.75C22.1996 28.9754 22.1101 29.1916 21.9506 29.3511C21.7912 29.5105 21.575 29.6 21.3496 29.6H2.64961C2.42418 29.6 2.20797 29.5105 2.04857 29.3511C1.88916 29.1916 1.79961 28.9754 1.79961 28.75V3.25001Z" fill="#FCF4DA"/>
-                            <path d="M14.5498 2.57001V10.56H22.5398" stroke="#FCF4DA" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.82771 9.42608C9.07048 9.43352 9.31226 9.39212 9.53873 9.30435C9.76519 9.21658 9.97172 9.08423 10.1461 8.91514C10.3204 8.74605 10.459 8.54366 10.5537 8.31999C10.6484 8.09632 10.6971 7.85591 10.6971 7.61303C10.6971 7.37016 10.6484 7.12975 10.5537 6.90608C10.459 6.68241 10.3204 6.48002 10.1461 6.31093C9.97172 6.14184 9.76519 6.00948 9.53873 5.92171C9.31226 5.83394 9.07048 5.79255 8.82771 5.79998C8.35647 5.81441 7.90936 6.01176 7.58113 6.3502C7.2529 6.68863 7.06934 7.14157 7.06934 7.61303C7.06934 8.0845 7.2529 8.53743 7.58113 8.87587C7.90936 9.21431 8.35647 9.41165 8.82771 9.42608Z" fill="#FCF4DA"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4514 13.3548C12.4514 11.427 10.8279 10.0313 8.82532 10.0313C6.82272 10.0313 5.19922 11.4253 5.19922 13.3548V14.2626C5.19967 14.4228 5.26363 14.5763 5.37708 14.6895C5.49053 14.8026 5.6442 14.8661 5.80442 14.8661H11.8479C12.0078 14.8657 12.1611 14.8019 12.2742 14.6889C12.3872 14.5758 12.451 14.4225 12.4514 14.2626V13.3548Z" fill="#FCF4DA"/>
-                            </svg>
-                    </a>
-                </div>
+					<div class="progress-bars">
+						<span>SQL</span>
+						<div class="progress-bar">
+							<div id="seventh"></div>
+						</div>
+					</div>
+				</div>
 
-            
-
-            </div>
-            <div class="right-box" id="profile-picture-div">
-                <div id="profile-picture-div-inner">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="content-box" id="second-content-box">
-            <div class="left-box">
-
-                <div class="skillPath">
-                    Learning HTML and CSS
-                    <article>
-                        In 2019 I started to learn HTML and CSS in High school. I created multiple pages written only in HTML and CSS. 
-                        Many of them were created for education purpose.
-                    </article>
-                </div>
-                <div class="skillPath">
-                    Studying web development at Univerity
-                    <article>
-                        During the second and third semester of Bacherol degree I passed subjects aimed at Web development and Development of user interfaces. I created 3 projects. The first aimed at CSS, the second aimed at HTML, CSS and JavaScript and the third one for web application communicated with backend (HTML, CSS, JavaScript). I learned teoretical and practical basics of UX and UI in web development.
-                    </article>
-                </div>
-                <div class="skillPath">
-                    Learning design and designer's tools
-                    <article>
-                        Figma and Canva are tools which I learned during working as a marketing assistant in EduEra NGO since 2020.
-                        Now I am using this tools for creating front-end application mock-ups or design components for web pages.
-                    </article>
-                </div>
-                <div class="skillPath">
-                    Learning Javascript
-                    <article>
-                        JavaScript is must have in web development. I was learning JS by creating small projects as a snake game, web app BrainFree, timer and more. I received certification by Meta and Coursera for completing part of the Meta Front-End Developer Professional Certificate course. You can find my certificates on my LinkedIn profile.
-                    </article>
-                </div>
-                <div class="skillPath">
-                    Learning React JS
-                    <article>
-                        I decided to learn React JS because it offers a lot of features and helps developers to create front-end in web apps. I came through YT tutorial and projects in React aimed at states, useEffect, fetching data and CRUD operations with objects/data. With React JS I am using Material UI, Redux Toolkit, ViteJS and many other libraries.
-                    </article>
-                </div>
-
-                <div id="road-map">
-                    <svg width="189" height="653" viewBox="0 0 189 653"  fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d_605_36)">
-                        <path d="M43.1427 11C26.6157 38.3189 -0.462949 103.714 23.4375 146.741C53.3131 200.525 106.708 184.518 109.25 257.191C111.793 329.863 14.2206 359.957 43.1427 447.996C72.0647 536.036 206.823 527.392 168.048 634" stroke="white" stroke-width="20" stroke-linecap="round"/>
-                        </g>
-                        <defs>
-                        <filter id="filter0_d_605_36" x="0.000488281" y="0.998535" width="189" height="651.004" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                        <feOffset dy="6"/>
-                        <feGaussianBlur stdDeviation="2"/>
-                        <feComposite in2="hardAlpha" operator="out"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0.5 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_605_36"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_605_36" result="shape"/>
-                        </filter>
-                        </defs>
-                    </svg>
-                </div>    
-            </div>
-
-            <div class="right-box" id="front-end-road-map">
-                <h1>Front-end road map</h1>
-            </div>
-
-        </div>
-        <div class="content-box" id="third-content-box">
-
-            <div class="left-box">
-
-                <div class="progress-bars">
-                    <span>C, PHP</span>             
-                    <div class="progress-bar">
-                        <div id="first"></div>
-                    </div>
-                </div>    
-
-                <div class="progress-bars">
-                    <span>C#, Python</span>             
-                    <div class="progress-bar">
-                        <div id="second"></div>
-                    </div>
-                </div>
-
-                <div class="progress-bars">
-                    <span>Git</span>             
-                    <div class="progress-bar">
-                        <div id="third"></div>
-                    </div>
-                </div>
-
-                <div class="progress-bars">    
-                    <span>Linux, Windows</span>             
-                    <div class="progress-bar">
-                        <div id="fourth"></div>
-                    </div>
-                </div>
-
-                <div class="progress-bars">
-                    <span>Figma, Canva</span>             
-                    <div class="progress-bar">
-                        <div id="fifth"></div>
-                    </div>
-                </div>
-
-                <div class="progress-bars">
-                    <span>SAP BW/BW4HANA modeling</span>             
-                    <div class="progress-bar">
-                        <div id="sixth"></div>
-                    </div>
-                </div>
-
-                <div class="progress-bars">
-                    <span>SQL</span>             
-                    <div class="progress-bar">
-                        <div id="seventh"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-box" id="other-skills">
-                <h1>Other skills</h1>
-            </div>
-
-        </div>
-        <div class="content-box" id="fourth-content-box">
-            <div class="left-box">
-                <span id="portfolio-up-arrow" onclick="PortfolioUpArrow()">
-                    <svg width="38" height="22" viewBox="0 0 38 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.7678 1.23223C19.7915 0.255922 18.2085 0.255922 17.2322 1.23223L1.32233 17.1421C0.34602 18.1184 0.34602 19.7014 1.32233 20.6777C2.29864 21.654 3.88155 21.654 4.85786 20.6777L19 6.53553L33.1421 20.6777C34.1184 21.654 35.7014 21.654 36.6777 20.6777C37.654 19.7014 37.654 18.1184 36.6777 17.1421L20.7678 1.23223ZM21.5 4V3H16.5V4H21.5Z" fill="#333333"/>
-                    </svg>
-                </span>
-                <div id="projects">
-                    <div class="portfolio-project first-project" data-index="1">
-                        <span>
-                            <h3>BrainFree app</h3>
-                            <a href="https://wedevs.sk/brainfree/" target="_blank">Visit</a>
-                        </span>
-                        <a href="https://wedevs.sk/brainfree/" target="_blank"><img src="https://www.wedevs.sk/daliborkralik/pictures/brainfree.avif" alt="BrainFree"></a>
-
-                    </div>
-                    <div class="portfolio-project second-project" data-index="2">
-                        <span>
-                            <h3>WeDevs web</h3>
-                            <a href="https://wedevs.sk/" target="_blank">Visit</a>
-                        </span>
-                        <a href="https://wedevs.sk/" target="_blank"><img src="https://www.wedevs.sk/daliborkralik/pictures/wedevs.avif" alt="WeDevs"></a>
-
-                    </div>
-                    <div class="portfolio-project last-hidden-project" data-index="3">
-                        <span>
-                            <h3>Dny AI web</h3>
-                            <a href="https://wedevs.sk/DnyAI/" target="_blank">Visit</a>
-                        </span>
-                        <a href="https://wedevs.sk/DnyAI/" target="_blank"><img src="https://www.wedevs.sk/daliborkralik/pictures/dnyai.avif" alt="Dny AI"></a>
-                        
-                    </div>
-                    <div class="portfolio-project hidden-project" data-index="4">
-                        <span>
-                            <h3>Dalibor Králik web</h3>
-                            <a href="https://wedevs.sk/daliborkralik" target="_blank">Visit</a>
-                        </span>
-                        <a href="https://wedevs.sk/daliborkralik" target="_blank"><img src="https://www.wedevs.sk/daliborkralik/pictures/daliborweb.avif" alt="Dalibor Králik web"></a>
-                        
-                    </div>
-                    <div class="portfolio-project hidden-project" data-index="5">
-                        <span>
-                            <h3>React ToDo List App</h3>
-                            <a href="https://master--sparkling-jelly-250459.netlify.app/" target="_blank">Visit</a>
-                        </span>
-                        <a href="https://master--sparkling-jelly-250459.netlify.app/" target="_blank"><img src="https://www.wedevs.sk/daliborkralik/pictures/todoList.avif" alt="React ToDo List App"></a>
-
-                    </div>
-                    <div class="portfolio-project hidden-project" data-index="6">
-                        <span>
-                            <h3>Hackathon Landing Page</h3>
-                            <a href="https://www.domajedoma.eu/" target="_blank">Visit</a>
-                        </span>
-                        <a href="https://www.domajedoma.eu/" target="_blank"><img src="https://www.wedevs.sk/daliborkralik/pictures/JinagHackathon.avif" alt="Hackathon Landing Page"></a>
-
-                    </div>
-                    <div class="portfolio-project hidden-project" data-index="7">
-                        <span>
-                            <h3>Laravel Tournament IS</h3>
-                            <a href="http://www.iis.wedevs.sk:8080/" target="_blank">Visit</a>
-                        </span>
-                        <a href="http://www.iis.wedevs.sk:8080/" target="_blank"><img src="https://www.wedevs.sk/daliborkralik/pictures/duckTournaments.avif" alt="Laravel Tournament IS"></a>
-
-                    </div>
-                </div>
-                <span id="portfolio-down-arrow" onclick="PortfolioDownArrow()">
-                    <svg width="38" height="22" viewBox="0 0 38 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.34602 34.1184 0.34602 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.34602 2.29864 0.34602 3.88155 1.32233 4.85786L17.2322 20.7678ZM16.5 18V19H21.5V18H16.5Z" fill="#333333"/>
-                    </svg>
-                </span>
-            </div>
-            <div class="right-box" id="portfolio">
-                <h1>Portfolio</h1>
-            </div>
-
-        </div>
-        <div class="content-box" id="fifth-content-box">
-            <div id="career-nav"></div>
-            <div class="left-box">
-                <span id="career-up-arrow" onclick="CareerUpArrow()">
-                    <svg width="38" height="22" viewBox="0 0 38 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.7678 1.23223C19.7915 0.255922 18.2085 0.255922 17.2322 1.23223L1.32233 17.1421C0.34602 18.1184 0.34602 19.7014 1.32233 20.6777C2.29864 21.654 3.88155 21.654 4.85786 20.6777L19 6.53553L33.1421 20.6777C34.1184 21.654 35.7014 21.654 36.6777 20.6777C37.654 19.7014 37.654 18.1184 36.6777 17.1421L20.7678 1.23223ZM21.5 4V3H16.5V4H21.5Z" fill="#FCF4DA"/>
-                    </svg>
-                </span>
-                <section id="list-of-jobs">
-                    <article class="career-item first-job">
-                        <h2>
-                        Brno University of Technology
-                    </h2>
-                    <p>
-                        <p class="date-of-job">01. 02. 2022 - present</p>
-                        <h3>Software Developer</h3>
-                        <ul>
-                            <li>SAP Business Warehouse(BW)</li>
-                            <li>ELT Processes</li>
-                            <li>InfoCubes and InfoObjects</li>
-                            <li>Working in team</li>
-                        </ul>
-                    </p>
-                    </article>
-                    <article class="career-item second-job">
-                        <h2>
-                            EduEra NGO
-                        </h2>
-                        <p>
-                            <p class="date-of-job">01. 10. 2020 - 31. 12. 2021</p>
-                            <h3>Marketing Assistant</h3>
-                            <ul>
-                                <li>Volunteering</li>
-                                <li>Content creator</li>
-                                <li>Managing social media</li>
-                                <li>Creating of marketing campaigns </li>
-                            </ul>
-                        </p>
-                    </article>
-                    <article class="career-item last-hidden-job">
-                        <h2>
-                            EduEra NGO
-                        </h2>
-                        <p>
-                            <p class="date-of-job">01. 04. 2020 - 31. 09. 2020</p>
-                            <h3>Project Assistant</h3>
-                            <ul>
-                                <li>Volunteering</li>
-                                <li>Creating Erasmus+ projects</li>
-                                <li>Creating projects of European Solidarity Corps</li>
-                                <li>Working in team</li>
-                            </ul>
-                        </p>
-                    </article>
-                    <article class="career-item hidden-job">
-                        <h2>
-                            MSM Group LLC
-                        </h2>
-                        <p>
-                            <p class="date-of-job">01. 06. 2021 - 31. 08. 2021</p>
-                            <h3>Office Assistant</h3>
-                            <ul>
-                                <li>MS Excel</li>
-                                <li>Extracting informations</li>
-                                <li>Creating Excel sheets</li>
-                                <li>Working in team</li>
-                            </ul>
-                        </p>
-                    </article>
-                </section>
-                <span id="career-down-arrow" onclick="CareerDownArrow()">
-                    <svg width="38" height="22" viewBox="0 0 38 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.34602 34.1184 0.34602 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.34602 2.29864 0.34602 3.88155 1.32233 4.85786L17.2322 20.7678ZM16.5 18V19H21.5V18H16.5Z" fill="#FCF4DA"/>
-                    </svg>
-                </span>
-
-            </div>
-            <div class="right-box" id="career">
-                <h1>Career</h1>
-            </div>
-
-        </div>
-        <div class="content-box" id="sixth-content-box">
-            <div class="left-box">
-                <section>
-                    <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M34.9989 26.5061V31.6346C35.0009 32.1107 34.9034 32.582 34.7126 33.0182C34.5219 33.4544 34.2421 33.846 33.8913 34.1679C33.5405 34.4897 33.1263 34.7348 32.6753 34.8873C32.2243 35.0398 31.7464 35.0965 31.2722 35.0536C26.0118 34.482 20.9587 32.6845 16.5191 29.8054C12.3887 27.1807 8.88675 23.6788 6.26207 19.5484C3.37296 15.0886 1.57501 10.011 1.01388 4.7269C0.971156 4.25416 1.02734 3.77771 1.17884 3.32788C1.33035 2.87804 1.57386 2.46468 1.89387 2.11412C2.21389 1.76355 2.60339 1.48346 3.03758 1.29167C3.47177 1.09989 3.94114 1.00061 4.4158 1.00017H9.54433C10.374 0.992 11.1783 1.28579 11.8073 1.82677C12.4364 2.36775 12.8472 3.11901 12.9634 3.94052C13.1798 5.58177 13.5813 7.19326 14.16 8.74425C14.39 9.35612 14.4398 10.0211 14.3035 10.6604C14.1671 11.2997 13.8504 11.8865 13.3907 12.3513L11.2197 14.5224C13.6532 18.8022 17.1969 22.3459 21.4767 24.7795L23.6478 22.6084C24.1126 22.1488 24.6994 21.832 25.3387 21.6957C25.978 21.5593 26.643 21.6091 27.2549 21.8391C28.8059 22.4179 30.4173 22.8193 32.0586 23.0358C32.889 23.1529 33.6474 23.5712 34.1895 24.211C34.7317 24.8509 35.0197 25.6677 34.9989 26.5061Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>+421 910 329 130</span>
-                </section>                
-                <section>
-                    <a href="mailto:dadokralik@gmail.com" target="_blank">
-                        <svg class="mail" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6.18783 6.08356H28.8545C30.4128 6.08356 31.6878 7.35856 31.6878 8.91689V25.9169C31.6878 27.4752 30.4128 28.7502 28.8545 28.7502H6.18783C4.62949 28.7502 3.35449 27.4752 3.35449 25.9169V8.91689C3.35449 7.35856 4.62949 6.08356 6.18783 6.08356Z" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M31.6878 8.91687L17.5212 18.8335L3.35449 8.91687" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="mailto:dadokralik@gmail.com" target="_blank">
-                        <span>dadokralik@gmail.com</span>
-                    </a>
-                </section>
-                <section>
-                    <a href="https://github.com/MrDalo" target="_blank">
-                        <svg class="github" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.7502 26.9167C5.66683 29.0417 5.66683 23.375 2.8335 22.6667M22.6668 31.1667V25.6842C22.72 25.0087 22.6287 24.3296 22.3991 23.6921C22.1695 23.0545 21.8068 22.4732 21.3352 21.9867C25.7835 21.4908 30.4585 19.805 30.4585 12.07C30.4581 10.0921 29.6973 8.19004 28.3335 6.75751C28.9793 5.02706 28.9336 3.11434 28.206 1.41668C28.206 1.41668 26.5343 0.920847 22.6668 3.51335C19.4198 2.63334 15.9971 2.63334 12.7502 3.51335C8.88266 0.920847 7.211 1.41668 7.211 1.41668C6.48336 3.11434 6.4377 5.02706 7.0835 6.75751C5.70951 8.20067 4.9479 10.1199 4.9585 12.1125C4.9585 19.7908 9.6335 21.4767 14.0818 22.0292C13.6157 22.5108 13.2563 23.0852 13.0268 23.7149C12.7974 24.3446 12.7031 25.0156 12.7502 25.6842V31.1667" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/MrDalo" target="_blank">
-                        <span>github.com/MrDalo</span>
-                    </a>
-                </section>
-                <section>
-                    <a href="https://www.linkedin.com/in/dalibor-kralik/" target="_blank">
-                        <svg class="linkedin" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.6665 11.3333C24.9208 11.3333 27.0829 12.2288 28.6769 13.8229C30.271 15.417 31.1665 17.579 31.1665 19.8333V29.75H25.4998V19.8333C25.4998 19.0819 25.2013 18.3612 24.67 17.8298C24.1386 17.2985 23.418 17 22.6665 17C21.9151 17 21.1944 17.2985 20.663 17.8298C20.1317 18.3612 19.8332 19.0819 19.8332 19.8333V29.75H14.1665V19.8333C14.1665 17.579 15.062 15.417 16.6561 13.8229C18.2502 12.2288 20.4122 11.3333 22.6665 11.3333V11.3333Z" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.50016 12.75H2.8335V29.75H8.50016V12.75Z" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M5.66683 8.49998C7.23164 8.49998 8.50016 7.23145 8.50016 5.66665C8.50016 4.10184 7.23164 2.83331 5.66683 2.83331C4.10202 2.83331 2.8335 4.10184 2.8335 5.66665C2.8335 7.23145 4.10202 8.49998 5.66683 8.49998Z" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dalibor-kralik/" target="_blank">
-                        <span>linkedin.com/in/dalibor-kralik</span>
-                    </a>
-                </section>
-                <section>
-                    <a href="https://www.instagram.com/dali_kralik/" target="_blank">
-                    <svg class="instagram" width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24.0835 2.75H9.91683C6.00481 2.75 2.8335 5.82804 2.8335 9.625V23.375C2.8335 27.172 6.00481 30.25 9.91683 30.25H24.0835C27.9955 30.25 31.1668 27.172 31.1668 23.375V9.625C31.1668 5.82804 27.9955 2.75 24.0835 2.75Z" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M22.6666 15.6337C22.8414 16.7781 22.64 17.9468 22.0911 18.9736C21.5421 20.0005 20.6735 20.8332 19.6089 21.3533C18.5442 21.8734 17.3377 22.0544 16.1609 21.8706C14.9842 21.6869 13.8971 21.1476 13.0543 20.3296C12.2115 19.5116 11.6559 18.4564 11.4665 17.3143C11.2771 16.1721 11.4637 15.0011 11.9995 13.9678C12.5354 12.9344 13.3933 12.0914 14.4513 11.5586C15.5093 11.0258 16.7134 10.8303 17.8924 11C19.0951 11.1731 20.2084 11.717 21.0681 12.5514C21.9278 13.3858 22.4882 14.4665 22.6666 15.6337Z" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M24.7915 8.9375H24.8053" stroke="#323131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/dali_kralik/" target="_blank">
-                    <span>instagram.com/dali_kralik</span>
-                </a>
-                </section>
-                <footer>
-                    © Copyright 2023 | created by Dalibor Králik
-                </footer>
-            </div>
-            <div class="right-box" id="contact">
-                <h1>Contact</h1>
-                <span>© Copyright 2023 | created by Dalibor Králik</span>
-            </div>
-        
-        </div>
-    </main>
-
-    
-</body>
+				<div class="right-box" id="other-skills">
+					<h1>Other skills</h1>
+				</div>
+			</div>
+			<div class="content-box" id="fourth-content-box">
+				<div class="left-box">
+					<span id="portfolio-up-arrow" onclick="PortfolioUpArrow()">
+						<svg
+							width="38"
+							height="22"
+							viewBox="0 0 38 22"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M20.7678 1.23223C19.7915 0.255922 18.2085 0.255922 17.2322 1.23223L1.32233 17.1421C0.34602 18.1184 0.34602 19.7014 1.32233 20.6777C2.29864 21.654 3.88155 21.654 4.85786 20.6777L19 6.53553L33.1421 20.6777C34.1184 21.654 35.7014 21.654 36.6777 20.6777C37.654 19.7014 37.654 18.1184 36.6777 17.1421L20.7678 1.23223ZM21.5 4V3H16.5V4H21.5Z"
+								fill="#333333"
+							/>
+						</svg>
+					</span>
+					<div id="projects">
+						<div class="portfolio-project first-project" data-index="1">
+							<span>
+								<h3>BrainFree app</h3>
+								<a href="https://wedevs.sk/brainfree/" target="_blank">Visit</a>
+							</span>
+							<a href="https://wedevs.sk/brainfree/" target="_blank"
+								><img
+									src="https://www.wedevs.sk/daliborkralik/pictures/brainfree.avif"
+									alt="BrainFree"
+							/></a>
+						</div>
+						<div class="portfolio-project second-project" data-index="2">
+							<span>
+								<h3>WeDevs web</h3>
+								<a href="https://wedevs.sk/" target="_blank">Visit</a>
+							</span>
+							<a href="https://wedevs.sk/" target="_blank"
+								><img
+									src="https://www.wedevs.sk/daliborkralik/pictures/wedevs.avif"
+									alt="WeDevs"
+							/></a>
+						</div>
+						<div class="portfolio-project last-hidden-project" data-index="3">
+							<span>
+								<h3>Dny AI web</h3>
+								<a href="https://wedevs.sk/DnyAI/" target="_blank">Visit</a>
+							</span>
+							<a href="https://wedevs.sk/DnyAI/" target="_blank"
+								><img
+									src="https://www.wedevs.sk/daliborkralik/pictures/dnyai.avif"
+									alt="Dny AI"
+							/></a>
+						</div>
+						<div class="portfolio-project hidden-project" data-index="4">
+							<span>
+								<h3>Dalibor Králik web</h3>
+								<a href="https://wedevs.sk/daliborkralik" target="_blank"
+									>Visit</a
+								>
+							</span>
+							<a href="https://wedevs.sk/daliborkralik" target="_blank"
+								><img
+									src="https://www.wedevs.sk/daliborkralik/pictures/daliborweb.avif"
+									alt="Dalibor Králik web"
+							/></a>
+						</div>
+						<div class="portfolio-project hidden-project" data-index="5">
+							<span>
+								<h3>React ToDo List App</h3>
+								<a
+									href="https://master--sparkling-jelly-250459.netlify.app/"
+									target="_blank"
+									>Visit</a
+								>
+							</span>
+							<a
+								href="https://master--sparkling-jelly-250459.netlify.app/"
+								target="_blank"
+								><img
+									src="https://www.wedevs.sk/daliborkralik/pictures/todoList.avif"
+									alt="React ToDo List App"
+							/></a>
+						</div>
+						<div class="portfolio-project hidden-project" data-index="6">
+							<span>
+								<h3>Hackathon Landing Page</h3>
+								<a href="https://www.domajedoma.eu/" target="_blank">Visit</a>
+							</span>
+							<a href="https://www.domajedoma.eu/" target="_blank"
+								><img
+									src="https://www.wedevs.sk/daliborkralik/pictures/JinagHackathon.avif"
+									alt="Hackathon Landing Page"
+							/></a>
+						</div>
+						<div class="portfolio-project hidden-project" data-index="7">
+							<span>
+								<h3>Laravel Tournament IS</h3>
+								<a href="http://www.iis.wedevs.sk:8080/" target="_blank"
+									>Visit</a
+								>
+							</span>
+							<a href="http://www.iis.wedevs.sk:8080/" target="_blank"
+								><img
+									src="https://www.wedevs.sk/daliborkralik/pictures/duckTournaments.avif"
+									alt="Laravel Tournament IS"
+							/></a>
+						</div>
+					</div>
+					<span id="portfolio-down-arrow" onclick="PortfolioDownArrow()">
+						<svg
+							width="38"
+							height="22"
+							viewBox="0 0 38 22"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.34602 34.1184 0.34602 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.34602 2.29864 0.34602 3.88155 1.32233 4.85786L17.2322 20.7678ZM16.5 18V19H21.5V18H16.5Z"
+								fill="#333333"
+							/>
+						</svg>
+					</span>
+				</div>
+				<div class="right-box" id="portfolio">
+					<h1>Portfolio</h1>
+				</div>
+			</div>
+			<div class="content-box" id="fifth-content-box">
+				<div id="career-nav"></div>
+				<div class="left-box">
+					<span id="career-up-arrow" onclick="CareerUpArrow()">
+						<svg
+							width="38"
+							height="22"
+							viewBox="0 0 38 22"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M20.7678 1.23223C19.7915 0.255922 18.2085 0.255922 17.2322 1.23223L1.32233 17.1421C0.34602 18.1184 0.34602 19.7014 1.32233 20.6777C2.29864 21.654 3.88155 21.654 4.85786 20.6777L19 6.53553L33.1421 20.6777C34.1184 21.654 35.7014 21.654 36.6777 20.6777C37.654 19.7014 37.654 18.1184 36.6777 17.1421L20.7678 1.23223ZM21.5 4V3H16.5V4H21.5Z"
+								fill="#FCF4DA"
+							/>
+						</svg>
+					</span>
+					<section id="list-of-jobs">
+						<article class="career-item first-job">
+							<h2>Brno University of Technology</h2>
+							<div>
+								<p class="date-of-job">01. 02. 2022 - present</p>
+								<h3>Software Developer</h3>
+								<ul>
+									<li>SAP Business Warehouse(BW)</li>
+									<li>ELT Processes</li>
+									<li>InfoCubes and InfoObjects</li>
+									<li>Working in team</li>
+								</ul>
+							</div>
+						</article>
+						<article class="career-item second-job">
+							<h2>EduEra NGO</h2>
+							<div>
+								<p class="date-of-job">01. 10. 2020 - 31. 12. 2021</p>
+								<h3>Marketing Assistant</h3>
+								<ul>
+									<li>Volunteering</li>
+									<li>Content creator</li>
+									<li>Managing social media</li>
+									<li>Creating of marketing campaigns</li>
+								</ul>
+							</div>
+						</article>
+						<article class="career-item last-hidden-job">
+							<h2>EduEra NGO</h2>
+							<div>
+								<p class="date-of-job">01. 04. 2020 - 31. 09. 2020</p>
+								<h3>Project Assistant</h3>
+								<ul>
+									<li>Volunteering</li>
+									<li>Creating Erasmus+ projects</li>
+									<li>Creating projects of European Solidarity Corps</li>
+									<li>Working in team</li>
+								</ul>
+							</div>
+						</article>
+						<article class="career-item hidden-job">
+							<h2>MSM Group LLC</h2>
+							<div>
+								<p class="date-of-job">01. 06. 2021 - 31. 08. 2021</p>
+								<h3>Office Assistant</h3>
+								<ul>
+									<li>MS Excel</li>
+									<li>Extracting informations</li>
+									<li>Creating Excel sheets</li>
+									<li>Working in team</li>
+								</ul>
+							</div>
+						</article>
+					</section>
+					<span id="career-down-arrow" onclick="CareerDownArrow()">
+						<svg
+							width="38"
+							height="22"
+							viewBox="0 0 38 22"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M17.2322 20.7678C18.2085 21.7441 19.7915 21.7441 20.7678 20.7678L36.6777 4.85786C37.654 3.88155 37.654 2.29864 36.6777 1.32233C35.7014 0.34602 34.1184 0.34602 33.1421 1.32233L19 15.4645L4.85786 1.32233C3.88155 0.34602 2.29864 0.34602 1.32233 1.32233C0.34602 2.29864 0.34602 3.88155 1.32233 4.85786L17.2322 20.7678ZM16.5 18V19H21.5V18H16.5Z"
+								fill="#FCF4DA"
+							/>
+						</svg>
+					</span>
+				</div>
+				<div class="right-box" id="career">
+					<h1>Career</h1>
+				</div>
+			</div>
+			<div class="content-box" id="sixth-content-box">
+				<div class="left-box">
+					<section>
+						<svg
+							width="36"
+							height="37"
+							viewBox="0 0 36 37"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M34.9989 26.5061V31.6346C35.0009 32.1107 34.9034 32.582 34.7126 33.0182C34.5219 33.4544 34.2421 33.846 33.8913 34.1679C33.5405 34.4897 33.1263 34.7348 32.6753 34.8873C32.2243 35.0398 31.7464 35.0965 31.2722 35.0536C26.0118 34.482 20.9587 32.6845 16.5191 29.8054C12.3887 27.1807 8.88675 23.6788 6.26207 19.5484C3.37296 15.0886 1.57501 10.011 1.01388 4.7269C0.971156 4.25416 1.02734 3.77771 1.17884 3.32788C1.33035 2.87804 1.57386 2.46468 1.89387 2.11412C2.21389 1.76355 2.60339 1.48346 3.03758 1.29167C3.47177 1.09989 3.94114 1.00061 4.4158 1.00017H9.54433C10.374 0.992 11.1783 1.28579 11.8073 1.82677C12.4364 2.36775 12.8472 3.11901 12.9634 3.94052C13.1798 5.58177 13.5813 7.19326 14.16 8.74425C14.39 9.35612 14.4398 10.0211 14.3035 10.6604C14.1671 11.2997 13.8504 11.8865 13.3907 12.3513L11.2197 14.5224C13.6532 18.8022 17.1969 22.3459 21.4767 24.7795L23.6478 22.6084C24.1126 22.1488 24.6994 21.832 25.3387 21.6957C25.978 21.5593 26.643 21.6091 27.2549 21.8391C28.8059 22.4179 30.4173 22.8193 32.0586 23.0358C32.889 23.1529 33.6474 23.5712 34.1895 24.211C34.7317 24.8509 35.0197 25.6677 34.9989 26.5061Z"
+								stroke="black"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+						<span>+421 910 329 130</span>
+					</section>
+					<section>
+						<a href="mailto:dadokralik@gmail.com" target="_blank">
+							<svg
+								class="mail"
+								width="35"
+								height="35"
+								viewBox="0 0 35 35"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M6.18783 6.08356H28.8545C30.4128 6.08356 31.6878 7.35856 31.6878 8.91689V25.9169C31.6878 27.4752 30.4128 28.7502 28.8545 28.7502H6.18783C4.62949 28.7502 3.35449 27.4752 3.35449 25.9169V8.91689C3.35449 7.35856 4.62949 6.08356 6.18783 6.08356Z"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M31.6878 8.91687L17.5212 18.8335L3.35449 8.91687"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="mailto:dadokralik@gmail.com" target="_blank">
+							<span>dadokralik@gmail.com</span>
+						</a>
+					</section>
+					<section>
+						<a href="https://github.com/MrDalo" target="_blank">
+							<svg
+								class="github"
+								width="34"
+								height="34"
+								viewBox="0 0 34 34"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M12.7502 26.9167C5.66683 29.0417 5.66683 23.375 2.8335 22.6667M22.6668 31.1667V25.6842C22.72 25.0087 22.6287 24.3296 22.3991 23.6921C22.1695 23.0545 21.8068 22.4732 21.3352 21.9867C25.7835 21.4908 30.4585 19.805 30.4585 12.07C30.4581 10.0921 29.6973 8.19004 28.3335 6.75751C28.9793 5.02706 28.9336 3.11434 28.206 1.41668C28.206 1.41668 26.5343 0.920847 22.6668 3.51335C19.4198 2.63334 15.9971 2.63334 12.7502 3.51335C8.88266 0.920847 7.211 1.41668 7.211 1.41668C6.48336 3.11434 6.4377 5.02706 7.0835 6.75751C5.70951 8.20067 4.9479 10.1199 4.9585 12.1125C4.9585 19.7908 9.6335 21.4767 14.0818 22.0292C13.6157 22.5108 13.2563 23.0852 13.0268 23.7149C12.7974 24.3446 12.7031 25.0156 12.7502 25.6842V31.1667"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://github.com/MrDalo" target="_blank">
+							<span>github.com/MrDalo</span>
+						</a>
+					</section>
+					<section>
+						<a
+							href="https://www.linkedin.com/in/dalibor-kralik/"
+							target="_blank"
+						>
+							<svg
+								class="linkedin"
+								width="34"
+								height="34"
+								viewBox="0 0 34 34"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M22.6665 11.3333C24.9208 11.3333 27.0829 12.2288 28.6769 13.8229C30.271 15.417 31.1665 17.579 31.1665 19.8333V29.75H25.4998V19.8333C25.4998 19.0819 25.2013 18.3612 24.67 17.8298C24.1386 17.2985 23.418 17 22.6665 17C21.9151 17 21.1944 17.2985 20.663 17.8298C20.1317 18.3612 19.8332 19.0819 19.8332 19.8333V29.75H14.1665V19.8333C14.1665 17.579 15.062 15.417 16.6561 13.8229C18.2502 12.2288 20.4122 11.3333 22.6665 11.3333V11.3333Z"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M8.50016 12.75H2.8335V29.75H8.50016V12.75Z"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M5.66683 8.49998C7.23164 8.49998 8.50016 7.23145 8.50016 5.66665C8.50016 4.10184 7.23164 2.83331 5.66683 2.83331C4.10202 2.83331 2.8335 4.10184 2.8335 5.66665C2.8335 7.23145 4.10202 8.49998 5.66683 8.49998Z"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a
+							href="https://www.linkedin.com/in/dalibor-kralik/"
+							target="_blank"
+						>
+							<span>linkedin.com/in/dalibor-kralik</span>
+						</a>
+					</section>
+					<section>
+						<a href="https://www.instagram.com/dali_kralik/" target="_blank">
+							<svg
+								class="instagram"
+								width="34"
+								height="33"
+								viewBox="0 0 34 33"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M24.0835 2.75H9.91683C6.00481 2.75 2.8335 5.82804 2.8335 9.625V23.375C2.8335 27.172 6.00481 30.25 9.91683 30.25H24.0835C27.9955 30.25 31.1668 27.172 31.1668 23.375V9.625C31.1668 5.82804 27.9955 2.75 24.0835 2.75Z"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M22.6666 15.6337C22.8414 16.7781 22.64 17.9468 22.0911 18.9736C21.5421 20.0005 20.6735 20.8332 19.6089 21.3533C18.5442 21.8734 17.3377 22.0544 16.1609 21.8706C14.9842 21.6869 13.8971 21.1476 13.0543 20.3296C12.2115 19.5116 11.6559 18.4564 11.4665 17.3143C11.2771 16.1721 11.4637 15.0011 11.9995 13.9678C12.5354 12.9344 13.3933 12.0914 14.4513 11.5586C15.5093 11.0258 16.7134 10.8303 17.8924 11C19.0951 11.1731 20.2084 11.717 21.0681 12.5514C21.9278 13.3858 22.4882 14.4665 22.6666 15.6337Z"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M24.7915 8.9375H24.8053"
+									stroke="#323131"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+						</a>
+						<a href="https://www.instagram.com/dali_kralik/" target="_blank">
+							<span>instagram.com/dali_kralik</span>
+						</a>
+					</section>
+					<footer>© Copyright 2023 | created by Dalibor Králik</footer>
+				</div>
+				<div class="right-box" id="contact">
+					<h1>Contact</h1>
+					<span>© Copyright 2023 | created by Dalibor Králik</span>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
