@@ -15,7 +15,7 @@ let headerInViewPort;
 let scrollAction = false;
 const smallerThan1024px = window.innerWidth < 1024 ? true : false;
 
-let portfolio = [1, 2, 3, 4, 5, 6, 7];
+let portfolio = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // let portfolio = [1, 2, 3, 4];
 const portfolioProjects = document.getElementsByClassName("portfolio-project");
 
@@ -184,7 +184,10 @@ function PortfolioSliderRendering(direction) {
 		portfolioProjects[portfolio[3] - 1].classList.add("hidden-project");
 		portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
 		portfolioProjects[portfolio[5] - 1].classList.add("hidden-project");
-		portfolioProjects[portfolio[6] - 1].classList.add(
+		portfolioProjects[portfolio[6] - 1].classList.add("hidden-project");
+		portfolioProjects[portfolio[7] - 1].classList.add("hidden-project");
+		portfolioProjects[portfolio[8] - 1].classList.add("hidden-project");
+		portfolioProjects[portfolio[9] - 1].classList.add(
 			"last-hidden-project"
 		);
 	} else if (direction == "down") {
@@ -206,6 +209,9 @@ function PortfolioSliderRendering(direction) {
 		portfolioProjects[portfolio[4] - 1].classList.add("hidden-project");
 		portfolioProjects[portfolio[5] - 1].classList.add("hidden-project");
 		portfolioProjects[portfolio[6] - 1].classList.add("hidden-project");
+		portfolioProjects[portfolio[7] - 1].classList.add("hidden-project");
+		portfolioProjects[portfolio[8] - 1].classList.add("hidden-project");
+		portfolioProjects[portfolio[9] - 1].classList.add("hidden-project");
 	}
 
 	if (portfolio[0] > portfolio[1]) {
@@ -220,7 +226,7 @@ function PortfolioUpArrow() {
 	portfolio = portfolio.map((item) => {
 		item++;
 		// if(item == 5){
-		if (item == 8) {
+		if (item == 11) {
 			item = 1;
 		}
 		return item;
@@ -251,7 +257,7 @@ function PortfolioDownArrow() {
 	portfolio = portfolio.map((item) => {
 		item--;
 		if (item == 0) {
-			item = 7;
+			item = 10;
 		}
 		return item;
 	});
