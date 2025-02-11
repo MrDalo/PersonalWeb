@@ -1,75 +1,74 @@
 @import "./mixins";
 @import "./variables";
 
-#profile-picture-div{
-    background-image: url("https://www.wedevs.sk/daliborkralik/pictures/profilePicture.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    @include flex-center;
+#profile-picture-div {
+	background-image: url("./pictures/profilePicture.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	@include flex-center;
 }
 
-#profile-picture-div-inner{
-    display: none;
-    background-image: url("https://www.wedevs.sk/daliborkralik/pictures/profilePictureSmall.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80%;
-    aspect-ratio: 1;
-    border-radius: 40px;
+#profile-picture-div-inner {
+	display: none;
+	background-image: url("./pictures/profilePictureSmall.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 80%;
+	aspect-ratio: 1;
+	border-radius: 40px;
 }
 
-#first-content-box{
-    h1{
-        color: $mainBrown;
-        margin-bottom: 10vh;
-        font-size: 5em;
-        font-weight: 400;
-    }
+#first-content-box {
+	h1 {
+		color: $mainBrown;
+		margin-bottom: 10vh;
+		font-size: 5em;
+		font-weight: 400;
+	}
 
-    .left-box{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-        // padding-top: 5%;
-        
-        div{
-            width: 100%;
+	.left-box {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: wrap;
+		// padding-top: 5%;
 
-        }
+		div {
+			width: 100%;
+		}
 
-        div:first-of-type{
-            @include flex-center();
-            flex-direction: column;
-            padding-left: 20%;
-            padding-right: 20%;
-        }
+		div:first-of-type {
+			@include flex-center();
+			flex-direction: column;
+			padding-left: 20%;
+			padding-right: 20%;
+		}
 
-        div:nth-of-type(2){
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding-left: 10%;
-            column-gap: 3%;
-        }
+		div:nth-of-type(2) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding-left: 10%;
+			column-gap: 3%;
+		}
 
-        section{
-            text-align: center;
-            font-weight: 300;
-        }
+		section {
+			text-align: center;
+			font-weight: 300;
+		}
 
-        #socials{
-            svg{
-                transition-duration: 100ms;
-            }
+		#socials {
+			svg {
+				transition-duration: 100ms;
+			}
 
-            svg:hover{
-                transform: scale(1.2);
-                cursor: pointer;
-            }
-        }
-    }
+			svg:hover {
+				transform: scale(1.2);
+				cursor: pointer;
+			}
+		}
+	}
 }
